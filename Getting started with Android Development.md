@@ -12,3 +12,5 @@ Let's go through:
 - App lifecycle
 - Layouts
 - Communicate and manipulate layout
+
+To learn more: [Codelab; First App](https://codelabs.developers.google.com/codelabs/build-your-first-android-app/#0) and [Codelab; Fundamentals](https://codelabs.developers.google.com/codelabs/android-training-welcome/#0)
