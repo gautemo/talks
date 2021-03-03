@@ -1,7 +1,7 @@
 # Beyond ES6 - New things in JavaScript
 Format: Presentation 👨‍🏫
 
-### 15 October 2020 - DevFest Google
+### 15 October 2020 - conference DevFest Google
 [Recording](https://youtu.be/amSSIK-mQSI?t=10605)  
 [Slides](https://beyond-es6.netlify.app/)  
 [Repo](https://github.com/gautemo/ES-Intro)

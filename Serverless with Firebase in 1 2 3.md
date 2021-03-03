@@ -9,6 +9,8 @@ Format: Workshop 👨‍💻
 Firebase is a bunch of tools which helps you build, improve and grow your mobile or web application. Firebase makes it really easy to get started, but it also scales well since it runs in the Google Cloud. In this workshop, we are using hosting, authentication, and Firestore to get our web application working. Since Firebase is our backend, both server and API, we get a lot of functionality in a short time.
 
 ## Private notes 🤫
+<details>
+  <summary>Expand</summary>
 Vis løsning
 
 $ `git clone -b step-one https://github.com/gautemo/firebase-chat.git`
@@ -217,3 +219,4 @@ https://twitter.com/firebase
 https://firebase.google.com/docs/  
 https://console.firebase.google.com/ 
 
+</details>

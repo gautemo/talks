@@ -5,8 +5,8 @@ Format: Presentation 👨‍🏫
 [Slides](https://drive.google.com/file/d/1Y5-wXK6jmffhtVsuz01A-knWC1A92xQ-/view?usp=sharing)  
 [Repo](https://github.com/gautemo/vue-3-playground)
 
-### 15 October 2020 - DevFest Google
-[Recording](https://youtu.be/amSSIK-mQSI?t=12066)  
+### 15 October 2020 - conference DevFest Google
+[Recording](https://youtu.be/amSSIK-mQSI?t=12115)  
 [Slides](https://docs.google.com/presentation/d/1aOhFSr3BlQe7Gl4eVodmZ0YwQLRj57YxG8OR8lP94KA/edit?usp=sharing)  
 
 ## Description

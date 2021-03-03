@@ -9,7 +9,8 @@ Preprocessors such as Sass or Less is no longer necessary to use variables in CS
 Variables make you write better and less CSS. Bonus is that they can be altered through JavaScript, making cool functionality very easy.
 
 ## Private notes 🤫
-
+<details>
+  <summary>Expand</summary>
 ```js
 document.documentElement.style.setProperty('--primary-color', e.target.value);
 
@@ -42,4 +43,5 @@ document.documentElement.style.setProperty('--size', e.target.value + 'px');
 ```
 ```js
 document.documentElement.classList.toggle('night');
-```
+```    
+</details>

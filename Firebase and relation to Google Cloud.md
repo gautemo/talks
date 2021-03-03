@@ -1,6 +1,6 @@
 # Hva er Firebase og hvordan er forholdet mellom Firebase og Google Cloud?
 
-### November 2019 - conference Rubiks, Sopra Steria
+### 2 November 2019 - conference Rubiks, Sopra Steria
 [Slides](https://drive.google.com/file/d/18aKeAta5iO61tLYJfV3PU3ZVQfaQCtlf/view?usp=sharing)  
 [Repo](https://github.com/gautemo/fama)
 

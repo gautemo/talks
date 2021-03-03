@@ -1,7 +1,7 @@
 # Why I choose Vue
 Format: Lightning talk ⚡
 
-### February 2020 - Tech Talks, Online NTNU
+### 20 February 2020 - Tech Talks, Online NTNU
 [Slides](https://drive.google.com/file/d/1IB5YSZkTzr9dCn984xoAIohJoyOel4Ba/view?usp=sharing)
 
 ## Description

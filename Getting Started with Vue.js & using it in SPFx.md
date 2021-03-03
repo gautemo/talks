@@ -8,6 +8,8 @@ Format: Presentation 👨‍🏫
 Vue.js is a great web development framework, I will show you how to master Vue.js. After you have gotten to know Vue, I will show you how to use it in your SharePoint site with SharePoint Framework (SPFx). We will build a webpart retrieving links from a SharePoint list and showing them in a Vue component with realtime search.
 
 ## Private notes 🤫
+<details>
+  <summary>Expand</summary>
 https://vuejs.org/v2/guide/
 
 V-model  
@@ -65,3 +67,4 @@ It works fine after a clean build and new deployment.
 gulp clean && gulp bundle && gulp package-solution
 
 https://github.com/gautemo/links-webpart-vue-spfx
+</details>
