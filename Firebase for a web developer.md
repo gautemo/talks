@@ -2,7 +2,7 @@
 Format: Presentation 👨‍🏫
 
 ### 16 April 2021 - conference CapraCon
-[Slides](https://drive.google.com/file/d/1JRCqn3y205UFyLoAUL-rlRbTRJRYCZb3/view?usp=sharing)  
+[Slides](https://docs.google.com/presentation/d/1xlCC0iLlPjif_CNc7bIqZ6DWQ4jnqg_pUbZc1G6wHxg/edit?usp=sharing)  
 [Repo](https://github.com/gautemo/fama)
 
 ## Description (Norwegian)
@@ -75,7 +75,7 @@ const storage = firebase.storage();
 // Add image
 const file = e.target.files[0];
 const path = `photos/${file.name}`;
-await storage.ref().child(path).put(file);
+storage.ref().child(path).put(file);
 
 // Get image
 const src = storage.ref(path).getDownloadURL();
