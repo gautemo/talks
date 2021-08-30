@@ -43,8 +43,8 @@ Build:
 * snowpack(vue) - 10s
 
 [Vite and VitePress - Evan You](https://www.youtube.com/watch?v=xXrhg26VCSc&t=1406s&ab_channel=VueConfToronto)  
-[Next generation frontend tooling with ViteJS - Open Source Friday](https://www.youtube.com/watch?v=UJypSr8IhKY&ab_channel=GitHub)
-[Svelte from Snowpack to Vite](https://svelte.dev/blog/sveltekit-beta#From_Snowpack_to_Vite)
+[Next generation frontend tooling with ViteJS - Open Source Friday](https://www.youtube.com/watch?v=UJypSr8IhKY&ab_channel=GitHub)  
+[Svelte from Snowpack to Vite](https://svelte.dev/blog/sveltekit-beta#From_Snowpack_to_Vite)  
 
 `npm init @vitejs/app projname`
 
