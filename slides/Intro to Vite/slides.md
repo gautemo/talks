@@ -2,8 +2,7 @@
 theme: default
 class: 'text-center'
 layout: center
-highlighter: shiki
-lineNumbers: false
+routerMode: hash
 info: |
   ## Intro to Vite
   By [Gaute Meek Olsen](https://twitter.com/GauteMeekOlsen)
