@@ -6,6 +6,7 @@ highlighter: shiki
 lineNumbers: false
 info: |
   ## Intro to Vite
+  By [Gaute Meek Olsen](https://twitter.com/GauteMeekOlsen)
 drawings:
   persist: false
 ---
