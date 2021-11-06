@@ -13,8 +13,10 @@ jobs:
 
       - name: build Intro to Vite
         run: |
-          cd "slides/Intro to Vite"
+          cd slides && cd "Intro to Vite"
           npm ci
+          npm run build
+          mv dist ../web/intro-to-vite
       - name: deploy
         run: |
           cd slides
