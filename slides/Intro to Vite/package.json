@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.27.10",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "*",
+    "@vueuse/core": "^6.7.6",
+    "@vueuse/shared": "^6.7.6",
+    "slidev-theme-unicorn": "^1.0.21",
+    "vue-demi": "^0.12.1"
+  },
+  "name": "intro-to-vite",
+  "devDependencies": {
+    "@iconify-json/logos": "^1.0.1",
+    "@iconify-json/twemoji": "^1.0.2"
+  }
+}
