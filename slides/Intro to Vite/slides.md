@@ -178,7 +178,7 @@ layout: center
 | Tool                   | node_modules         | dev start | HMR | hmr keeps state | npm ci | npm build |
 | ---------------------- | -------------------- | --------- | ----| --------------- | ------ | --------- |
 | Create React App (CRA) | 449MB - 80 154 files | 32s       | 4s  | ❌             | 1m 4s  | 1m 10s    |
-| Vite                   | 387MB - 64 677 files | 12s       | ⚡  | ✔️             | 55s     | 30s      |
+| Vite                   | 381MB - 59 389 files | 8s        | ⚡  | ✔️             | 55s     | 30s      |
 
 
 ---
