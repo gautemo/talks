@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.27.10",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "*"
+  },
+  "name": "whats-new-in-javascript---es2021",
+  "devDependencies": {
+    "@vueuse/shared": "^6.8.0"
+  }
+}
