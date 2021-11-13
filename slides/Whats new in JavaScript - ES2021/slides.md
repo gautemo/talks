@@ -9,10 +9,8 @@ drawings:
   persist: false
 routerMode: hash  
 fonts:
-  # basically the text
-  sans: 'Baloo Chettan'
-  # use with `font-serif` css class from windicss
-  serif: 'Baloo Chettan'
+  sans: 'Baloo Chettan, Roboto'
+  serif: 'Baloo Chettan, Roboto'
 ---
 
 <Heart/>
@@ -75,10 +73,10 @@ h1{
 clicks: 14
 ---
 
-<p class="top">JavaScript created 1995</p>
-<p v-click="1" class="top">Standarized by ECMAScript</p>
+<p class="top font">JavaScript created 1995</p>
+<p v-click="1" class="top font">Standarized by ECMAScript</p>
 
-<table v-click="1">
+<table v-click="1" class="font">
   <thead>
     <tr>
       <th>Year</th>
@@ -195,6 +193,4 @@ tbody .slidev-vclick-current{
 
 ---
 
-### Numeric separators
-
-<Code :snippetId="0"/>
+<CodeSlide label="Numeric separators" :snippetId="0"/>

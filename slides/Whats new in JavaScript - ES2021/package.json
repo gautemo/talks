@@ -21,6 +21,7 @@
   },
   "name": "whats-new-in-javascript---es2021",
   "devDependencies": {
+    "@iconify-json/ic": "^1.0.4",
     "@vueuse/shared": "^6.8.0"
   }
 }
