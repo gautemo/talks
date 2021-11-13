@@ -6,7 +6,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="font">
+  <div class="grid font">
     <h1 class="label">{{props.label}}</h1>
     <div class="grow">
       <Code :snippetId="props.snippetId"/>
@@ -20,13 +20,15 @@ const props = defineProps<{
   margin: 0;
 }
 
-div{
-  display: flex;
-  flex-direction: column;
+.grid{
+  display: grid;
+  grid-template: auto 1fr / 1fr;
   height: 100%;
 }
 
 .grow{
-  flex: 1;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
 }
 </style>

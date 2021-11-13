@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="about-me" v-if="[1,2].includes($slidev.nav.currentPage)">
+    <div class="about-me" v-if="[1,2,9].includes($slidev.nav.currentPage)">
       <Homepage/>
       <Twitter/>
     </div>

@@ -194,3 +194,73 @@ tbody .slidev-vclick-current{
 ---
 
 <CodeSlide label="Numeric separators" :snippetId="0"/>
+
+---
+
+<CodeSlide label="replaceAll" :snippetId="1"/>
+
+---
+
+<CodeSlide label="Promise.any" :snippetId="2"/>
+
+---
+
+<CodeSlide label="Logical assignment" :snippetId="3"/>
+
+---
+
+<CodeSlide label="WeakRef" :snippetId="4"/>
+
+---
+
+<div class="container">
+  <div class="wavetext">
+    <span v-for="(t, i) in [...'The End... Thank You For Listening!']" :key="i" :style="{'animation-delay': `-${((40 - i) * 2 * 2.5) / 40}s`, 'color':`rgba(${100 + ((i * 20) % 155)}, 10, ${100 + ((i * 40) % 55)}, 1)`}">{{t}}</span>
+  </div>
+
+  <div class="links">
+    <a href="https://github.com/gautemo/ES-Intro">github.com/gautemo/ES-Intro</a>
+  </div>
+</div>
+
+<style>
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@keyframes wave {
+  from {
+    transform: translateY(0);
+    color: white;
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+.wavetext {
+  padding-top: 100px;
+  text-align: center;
+}
+.wavetext span {
+  display: inline-block;
+  font-size: 40px;
+  white-space: pre-wrap;
+  animation-duration: 2.5s;
+  animation-name: wave;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.links{
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  font-size: 1.5em;
+}
+
+.links a{
+  width: fit-content;
+}
+</style>

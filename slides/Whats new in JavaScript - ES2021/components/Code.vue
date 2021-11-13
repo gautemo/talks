@@ -20,14 +20,14 @@ let view: EditorView | null = null
 
 const outputTimeout = ref(-1)
 const output = ref([])
-const runCode = () => {
+const runCode = async () => {
   clearTimeout(outputTimeout.value);
   const startFunc = `
   const output = [];
   try{`;
   const endFunc = `
   }catch(error){
-    output.push("error: " + error.message);
+    output.push("error: " + (error.message ?? error));
   }
   return output;
   `;
@@ -36,8 +36,9 @@ const runCode = () => {
     "output.push("
   );
   try {
-    const fun = new Function("component", startFunc + manipCode + endFunc);
-    output.value = fun(this);
+    const AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
+    const fun = new AsyncFunction(startFunc + manipCode + endFunc);
+    output.value = await fun(this);
   } catch (error) {
     output.value.push("error: " + error.message);
   }
@@ -82,7 +83,7 @@ const setup = [
 ]
 
 onMounted(() => {
-  const codeEl = document.querySelector('#code')
+  const codeEl = document.querySelector(`#code-${props.snippetId}`)
   if (codeEl && !codeEl.innerHTML) {
     view = new EditorView({
       state: EditorState.create({ extensions: [setup, oneDark, javascript()], doc: snippet.initial }),
@@ -98,7 +99,7 @@ onMounted(() => {
 
 <template>
   <div class="container">
-    <div id="code"></div>
+    <div :id="`code-${snippetId}`" class="code"></div>
     <div class="control">
       <div @click="() => updateCode(snippet.initial)" title="Refresh. Ctrl + Shift + R">
         <ic-round-refresh />
@@ -128,7 +129,7 @@ onMounted(() => {
   position: relative;
 }
 
-#code {
+.code {
   font-size: 1.2em;
   height: 100%;
 }
@@ -142,6 +143,7 @@ onMounted(() => {
 
 :deep(.cm-scroller)::-webkit-scrollbar {
   width: 5px;
+  height: 5px;
 }
 
 :deep(.cm-scroller)::-webkit-scrollbar-thumb {
@@ -158,15 +160,14 @@ onMounted(() => {
   font-size: 2.2rem;
   pointer-events: none;
 }
-.multi-line .output p {
-  white-space: pre-line;
-}
+
 .output p {
-  padding: 12px 30px 12px 70px;
+  padding: 10px 30px 10px 70px;
   margin: 0;
   background: rgba(255, 255, 0, 0.9);
   color: black;
   pointer-events: none;
+  line-height: 2.2rem;
 }
 .output p.err {
   background: rgb(219, 44, 21, 0.9);
