@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/new-in-javascript-es2021/'
+  base: '/whats-new-in-javascript-es2021/'
 })
