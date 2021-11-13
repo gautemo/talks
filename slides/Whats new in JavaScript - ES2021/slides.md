@@ -220,6 +220,7 @@ tbody .slidev-vclick-current{
 
   <div class="links">
     <a href="https://github.com/gautemo/ES-Intro">github.com/gautemo/ES-Intro</a>
+    <a href="https://gaute-talks.netlify.app">gaute-talks.netlify.app</a>
   </div>
 </div>
 
@@ -255,7 +256,9 @@ tbody .slidev-vclick-current{
 
 .links{
   display: flex;
-  justify-content: center;
+  gap: 1em;
+  flex-direction: column;
+  align-items: center;
   margin-top: 2em;
   font-size: 1.5em;
 }
