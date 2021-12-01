@@ -33,6 +33,9 @@ drawings:
   <logos-react class="text-10xl"/>
   <logos-babel class="text-10xl"/>
   <logos-typescript-icon class="text-8xl"/>
+  <logos-vue class="text-6xl"/>
+  <logos-svelte class="text-10xl"/>
+  <logos-less class="text-8xl"/>
 </section>
 
 <style>
@@ -72,6 +75,24 @@ drawings:
     margin: auto;
     transform: translate(180px, 20px);
   }
+  section svg:nth-child(7){
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    transform: translate(-150px, 20px);
+  }
+  section svg:nth-child(8){
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    transform: translate(-60px, 160px);
+  }
+  section svg:nth-child(9){
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    transform: translate(20px, -140px);
+  }
 </style>
 
 ---
@@ -104,12 +125,12 @@ layout: center
 ---
 
 <div class="features">
-  <h2>💡 Instant Server Start</h2>
-  <h2>⚡️ Lightning Fast HMR</h2>
-  <h2>🛠️ Rich Features</h2>
-  <h2>📦 Optimized Build</h2>
-  <h2>🔩 Universal Plugins</h2>
-  <h2>🔑 Fully Typed APIs</h2>
+  <h2 v-click="1">💡 Instant Server Start</h2>
+  <h2 v-click="2">⚡️ Lightning Fast HMR</h2>
+  <h2 v-click="3">🛠️ Rich Features</h2>
+  <h2 v-click="4">📦 Optimized Build</h2>
+  <h2 v-click="5">🔩 Universal Plugins</h2>
+  <h2 v-click="6">🔑 Fully Typed APIs</h2>
 </div>
 
 <style>
@@ -121,6 +142,10 @@ layout: center
 
   h2{
     font-size: 1.4rem;
+  }
+
+  .slidev-vclick-prior{
+    opacity: 0.5;
   }
 </style>
 
@@ -171,22 +196,13 @@ layout: center
 | Create React App (CRA) | 170MB - 34 863 files | 3456 lines  |
 | Vite                   | 100MB - 2 051 files  | 149 lines   |
 
----
-
-# salg-gpluss stats
-
-| Tool                   | node_modules         | dev start | HMR | hmr keeps state | npm ci | npm build |
-| ---------------------- | -------------------- | --------- | ----| --------------- | ------ | --------- |
-| Create React App (CRA) | 449MB - 80 154 files | 32s       | 4s  | ❌             | 1m 4s  | 1m 10s    |
-| Vite                   | 381MB - 59 389 files | 8s        | ⚡  | ✔️             | 55s     | 30s      |
-
 
 ---
 
 # Is it ready or just the latest hype?
 
 - 33k GitHub stars
-- 6 million npm downloads
+- 1.5 million npm downloads a month and growing
 - 1.5 years old
 
 ## Used/recommended in

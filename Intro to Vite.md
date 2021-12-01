@@ -3,6 +3,7 @@ Format: Presentation 👨‍🏫
 
 ### 28 October 2021 - Developer day, Gjensidige
 ### 16 November 2021 - frontendForum, Gjensidige
+### 02 December 2021 - fag og øl, Capra
 [Slides](https://gaute-talks.netlify.app/intro-to-vite/)  
 
 ## Description
