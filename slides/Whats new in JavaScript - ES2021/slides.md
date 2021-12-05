@@ -185,10 +185,6 @@ thead tr{
 tbody .slidev-vclick-hidden{
   display: none;
 }
-
-tbody .slidev-vclick-current{
-  font-size: 1.5em;
-}
 </style>
 
 ---
