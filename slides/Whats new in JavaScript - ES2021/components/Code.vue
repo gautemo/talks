@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import { EditorView, keymap, highlightSpecialChars, drawSelection, highlightActiveLine } from "@codemirror/view"
+import { EditorView, keymap, highlightSpecialChars } from "@codemirror/view"
 import { oneDark } from "@codemirror/theme-one-dark"
 import { javascript } from "@codemirror/lang-javascript"
 import { EditorState } from "@codemirror/state"
 import { history, historyKeymap } from "@codemirror/history"
 import { indentOnInput } from "@codemirror/language"
-import { lineNumbers, highlightActiveLineGutter } from "@codemirror/gutter"
 import { defaultKeymap } from "@codemirror/commands"
 import { closeBrackets, closeBracketsKeymap } from "@codemirror/closebrackets"
-import { snippets } from '../snippets.ts'
+import { snippets } from '../snippets'
 
 const props = defineProps<{
   snippetId: number
@@ -31,7 +30,7 @@ const runCode = async () => {
   }
   return output;
   `;
-  const manipCode = view.state.doc.text.join('\n').replace(
+  const manipCode = view.state.doc.toJSON().join('\n').replace(
     /console\.log\(/gi,
     "output.push("
   );
@@ -63,7 +62,7 @@ const setup = [
     ...historyKeymap,
     {
       key: 'Mod-Space',
-      run: runCode,
+      run: () => runCode() && true,
     },
     {
       key: 'Mod-Shift-r',
@@ -76,6 +75,13 @@ const setup = [
       key: 'Mod-Shift-c',
       run() {
         updateCode(snippet.complete)
+        return true;
+      }
+    },
+    {
+      key: 'Escape',
+      run() {
+        output.value = []
         return true;
       }
     },
@@ -121,6 +127,7 @@ onMounted(() => {
       >{{ o }}</p>
     </div>
   </transition>
+  <div tabindex="0"></div>
 </template>
 
 <style scoped>

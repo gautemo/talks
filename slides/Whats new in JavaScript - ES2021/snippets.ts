@@ -22,37 +22,37 @@ console.log(oranges)`,
   {
     initial:
     `const slow = () => new Promise(resolve => {
-      setTimeout(() => resolve('slow'), 2_000);
-    });
-    const fast = () => new Promise(resolve => {
-      setTimeout(() => resolve('fast'), 500);
-    });
-    const fail = () => new Promise((_, reject) => reject('nope'));
-    
-    const promises = [
-      slow(),
-      fast(),
-      fail(),
-    ];
-    const result = await Promise.race(promises);
-    console.log(result);
+  setTimeout(() => resolve('slow'), 2_000);
+});
+const fast = () => new Promise(resolve => {
+  setTimeout(() => resolve('fast'), 500);
+});
+const fail = () => new Promise((_, reject) => reject('nope'));
+
+const promises = [
+  slow(),
+  fast(),
+  fail(),
+];
+const result = await Promise.race(promises);
+console.log(result);
     `,
     complete:
     `const slow = () => new Promise(resolve => {
       setTimeout(() => resolve('slow'), 2_000);
-    });
-    const fast = () => new Promise(resolve => {
-      setTimeout(() => resolve('fast'), 500);
-    });
-    const fail = () => new Promise((_, reject) => reject('nope'));
-    
-    const promises = [
-      slow(),
-      fast(),
-      fail(),
-    ];
-    const first = await Promise.any(promises);
-    console.log(first); 
+});
+const fast = () => new Promise(resolve => {
+  setTimeout(() => resolve('fast'), 500);
+});
+const fail = () => new Promise((_, reject) => reject('nope'));
+
+const promises = [
+  slow(),
+  fast(),
+  fail(),
+];
+const first = await Promise.any(promises);
+console.log(first); 
     `,
   },
   {
@@ -86,7 +86,6 @@ if(cache){
   console.log('object lost to garbage-collection');
 }
 
-// FinalizationRegistry let's you assign a callback if object is garbage-collected
 const registry = new FinalizationRegistry((value) => {
   console.log(value);
 });
