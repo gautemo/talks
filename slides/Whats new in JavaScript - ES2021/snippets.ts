@@ -57,7 +57,16 @@ console.log(first);
   },
   {
     initial:
-      ``,
+      `let x = 0
+
+// && - truthy
+
+// || - falsy
+
+// ?? - nullish
+
+console.log(x)
+      `,
     complete:
       `const obj = {
   value: 0,
