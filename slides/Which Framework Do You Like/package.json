@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.27.20",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "*",
+    "@vueuse/shared": "^7.7.0"
+  },
+  "name": "which-framework-do-you-like"
+}
