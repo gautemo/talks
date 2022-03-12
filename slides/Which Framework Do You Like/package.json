@@ -6,10 +6,10 @@
     "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^0.27.20",
-    "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*",
-    "@vueuse/shared": "^7.7.0"
+    "@slidev/cli": "^0.28.10",
+    "@slidev/theme-default": "^0.21.2",
+    "@slidev/theme-seriph": "^0.21.2",
+    "@vueuse/shared": "^7.7.1"
   },
   "name": "which-framework-do-you-like"
 }

@@ -18,26 +18,24 @@ drawings:
   { name: 'Angular', points: 2_852_099 },
   { name: 'Svelte', points: 262_649 },
   { name: 'Preact', points: 1_146_433 },
-  { name: 'Ember', points: 9 },
-  { name: 'Lit', points: 7 },
-  { name: 'Alpine.js', points: 6 },
-  { name: 'Solid', points: 3 },
+  { name: 'Ember', points: 3_704 },
+  { name: 'Lit', points: 117_235 },
+  { name: 'Alpine.js', points: 86_016 },
+  { name: 'Solid', points: 17_154 },
   ]"/>
 
 ---
 
 <BarChart title="GitHub Stars" :bars="[
-  { name: 'React', points: 400 }, 
-  { name: 'Vue', points: 300 }, 
-  { name: 'Vue', points: 300 },
-  ]"/>
-
----
-
-<BarChart title="NPM installs" :bars="[
-  { name: 'React', points: 400 }, 
-  { name: 'Vue', points: 300 }, 
-  { name: 'Vue', points: 300 },
+  { name: 'React', points: 184_000 }, 
+  { name: 'Vue', points: 194_000 }, 
+  { name: 'Angular', points: 80_000 },
+  { name: 'Svelte', points: 57_000 },
+  { name: 'Preact', points: 31_000 },
+  { name: 'Ember', points: 22_000 },
+  { name: 'Lit', points: 11_000 },
+  { name: 'Alpine.js', points: 20_000 },
+  { name: 'Solid', points: 16_000 },
   ]"/>
 
 ---
@@ -57,9 +55,13 @@ drawings:
 ---
 
 <BarChart title="Developer Tools" :bars="[
-  { name: 'React', points: 400 }, 
-  { name: 'Vue', points: 300 }, 
-  { name: 'Vue', points: 300 },
+  { name: 'React', points: 141_663+3_000_000 }, 
+  { name: 'Vue', points: 87_209+1_200_000 }, 
+  { name: 'Angular', points: 100_000 },
+  { name: 'Svelte', points: 1_610+10_000 },
+  { name: 'Preact', points: 511+6_000 },
+  { name: 'Ember', points: 2_119+40_000 },
+  { name: 'Alpine.js', points: 935+9_000 },
   ]"/>
 
 ---
