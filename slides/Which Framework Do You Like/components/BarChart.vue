@@ -4,10 +4,12 @@ import BarBlock from './BarBlock.vue';
 
 const props = defineProps<{
   title: string,
-  bars: { name: string, points: number }[]
+  bars: { name: string, points: number }[],
+  postfix?: string,
 }>()
 
 const max = computed(() => Math.max(...props.bars.map(bar => bar.points)))
+const sum = computed(() => props.bars.reduce((acc, bar) => acc + bar.points, 0))
 </script>
 
 <template>
@@ -15,7 +17,7 @@ const max = computed(() => Math.max(...props.bars.map(bar => bar.points)))
     <div class="grid">
       <template v-for="bar in bars.sort((a, b) => b.points - a.points)" :key="bar.name">
         <span>{{ bar.name }}</span>
-        <BarBlock :points="bar.points" :max="max"/>
+        <BarBlock :points="bar.points" :max="max" :postfix="postfix" :sum="sum"/>
       </template>
     </div>
 </template>

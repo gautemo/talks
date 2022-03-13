@@ -5,6 +5,8 @@ import { useElementSize } from '@vueuse/core'
 const props = defineProps<{
     points: number;
     max: number;
+    postfix?: string,
+    sum: number;
 }>()
 
 const container = ref<HTMLElement>()
@@ -16,7 +18,8 @@ const numberFormat = new Intl.NumberFormat()
 <template>
 <div class="container" ref="container">
     <div class="bar"></div>
-    <span>{{ numberFormat.format(points) }}</span>
+    <span>{{ numberFormat.format(points) }} {{postfix}}</span>
+    <span v-if="false">({{ ((points / sum)*100).toFixed(1) }} %)</span>
 </div>
 </template>
 
