@@ -1,10 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build:slides": "slidev build",
+    "build:voting": "vite build voting-app",
     "dev:slides": "slidev",
-    "dev:voting": "vite voting-app",
-    "export": "slidev export"
+    "dev:voting": "vite voting-app"
   },
   "dependencies": {
     "@slidev/cli": "^0.28.10",

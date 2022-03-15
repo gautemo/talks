@@ -23,6 +23,17 @@ jobs:
           npm i
           npm run build
           mv dist ../web/whats-new-in-javascript-es2021
+      - name: build Which Framework Do You Like
+        run: |
+          cd "slides/Which Framework Do You Like"
+          npm i
+          npm run build:slides
+          mv dist ../web/which-framework-do-you-like
+      - name: build Which Framework Do You Like - Voting app
+        run: |
+          cd "slides/Which Framework Do You Like"
+          npm run build:voting
+          mv voting-app/dist ../web/which-framework-do-you-like-voting               
       - name: deploy
         run: |
           cd slides
