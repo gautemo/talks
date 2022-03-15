@@ -2,14 +2,22 @@
   "private": true,
   "scripts": {
     "build": "slidev build",
-    "dev": "slidev",
+    "dev:slides": "slidev",
+    "dev:voting": "vite voting-app",
     "export": "slidev export"
   },
   "dependencies": {
     "@slidev/cli": "^0.28.10",
     "@slidev/theme-default": "^0.21.2",
     "@slidev/theme-seriph": "^0.21.2",
-    "@vueuse/shared": "^7.7.1"
+    "@vueuse/shared": "^7.7.1",
+    "firebase": "^9.6.8",
+    "vue": "^3.2.31"
   },
-  "name": "which-framework-do-you-like"
+  "name": "which-framework-do-you-like",
+  "devDependencies": {
+    "typescript": "^4.6.2",
+    "vite": "^2.8.6",
+    "vue-tsc": "^0.33.0-patch.1"
+  }
 }
