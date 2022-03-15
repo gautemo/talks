@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { vote } from '../firebase'
 
 const props = defineProps<{
+  title: string,
   votekey: string,
   options: string[],
 }>()
@@ -15,6 +16,7 @@ function confirm(){
 
 <template>
 <section>
+  <h1>{{title}}</h1>
   <div class="options">
     <button @click="selected = 0" :class="{selected: selected === 0}">
       <slot name="option1"></slot>
