@@ -39,10 +39,6 @@ import VoteScreen from './VoteScreen.vue';
 </template>
 
 <style scoped>
-h1{
-  text-align: center;
-}
-
 div{
   display: flex;
   align-items: center;

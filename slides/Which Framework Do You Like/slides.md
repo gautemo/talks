@@ -13,6 +13,14 @@ drawings:
 <h2 v-click>sånn egentlig?</h2>
 
 ---
+
+# Hva er et frontend rammeverk?
+
+* Lar deg utvikle UI komponenter
+* Holder på data/state
+* Reaktiv UI basert på data
+
+---
   
 <BarChart title="State of JS 21 - Usage" postfix="%" :bars="[
   { name: 'React', points: 80 }, 
@@ -102,4 +110,44 @@ drawings:
 
 ---
 
+# React
+
+---
+
+# Angular
+
+---
+
+# Vue
+
+---
+
+# Svelte
+
+---
+
+## Bli med å gi din stemme
+
+![QR code](/qr-vote.png)
+
+[https://gaute-talks.netlify.app/which-framework-do-you-like-voting/](https://gaute-talks.netlify.app/which-framework-do-you-like-voting/)
+
+<style scoped>
+  img{
+    border-radius: 15px;
+    height: 35%;
+    width: 35%;
+  }
+</style>
+
+---
+
 <Vote title="Hvilken foretrekker du?" votekey="prefers"/>
+
+---
+
+# Hva er viktig for et framework?
+
+* Utvikler opplevelse
+* Performance
+* Økosystem

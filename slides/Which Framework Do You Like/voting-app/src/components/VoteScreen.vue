@@ -46,7 +46,12 @@ section{
   height: 100%;
 }
 
+h1{
+  text-align: center;
+}
+
 .options{
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
