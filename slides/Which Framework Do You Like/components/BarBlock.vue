@@ -34,6 +34,5 @@ const numberFormat = new Intl.NumberFormat()
     background-color: rebeccapurple;
     height: 100%;
     border-radius: 0 3px 3px 0;
-    transition: width 0.5s ease;
 }
 </style>
