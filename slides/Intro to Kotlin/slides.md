@@ -59,7 +59,7 @@ drawings:
 - Native
 - Jetpack Compose
 
-![Multiplatform](kotlin-multiplatform.png)
+![Multiplatform](/multiplatform.png)
 
 </div>
 
@@ -82,7 +82,7 @@ img{
 layout: center
 ---
 
-![Demo](demo.jpg)
+![Demo](/demo.jpg)
 
 ---
 
