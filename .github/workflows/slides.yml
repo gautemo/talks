@@ -33,7 +33,13 @@ jobs:
         run: |
           cd "slides/Which Framework Do You Like"
           npm run build:voting
-          mv voting-app/dist ../web/which-framework-do-you-like-voting               
+          mv voting-app/dist ../web/which-framework-do-you-like-voting      
+      - name: build Intro to Kotlin
+        run: |
+          cd "slides/Intro to Kotlin"
+          npm i
+          npm run build
+          mv dist ../web/intro-to-kotlin
       - name: deploy
         run: |
           cd slides

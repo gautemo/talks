@@ -6,5 +6,3 @@ Format: Presentation 👨‍🏫
 
 ## Description (Norwegian)
 Når man skal utvikle en nettside er det som oftest lurt å benytte et godt rammeverk. Men hvilket skal du velge? Vi skal se på hvilke som er mest populære, for så å gå i dybden på de 4 mest populære. Vi skal så sammen finne ut av hvilket du liker best når det gjelder utvikler opplevelse, performance og økosystem. Jeg er spent på hvem som vinner etter avstemning og poengutdeling!
-
-## Private notes 🤫
