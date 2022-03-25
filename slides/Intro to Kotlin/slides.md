@@ -18,11 +18,11 @@ drawings:
 
 # Agenda/Timeline
 
-* 09:00-09:30 Intro til Kotlin
-* 09:30-10:30 Oppgaver
+* 10:20:00-10:40 Intro til Kotlin
+* 10:40-12:00 Oppgaver
   * Kotlin Koans
   * Codewars
-* 10:30 Konkuranse 🏆
+* 12:00 Konkuranse 🏆
 
 ---
 

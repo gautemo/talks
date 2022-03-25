@@ -13,6 +13,8 @@ Format: Workshop 👨‍💻
   * var val
   * types
   * nullable
+  * if else
+  * when
   * string interpolation
   * string """ """
   * list methods
