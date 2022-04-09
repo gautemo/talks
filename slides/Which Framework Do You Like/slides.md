@@ -132,11 +132,13 @@ function addTodo(){
 
 # Hva er et frontend rammeverk?
 
+<div v-click>
 * Abstraksjon
 * Oppsett/struktur for å lage HTML, JS og CSS
 * Lar deg utvikle UI komponenter
 * Holder på data
 * Reaktiv UI basert på data
+</div>
 
 ---
   
@@ -250,17 +252,103 @@ function addTodo(){
 
 # React
 
+- Public release 2013
+- Current release v18
+- Av Facebook / Meta
+- ~~Library~~
+- Virtual DOM
+- 2019 React hooks
+
+---
+
+## React komponent
+
+```jsx
+function MyButton() {
+  return (
+    <button>Click me</button>
+  );
+}
+```
+
+---
+
+## React komponent
+
+```jsx
+function MyApp() {
+  return (
+    <div>
+      <h1>Welcome to my app</h1>
+      <MyButton />
+    </div>
+  );
+}
+```
+
+---
+
+## React data
+
+```jsx
+function Counter() {
+  let count = 0
+  
+  return (
+    <>
+      <span>Count is {count}</span>
+      <button onClick={() => count++}>Bump</button>
+    </>
+  );
+}
+```
+
+<span class="text-5xl">🙅</span>
+
+---
+
+## React data
+
+```jsx
+function Counter() {
+  const [count, setCount] = useState(0)
+  
+  return (
+    <>
+      <span>Count is {count}</span>
+      <button onClick={() => setCount(count + 1)}>Bump</button>
+    </>
+  );
+}
+```
+
 ---
 
 # Angular
+
+- Initial release 2016
+- Current release v13
+- Av Google
+- TypeScript only
 
 ---
 
 # Vue
 
+- Initial release 2013
+- Av Evan You
+- Full time siden 2016
+- Virtual DOM
+- Progressive framework
+- 2020 Composition API
+
 ---
 
 # Svelte
+
+- Initial release 2016
+- Av Rich Harris
+- Compiler
 
 ---
 
