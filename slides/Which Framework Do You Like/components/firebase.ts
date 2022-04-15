@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, onSnapshot } from "firebase/firestore";
+import { getFirestore, collection, onSnapshot, setDoc, doc } from "firebase/firestore";
 import { ref } from 'vue'
 
 const firebaseConfig = {
@@ -22,6 +22,10 @@ const initial = () => ({
     { name: 'React', points: 0 }, 
     { name: 'Angular', points: 0 },
     { name: 'Usikker', points: 0 },
+  ],
+  language: [
+    { name: 'JavaScript', points: 0 }, 
+    { name: 'TypeScript', points: 0 },
   ]
 })
 export const votes = ref(initial())
@@ -36,3 +40,7 @@ onSnapshot(votesCollection, snapshot => {
   }
   votes.value = newState
 })
+
+export function setVoteIndex(index: number){
+  setDoc(doc(db, 'state', 'vote'), { index })
+}

@@ -268,9 +268,10 @@ function addTodo(){
 
 ## Bli med å gi din stemme
 
-![QR code](/qr-vote.png)
-
-[https://gaute-talks.netlify.app/which-framework-do-you-like-voting/](https://gaute-talks.netlify.app/which-framework-do-you-like-voting/)
+<div class="center">
+  <img src="/qr-vote.png" alt="QR code"/>
+  <a href="https://gaute-talks.netlify.app/which-framework-do-you-like-voting/" target="_blank">https://gaute-talks.netlify.app/which-framework-do-you-like-voting/</a>
+</div>
 
 <style scoped>
   img{
@@ -278,6 +279,42 @@ function addTodo(){
     height: 35%;
     width: 35%;
   }
+
+  .center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    gap: 15px;
+  }
+</style>
+
+---
+
+# Hvilken foretrekker du?
+
+<section class="options">
+  <div><logos-react class="text-9xl"/></div>
+  <div><logos-angular-icon class="text-9xl"/></div>
+  <div><logos-vue class="text-9xl"/></div>
+  <div><logos-svelte-icon class="text-9xl"/></div>
+  <div><mdi-head-question-outline class="text-9xl"/></div>
+</section>
+<Voting :index="1"/>
+
+<style scoped>
+.options{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.options div{
+  border: 3px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+}
 </style>
 
 ---
@@ -528,3 +565,39 @@ import MyButton from './MyButton.svelte'
 * Utvikler opplevelse
 * Performance
 * Økosystem
+
+---
+layout: center
+---
+# Utivkler opplevelse - 💯 poeng
+
+---
+
+# JavaScript eller TypeScript?
+
+<section class="options">
+  <div><logos-javascript class="text-9xl"/></div>
+  <div><logos-typescript-icon class="text-9xl"/></div>
+</section>
+<Voting :index="2"/>
+
+<style scoped>
+.options{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.options div{
+  border: 3px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+}
+</style>
+
+---
+
+<Vote title="JavaScript eller TypeScript?" votekey="language"/>
+
+---
