@@ -1,6 +1,7 @@
 ---
 theme: default
 routerMode: hash
+highlighter: shiki
 info: |
   ## Which Framework Do You Like
   By [Gaute Meek Olsen](https://twitter.com/GauteMeekOlsen)
@@ -11,6 +12,41 @@ drawings:
 # Hvilket frontend rammeverk liker du...
 
 <h2 v-click>sånn egentlig?</h2>
+
+---
+
+<div class="row">
+  <img src="/gaute.jpg">
+  <div class="column">
+    <h1>Gaute Meek Olsen</h1>
+    <Capra/>
+  </div>
+</div>
+
+<style>
+.row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 5rem;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img{
+  height: 320px;
+  border-radius: 40px;
+}
+
+h1{
+  font-size: 3rem;
+}
+</style>
 
 ---
 
@@ -132,13 +168,13 @@ function addTodo(){
 
 # Hva er et frontend rammeverk?
 
-<div v-click>
-* Abstraksjon
-* Oppsett/struktur for å lage HTML, JS og CSS
-* Lar deg utvikle UI komponenter
-* Holder på data
-* Reaktiv UI basert på data
-</div>
+<ul v-click>
+<li>Abstraksjon</li>
+<li>Oppsett/struktur for å lage HTML, JS og CSS</li>
+<li>Lar deg utvikle UI komponenter</li>
+<li>Holder på data</li>
+<li>Reaktiv UI basert på data</li>
+</ul>
 
 ---
   
@@ -264,7 +300,7 @@ function addTodo(){
 ## React komponent
 
 ```jsx
-function MyButton() {
+export function MyButton() {
   return (
     <button>Click me</button>
   );
@@ -276,10 +312,11 @@ function MyButton() {
 ## React komponent
 
 ```jsx
+import { MyButton } from './MyButton'
+
 function MyApp() {
   return (
     <div>
-      <h1>Welcome to my app</h1>
       <MyButton />
     </div>
   );
@@ -326,10 +363,78 @@ function Counter() {
 
 # Angular
 
+- Ikke AngularJS
 - Initial release 2016
 - Current release v13
 - Av Google
 - TypeScript only
+- Decorators
+- Dependency injection
+
+---
+
+## Angular komponent
+
+**my-button.component.ts**:
+```ts
+@Component({
+  selector: 'app-my-button',
+  templateUrl: './my-button.component.html',
+  styleUrls: ['./my-button.component.css']
+})
+export class MyButtonComponent {
+  constructor() {}
+}
+```
+
+**my-button.component.html**:
+```html
+<button>Click me</button>
+```
+
+---
+
+## Angular komponent
+
+**app.module.ts**:
+```ts
+@NgModule({
+  declarations: [
+    AppComponent,
+    MyButtonComponent,
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+```html
+<div>
+  <app-my-button></app-my-button>
+</div>
+```
+
+---
+
+## Angular data
+
+```ts
+@Component({
+  selector: 'app-counter',
+  templateUrl: './counter.component.html',
+})
+export class CounterComponent {
+  count = 0
+  increment(){
+    this.count++
+  }
+}
+```
+
+```html
+<span>Count is {{count}}</span>
+<button (click)="increment()">Bump</button>
+```
 
 ---
 
@@ -344,11 +449,77 @@ function Counter() {
 
 ---
 
+## Vue komponent
+
+```vue
+<script setup lang="ts">
+</script>
+
+<template>
+  <button>Click me</button>
+</template>
+
+<style scoped>
+button {
+  cursor: pointer;
+}
+</style>
+```
+
+---
+
+## Vue komponent
+
+```vue
+<script setup lang="ts">
+import MyButton from './MyButton.vue'
+</script>
+
+<template>
+  <div>
+    <MyButton/>
+  </div>
+</template>
+```
+
+---
+
 # Svelte
 
 - Initial release 2016
 - Av Rich Harris
 - Compiler
+
+---
+
+## Svelte komponent
+
+```svelte
+<script lang="ts">
+</script>
+
+<button>Click me</button>
+
+<style>
+button {
+  cursor: pointer;
+}
+</style>
+```
+
+---
+
+## Svelte komponent
+
+```svelte
+<script lang="ts">
+import MyButton from './MyButton.svelte'
+</script>
+
+<div>
+  <MyButton/>
+</div>
+```
 
 ---
 
