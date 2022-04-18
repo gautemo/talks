@@ -117,16 +117,6 @@ function setDarkMode(){
 }
 ```
 
-<style scoped>
-pre::-webkit-scrollbar{
-  height: 8px;
-}
-
-pre::-webkit-scrollbar-thumb { 
-  background: #99999938;
-}
-</style>
-
 ---
 
 # Smertepunkter
@@ -273,7 +263,7 @@ function addTodo(){
   <a href="https://gaute-talks.netlify.app/which-framework-do-you-like-voting/" target="_blank">https://gaute-talks.netlify.app/which-framework-do-you-like-voting/</a>
 </div>
 
-<style scoped>
+<style>
   img{
     border-radius: 15px;
     height: 35%;
@@ -300,22 +290,7 @@ function addTodo(){
   <div><logos-svelte-icon class="text-9xl"/></div>
   <div><mdi-head-question-outline class="text-9xl"/></div>
 </section>
-<Voting :index="1"/>
-
-<style scoped>
-.options{
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-around;
-  gap: 10px;
-}
-
-.options div{
-  border: 3px solid #000;
-  border-radius: 5px;
-  padding: 10px;
-}
-</style>
+<Voting :index="1" votekey="prefers"/>
 
 ---
 
@@ -348,7 +323,7 @@ export function MyButton() {
 
 ## React komponent
 
-```jsx
+```jsx{1,6}
 import { MyButton } from './MyButton'
 
 function MyApp() {
@@ -412,7 +387,7 @@ function Counter() {
 
 ## Angular komponent
 
-**my-button.component.ts**:
+*my-button.component.ts*:
 ```ts
 @Component({
   selector: 'app-my-button',
@@ -433,8 +408,8 @@ export class MyButtonComponent {
 
 ## Angular komponent
 
-**app.module.ts**:
-```ts
+*app.module.ts*:
+```ts{4}
 @NgModule({
   declarations: [
     AppComponent,
@@ -445,6 +420,7 @@ export class MyButtonComponent {
 export class AppModule { }
 ```
 
+*html fil*:
 ```html
 <div>
   <app-my-button></app-my-button>
@@ -507,7 +483,7 @@ button {
 
 ## Vue komponent
 
-```vue
+```vue{2,7}
 <script setup lang="ts">
 import MyButton from './MyButton.vue'
 </script>
@@ -516,6 +492,21 @@ import MyButton from './MyButton.vue'
   <div>
     <MyButton/>
   </div>
+</template>
+```
+
+---
+
+## Vue data
+
+```vue
+<script setup lang="ts">
+const count = ref(0)
+</script>
+
+<template>
+  <span>Count is {{count}}</span>
+  <button @click="count++">Bump</button>
 </template>
 ```
 
@@ -560,6 +551,21 @@ import MyButton from './MyButton.svelte'
 
 ---
 
+## Svelte data
+
+```svelte
+<script lang="ts">
+let count = 0
+</script>
+
+<template>
+  <span>Count is {count}</span>
+  <button on:click={() => count++}>Bump</button>
+</template>
+```
+
+---
+
 # Hva er viktig for et framework?
 
 * Utvikler opplevelse
@@ -579,25 +585,506 @@ layout: center
   <div><logos-javascript class="text-9xl"/></div>
   <div><logos-typescript-icon class="text-9xl"/></div>
 </section>
-<Voting :index="2"/>
-
-<style scoped>
-.options{
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-around;
-  gap: 10px;
-}
-
-.options div{
-  border: 3px solid #000;
-  border-radius: 5px;
-  padding: 10px;
-}
-</style>
+<Voting :index="2" votekey="language"/>
 
 ---
 
 <Vote title="JavaScript eller TypeScript?" votekey="language"/>
 
 ---
+
+# Template
+
+<section class="options">
+
+<div>
+JSX
+
+```jsx
+function MyComponent() {
+  const world = 'CapraCon'
+  return (
+    <>
+      <h1>Hello {world}</h1>
+      <p>Do you like JSX?</p>
+    </>
+  );
+}
+```
+
+</div>
+<div>
+HTML
+
+```html
+<h1>Hello {{world}}</h1>
+<p>Do you like HTML?</p>
+```
+
+</div>
+<div>
+Single File Comonent
+
+```svelte
+<script>
+const world = 'CapraCon'
+</script>
+
+<h1>Hello {world}</h1>
+<p>Do you like SFC?</p>
+
+<style></style>
+```
+
+</div>
+</section>
+
+<Voting :index="3" votekey="template"/>
+
+---
+
+<Vote title="Template" votekey="template"/>
+
+---
+
+# Conditional rendering
+
+<section class="options">
+
+<div>
+Short circuit
+
+```jsx
+{ day && <p>☀️</p> }
+```
+
+</div>
+<div>
+Directive
+
+```html
+<p v-if="day">☀️</p>
+```
+
+</div>
+<div>
+Svelte syntax
+
+```svelte
+{#if day}
+  <p>☀️</p>
+{/if}
+```
+
+</div>
+</section>
+
+<Voting :index="4" votekey="if"/>
+
+---
+
+---
+
+# Conditional rendering - else
+
+<section class="options">
+
+<div>
+Short circuit
+
+```jsx
+{day ? (
+  <p>☀️</p>
+) : (
+  <p>🌑</p>
+)}
+```
+
+</div>
+<div>
+Directive - Angular
+
+```html
+<p *ngIf="day; else night">☀️</p>
+<ng-template #night>
+  <p>🌑</p>
+</ng-template>
+```
+
+</div>
+<div>
+Directive - Vue
+
+```html
+<p v-if="day">☀️</p>
+<p v-else>🌑</p>
+```
+
+</div>
+<div>
+Svelte syntax
+
+```svelte
+{#if day}
+	<p>☀️</p>
+{:else}
+	<p>🌑</p>
+{/if}
+```
+
+</div>
+</section>
+
+<Voting :index="5" votekey="ifelse"/>
+
+---
+
+# Liste
+
+<section class="options grid">
+
+<div>
+React
+
+```jsx
+<ul>
+  {todos.map(todo => 
+    <li key={todo.id}>{todo.text}</li>
+  )}
+</ul >
+```
+
+</div>
+<div>
+Angular
+
+```html
+<ul>
+  <li
+    *ngFor="let todo of todos; trackBy: trackByFn" 
+  >{{todo.text}}</li>
+</ul>
+```
+
+</div>
+<div>
+Vue
+
+```html
+<ul>
+  <li v-for="todo in todos" :key="todo.id">{{todo.text}}</li>
+</ul>
+```
+
+</div>
+<div>
+Svelte
+
+```svelte
+<ul>
+  {#each todos as todo (todo.id)}
+    <li>{todo}</li>
+  {/each}
+</ul>
+```
+
+</div>
+</section>
+
+<Voting :index="6" votekey="list"/>
+
+---
+
+# State - primitive verdier
+
+<section class="options grid">
+
+<div>
+React
+
+```jsx
+const [count, setCount] = useState(0)
+const bump = () => setCount(count + 1)
+```
+
+</div>
+<div>
+Angular
+
+```ts
+class MyComponent {
+  count = 0
+  bump(){
+    this.count++
+  }
+}
+```
+
+</div>
+<div>
+Vue
+
+```js
+const count = ref(0)
+const bump = () => count.value++
+```
+
+</div>
+<div>
+Svelte
+
+```js
+let count = 0
+const bump = () => count++
+```
+
+</div>
+</section>
+
+<Voting :index="7" votekey="state"/>
+
+---
+
+# State - objekter
+
+<section class="options grid">
+
+<div>
+React
+
+```jsx
+const [position, setPosition] = useState({ x: 0, y: 0 })
+const moveX = (x) => setPosition({...position, x: x})
+```
+
+</div>
+<div>
+Angular
+
+```ts
+class MyComponent {
+  position = { x: 0, y: 0 }
+  moveX(x: number){
+    this.position.x = x
+  }
+}
+```
+
+</div>
+<div>
+Vue
+
+```js
+const position = reactive({ x: 0, y: 0 })
+const moveX = (x) => position.x = x
+```
+
+</div>
+<div>
+Svelte
+
+```js
+const position = { x: 0, y: 0 }
+const moveX = (x) => position.x = x
+```
+
+</div>
+</section>
+
+<Voting :index="8" votekey="stateobject"/>
+
+---
+
+# Beregnet verdi
+
+<section class="options grid">
+
+<div>
+React
+
+```jsx
+const [count, setCount] = useState(0)
+const double = count * 2
+```
+
+</div>
+<div>
+Angular
+
+```ts
+class MyComponent {
+  count = 0
+  double(){
+    return this.count * 2
+  }
+}
+```
+
+</div>
+<div>
+Vue
+
+```js
+const count = ref(0)
+const double = computed(() => count.value * 2)
+```
+
+</div>
+<div>
+Svelte
+
+```js
+let count = 0
+$: double = count * 2
+```
+
+</div>
+</section>
+
+<Voting :index="9" votekey="computed"/>
+
+---
+
+# Global state
+
+<section class="options">
+
+<div>
+React
+
+```jsx
+export const StoreContext = createContext()
+
+export function StoreProvider({ children }) {
+  const [todos, setTodos] = useState([])
+  return (
+    <StoreContext.Provider value={{todos, setTodos}}>
+      {children}
+    </StoreContext.Provider>
+  )
+}
+```
+```jsx
+import { StoreContext } from './StoreProvider'
+
+export function DeleteTodos() {
+  const { todos, setTodos } = useContext(StoreContext);
+  return (
+    <button onClick={() => setTodos([])}>
+      Delete {todos.length} todos
+    </button>
+  )
+}
+```
+
+</div>
+
+</section>
+<Voting :index="9" votekey="global"/>
+
+<style>
+  h1{ 
+    position: absolute;
+  }
+</style>
+
+---
+
+# Global state
+
+<section class="options">
+<div>
+Angular
+
+```ts
+@Injectable({
+  providedIn: 'root'
+})
+export class StoreService {
+  todos = new BehaviorSubject<string[]>([])
+}
+```
+```ts
+@Component({
+  selector: 'app-delete-todos',
+  templateUrl: './delete-todos.component.html',
+  styleUrls: ['./delete-todos.component.css']
+})
+export class DeleteTodosComponent {
+  constructor(private storeService: StoreService) {}
+
+  deleteTodos(){
+    this.storeService.todos.next([])
+  }
+}
+```
+```html
+<button (click)="deleteTodos()">
+  Delete {{storeService.todos.length}} todos
+</button>
+```
+
+</div>
+</section>
+<Voting :index="9" votekey="global"/>
+
+
+<style>
+  h1{ 
+    margin-bottom: -80px !important;
+  }
+</style>
+
+---
+
+# Global state
+
+<section class="options">
+<div>
+Vue
+
+```js
+export const store = reactive({
+  todos: []
+})
+```
+```vue
+<script setup>
+import { store } from './store'
+</script>
+
+<template>
+  <button @click="store.todos = []">
+    Delete {{store.todos.length}} todos
+  </button>
+</template>
+```
+
+</div>
+<div>
+Svelte
+
+```js
+export const store = writable({
+  todos: []
+});
+```
+```svelte
+import { store } from "./store";
+
+<button on:click={() => $store.todos = []}>
+  Delete {$store.todos.length} todos
+</button>
+```
+
+</div>
+</section>
+
+<Voting :index="9" votekey="global"/>
+
+---
+
+props
+events up
+lifecycle
+watch effect

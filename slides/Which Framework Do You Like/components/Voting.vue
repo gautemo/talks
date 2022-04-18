@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { setVoteIndex } from './firebase'
-const props = defineProps<{index: number}>()
+import { computed, ref } from 'vue'
+import { setVoteIndex, voteKeys, votes } from './firebase'
+const props = defineProps<{
+  index: number
+  votekey: voteKeys
+}>()
 
 function setActive(){
   setVoteIndex(props.index)
@@ -9,11 +12,17 @@ function setActive(){
 }
 
 const active = ref(false)
+const nrVotes = computed(() => {
+  return votes.value[props.votekey].reduce((acc, curr) => acc + curr.points, 0)
+})
 </script>
 
 <template>
   <section @click="setActive" :class="{active: active}">
-    <p>Avstemning</p>
+    <div class="column">
+      <p>Avstemning</p>
+      <p>Stemmer: {{nrVotes}}</p>
+    </div>
     <img src="/qr-vote.png" alt="QR code" />
   </section>
 </template>
@@ -28,6 +37,8 @@ section {
   border-radius: 2px;
   padding: 3px;
   cursor: pointer;
+  display: flex;
+  gap: 5px;
 }
 
 .active{
@@ -44,7 +55,6 @@ img {
 
 p{
   margin: 0;
-  display: inline-block;
   margin-right: 5px;
 }
 </style>

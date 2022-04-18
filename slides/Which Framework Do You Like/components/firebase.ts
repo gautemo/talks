@@ -26,7 +26,53 @@ const initial = () => ({
   language: [
     { name: 'JavaScript', points: 0 }, 
     { name: 'TypeScript', points: 0 },
-  ]
+  ],
+  template: [
+    { name: 'JSX', points: 0 }, 
+    { name: 'HTML', points: 0 },
+    { name: 'SFC', points: 0 },
+  ],
+  if: [
+    { name: 'React', points: 0 }, 
+    { name: 'Directive', points: 0 },
+    { name: 'Svelte', points: 0 },
+  ],
+  ifelse: [
+    { name: 'Short circuit', points: 0 }, 
+    { name: 'Angular', points: 0 },
+    { name: 'Vue', points: 0 },
+    { name: 'Svelte', points: 0 },
+  ],
+  list: [
+    { name: 'React', points: 0 }, 
+    { name: 'Angular', points: 0 },
+    { name: 'Vue', points: 0 },
+    { name: 'Svelte', points: 0 },
+  ],
+  state: [
+    { name: 'React', points: 0 }, 
+    { name: 'Angular', points: 0 },
+    { name: 'Vue', points: 0 },
+    { name: 'Svelte', points: 0 },
+  ],
+  stateobject: [
+    { name: 'React', points: 0 }, 
+    { name: 'Angular', points: 0 },
+    { name: 'Vue', points: 0 },
+    { name: 'Svelte', points: 0 },
+  ],
+  computed: [
+    { name: 'React', points: 0 }, 
+    { name: 'Angular', points: 0 },
+    { name: 'Vue', points: 0 },
+    { name: 'Svelte', points: 0 },
+  ],
+  global: [
+    { name: 'React', points: 0 }, 
+    { name: 'Angular', points: 0 },
+    { name: 'Vue', points: 0 },
+    { name: 'Svelte', points: 0 },
+  ],
 })
 export const votes = ref(initial())
 export type voteKeys = keyof typeof votes.value;

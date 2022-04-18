@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, setDoc, doc } from "firebase/firestore";
+import { getFirestore, collection, setDoc, doc, onSnapshot } from "firebase/firestore";
 import { getAuth, signInAnonymously, onAuthStateChanged } from "firebase/auth";
 import { ref } from 'vue'
 
@@ -27,3 +27,10 @@ export function vote(voteKey: string, value: string){
     setDoc(voteUserRef, {[voteKey]: value }, { merge: true })
   }
 }
+
+export const voteIndex = ref(0)
+
+onSnapshot(doc(db, 'state', 'vote'), (doc) => {
+  const data = doc.data() as {index: number} 
+  voteIndex.value = data.index
+})

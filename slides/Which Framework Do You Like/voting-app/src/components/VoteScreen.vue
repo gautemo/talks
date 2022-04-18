@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { vote } from '../firebase'
 
 const props = defineProps<{
@@ -9,13 +9,12 @@ const props = defineProps<{
 }>()
 
 const selected = ref<number>(-1)
-function confirm(){
+watch(selected, () => {
   vote(props.votekey, props.options[selected.value])
-}
+})
 </script>
 
 <template>
-<section>
   <h1>{{title}}</h1>
   <div class="options">
     <button @click="selected = 0" :class="{selected: selected === 0}">
@@ -34,18 +33,9 @@ function confirm(){
       <slot name="option5"></slot>
     </button>
   </div>
-  <button @click="confirm" class="confirm" :disabled="selected === -1">Bekreft</button>
-</section>
 </template>
 
 <style scoped>
-section{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
 h1{
   text-align: center;
 }
@@ -70,7 +60,4 @@ h1{
   background-color: greenyellow;
 }
 
-.confirm{
-  margin: 10px;
-}
 </style>
