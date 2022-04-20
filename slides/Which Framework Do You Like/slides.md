@@ -666,11 +666,11 @@ const moveX = (x) => position.x = x
 </div>
 </section>
 
-<Voting :index="8" votekey="stateobject"/>
+<Voting :index="8" votekey="state"/>
 
 ---
 
-<Vote title="State" votekey="stateobject"/>
+<Vote title="State" votekey="state"/>
 
 ---
 
@@ -725,149 +725,6 @@ $: double = count * 2
 ---
 
 <Vote title="Beregnet verdi" votekey="computed"/>
-
----
-
-# Global state
-
-<section class="options">
-
-<div>
-React
-
-```jsx
-export const StoreContext = createContext()
-
-export function StoreProvider({ children }) {
-  const [todos, setTodos] = useState([])
-  return (
-    <StoreContext.Provider value={{todos, setTodos}}>
-      {children}
-    </StoreContext.Provider>
-  )
-}
-```
-```jsx
-import { StoreContext } from './StoreProvider'
-
-export function DeleteTodos() {
-  const { todos, setTodos } = useContext(StoreContext);
-  return (
-    <button onClick={() => setTodos([])}>
-      Delete {todos.length} todos
-    </button>
-  )
-}
-```
-
-</div>
-
-</section>
-<Voting :index="9" votekey="global"/>
-
-<style>
-  h1{ 
-    position: absolute;
-  }
-</style>
-
----
-
-# Global state
-
-<section class="options">
-<div>
-Angular
-
-```ts
-@Injectable({
-  providedIn: 'root'
-})
-export class StoreService {
-  todos = new BehaviorSubject<string[]>([])
-}
-```
-```ts
-@Component({
-  selector: 'app-delete-todos',
-  templateUrl: './delete-todos.component.html',
-  styleUrls: ['./delete-todos.component.css']
-})
-export class DeleteTodosComponent {
-  constructor(private storeService: StoreService) {}
-
-  deleteTodos(){
-    this.storeService.todos.next([])
-  }
-}
-```
-```html
-<button (click)="deleteTodos()">
-  Delete {{storeService.todos.length}} todos
-</button>
-```
-
-</div>
-</section>
-<Voting :index="9" votekey="global"/>
-
-
-<style>
-  h1{ 
-    margin-bottom: -80px !important;
-  }
-</style>
-
----
-
-# Global state
-
-<section class="options">
-<div>
-Vue
-
-```js
-export const store = reactive({
-  todos: []
-})
-```
-```vue
-<script setup>
-import { store } from './store'
-</script>
-
-<template>
-  <button @click="store.todos = []">
-    Delete {{store.todos.length}} todos
-  </button>
-</template>
-```
-
-</div>
-<div>
-Svelte
-
-```js
-export const store = writable({
-  todos: []
-});
-```
-```svelte
-import { store } from "./store";
-
-<button on:click={() => $store.todos = []}>
-  Delete {$store.todos.length} todos
-</button>
-```
-
-</div>
-</section>
-
-<Voting :index="9" votekey="global"/>
-
----
-
-<Vote title="Global state" votekey="global"/>
 
 ---
 
@@ -942,6 +799,18 @@ export let count: number
 <Vote title="Props" votekey="props"/>
 
 ---
+
+### Spør meg senere om 🕙
+
+- Global state
+- Watchers/side effects
+- Lifecycle methods
+
+---
+
+# Utivkler opplevelse 
+
+<DX/>
 
 ---
 layout: center
@@ -1058,6 +927,10 @@ Svelte: Astro, SvelteKit, Elder.js
 
 ---
 
+<Winner/>
+
+---
+
 # Kilder
 
 - [GitHub stars](https://bestofjs.org/projects?tags=framework)
@@ -1071,3 +944,4 @@ Svelte: Astro, SvelteKit, Elder.js
 annetrammeverk du liker?
 antall klare
 Dropp global state? legg til bibliotek?
+fjern setup plasser

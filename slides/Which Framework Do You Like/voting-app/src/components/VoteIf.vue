@@ -4,15 +4,15 @@ import VoteScreen from './VoteScreen.vue';
 </script>
 
 <template>
-<VoteScreen title="JavaScript eller TypeScript?" votekey="template" :options="['JSX', 'HTML', 'SFC']">
+<VoteScreen title="Conditional rendering" votekey="if" :options="['JSX', 'Directive', 'Svelte syntax']">
   <template #option1>
     <span>JSX</span>
   </template>
   <template #option2>
-    <span>HTML</span>
+    <span>Directive</span>
   </template>
   <template #option3>
-    <span>Single File Components</span>
+    <span>Svelte syntax</span>
   </template>
 </VoteScreen>
 </template>

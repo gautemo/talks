@@ -224,3 +224,146 @@ const bump = () => count++
 </section>
 
 <Voting :index="7" votekey="state"/>
+
+---
+
+# Global state
+
+<section class="options">
+
+<div>
+React
+
+```jsx
+export const StoreContext = createContext()
+
+export function StoreProvider({ children }) {
+  const [todos, setTodos] = useState([])
+  return (
+    <StoreContext.Provider value={{todos, setTodos}}>
+      {children}
+    </StoreContext.Provider>
+  )
+}
+```
+```jsx
+import { StoreContext } from './StoreProvider'
+
+export function DeleteTodos() {
+  const { todos, setTodos } = useContext(StoreContext);
+  return (
+    <button onClick={() => setTodos([])}>
+      Delete {todos.length} todos
+    </button>
+  )
+}
+```
+
+</div>
+
+</section>
+<Voting :index="9" votekey="global"/>
+
+<style>
+  h1{ 
+    position: absolute;
+  }
+</style>
+
+---
+
+# Global state
+
+<section class="options">
+<div>
+Angular
+
+```ts
+@Injectable({
+  providedIn: 'root'
+})
+export class StoreService {
+  todos = new BehaviorSubject<string[]>([])
+}
+```
+```ts
+@Component({
+  selector: 'app-delete-todos',
+  templateUrl: './delete-todos.component.html',
+  styleUrls: ['./delete-todos.component.css']
+})
+export class DeleteTodosComponent {
+  constructor(private storeService: StoreService) {}
+
+  deleteTodos(){
+    this.storeService.todos.next([])
+  }
+}
+```
+```html
+<button (click)="deleteTodos()">
+  Delete {{storeService.todos.length}} todos
+</button>
+```
+
+</div>
+</section>
+<Voting :index="9" votekey="global"/>
+
+
+<style>
+  h1{ 
+    margin-bottom: -80px !important;
+  }
+</style>
+
+---
+
+# Global state
+
+<section class="options">
+<div>
+Vue
+
+```js
+export const store = reactive({
+  todos: []
+})
+```
+```vue
+<script setup>
+import { store } from './store'
+</script>
+
+<template>
+  <button @click="store.todos = []">
+    Delete {{store.todos.length}} todos
+  </button>
+</template>
+```
+
+</div>
+<div>
+Svelte
+
+```js
+export const store = writable({
+  todos: []
+});
+```
+```svelte
+import { store } from "./store";
+
+<button on:click={() => $store.todos = []}>
+  Delete {$store.todos.length} todos
+</button>
+```
+
+</div>
+</section>
+
+<Voting :index="9" votekey="global"/>
+
+---
+
+<Vote title="Global state" votekey="global"/>
