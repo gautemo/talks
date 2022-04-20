@@ -1006,6 +1006,67 @@ layout: center
 | Memory allocation | 6 🏅  | 10 🏅  | 1 🏅  | 
 
 ---
+layout: center
+---
+
+# Økosystem - 💯 poeng
+
+---
+
+<BarChart title="Slått sammen" postfix="%" :bars="[
+  { name: 'React', points: Number(([32.5,66.2,29.4,68.2,53.3].reduce((acc, p) => acc + p, 0)/5).toFixed(1)) },
+  { name: 'Vue', points: Number(([20.7,13.5,31,28,14.5].reduce((acc, p) => acc + p, 0)/5).toFixed(1)) },
+  { name: 'Angular', points: Number(([22,12.6,12.8,2.2,30.7].reduce((acc, p) => acc + p, 0)/5).toFixed(1)) },
+  { name: 'Svelte', points: Number(([8.1,1.1,9.1,0.3,0.4].reduce((acc, p) => acc + p, 0)/5).toFixed(1)) },
+]"/>
+
+|         | Poeng
+| ------- | -----  
+| React   | 20 🏅  
+| Vue     | 9 🏅   
+| Angular | 6 🏅   
+| Svelte  | 2 🏅   
+
+---
+
+# Metaframework
+
+|         | Metaframework                                                                              | Poeng
+| ------- | -------------------------------------------------------------------------------------------| ------
+| React   | <logos-astro/> <logos-nextjs/> <logos-remix-icon/> <logos-gatsby/> <logos-docusaurus/> +5  | 30 🏅
+| Vue     | <logos-astro/> <logos-nuxt-icon/> <logos-gridsome-icon/> +3                                | 18🏅
+| Svelte  | <logos-astro/> <logos-svelte-icon/> +1                                                     | 9🏅
+| Angular | <logos-angular-icon/> +1                                                                   | 6🏅
+
+<style>
+  svg, img{
+    height: 40px;
+    width: 40px;
+    background: #87878773;
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+</style>
+
+<!--
+React: Astro, Next.js, Remix, Umi, Blitz, After.js, Fusion.js | Gatsby, Docusaurus, React Static
+Vue: Astro, Nuxt, Factor, VitePress, Gridsome, Saber
+Angular: Scully, Angular Universal
+Svelte: Astro, SvelteKit, Elder.js
+-->
+
+---
+
+# Kilder
+
+- [GitHub stars](https://bestofjs.org/projects?tags=framework)
+- [js-framework-benchmark](https://krausest.github.io/js-framework-benchmark/current.html)
+- [frontend-framework-size-analysis](https://github.com/gautemo/frontend-framework-size-analysis)
+- [Metaframeworks SSG](https://bestofjs.org/projects?tags=ssg)
+- [Metaframeworks SSR](https://bestofjs.org/projects?tags=nodejs-framework)
+
+---
 
 annetrammeverk du liker?
 antall klare
