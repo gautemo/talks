@@ -34,6 +34,7 @@ html, body, #app{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: "Avenir Next","Nunito Sans",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
 footer{
@@ -42,5 +43,10 @@ footer{
 
 footer > button{
   flex: 1;
+  font-size: 1.5rem;
+}
+
+button:not([disabled]){
+  cursor: pointer;
 }
 </style>

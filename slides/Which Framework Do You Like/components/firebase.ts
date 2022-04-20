@@ -73,6 +73,12 @@ const initial = () => ({
     { name: 'Vue', points: 0 },
     { name: 'Svelte', points: 0 },
   ],
+  props: [
+    { name: 'React', points: 0 }, 
+    { name: 'Angular', points: 0 },
+    { name: 'Vue', points: 0 },
+    { name: 'Svelte', points: 0 },
+  ],
 })
 export const votes = ref(initial())
 export type voteKeys = keyof typeof votes.value;
