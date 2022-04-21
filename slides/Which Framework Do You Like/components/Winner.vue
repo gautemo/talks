@@ -42,6 +42,7 @@ const winner = computed(() => {
 </script>
 
 <template>
+  <div class="space"></div>
   <BarChart title="🏆 Vinner 🏆 - hva vi egentlig liker" :bars="winner" postfix="%" />
   <section>
     <label>
@@ -60,6 +61,9 @@ const winner = computed(() => {
 </template>
 
 <style scoped>
+.space{
+  margin: 50px;
+}
 section {
   display: flex;
   flex-direction: column;

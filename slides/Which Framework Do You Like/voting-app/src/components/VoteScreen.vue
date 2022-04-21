@@ -53,7 +53,7 @@ h1{
   color: currentColor;
   border: 2px solid #787878;
   border-radius: 5px;
-  padding: 5px;
+  padding: 15px;
 }
 
 .options > .selected{
