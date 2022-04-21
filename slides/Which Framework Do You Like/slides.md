@@ -155,6 +155,7 @@ h1{
 <div class="center">
   <img src="/qr-vote.png" alt="QR code"/>
   <a href="https://gaute-talks.netlify.app/which-framework-do-you-like-voting/" target="_blank">https://gaute-talks.netlify.app/which-framework-do-you-like-voting/</a>
+  <Ready/>
 </div>
 
 <style>
@@ -337,7 +338,7 @@ export class CounterComponent {
 ## Vue komponent
 
 ```vue
-<script setup lang="ts">
+<script lang="ts">
 </script>
 
 <template>
@@ -411,7 +412,7 @@ button {
 
 ## Svelte komponent
 
-```svelte
+```svelte{2,6}
 <script lang="ts">
 import MyButton from './MyButton.svelte'
 </script>
@@ -931,17 +932,16 @@ Svelte: Astro, SvelteKit, Elder.js
 
 ---
 
-# Kilder
+## Slides
 
+- [gaute-talks.netlify.app](https://gaute-talks.netlify.app/which-framework-do-you-like/index.html)
+
+## Kilder
+
+- [frontend-framework-compare](https://github.com/gautemo/frontend-framework-compare)
 - [GitHub stars](https://bestofjs.org/projects?tags=framework)
 - [js-framework-benchmark](https://krausest.github.io/js-framework-benchmark/current.html)
 - [frontend-framework-size-analysis](https://github.com/gautemo/frontend-framework-size-analysis)
 - [Metaframeworks SSG](https://bestofjs.org/projects?tags=ssg)
 - [Metaframeworks SSR](https://bestofjs.org/projects?tags=nodejs-framework)
 
----
-
-annetrammeverk du liker?
-antall klare
-Dropp global state? legg til bibliotek?
-fjern setup plasser

@@ -10,6 +10,7 @@ import VoteList from './components/VoteList.vue';
 import VoteState from './components/VoteState.vue';
 import VoteComputed from './components/VoteComputed.vue';
 import VoteProps from './components/VoteProps.vue';
+import Winner from './components/Winner.vue';
 
 const page = ref(0)
 
@@ -28,6 +29,7 @@ watchEffect(() => {
   <VoteState v-if="page === 6"/>
   <VoteComputed v-if="page === 7"/>
   <VoteProps v-if="page === 8"/>
+  <Winner v-if="page === 9"/>
   <footer>
     <button @click="page--" :disabled="page === 0">←</button>
     <button @click="page++" :disabled="page === voteIndex">→</button>
@@ -38,6 +40,8 @@ watchEffect(() => {
 html, body, #app{
   height: 100%;
   margin: 0;
+  background-color: #121212;
+  color: white;
 }
 
 #app{

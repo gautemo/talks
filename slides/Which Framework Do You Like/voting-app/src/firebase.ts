@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, setDoc, doc, onSnapshot } from "firebase/firestore";
+import { getFirestore, setDoc, doc, onSnapshot } from "firebase/firestore";
 import { getAuth, signInAnonymously, onAuthStateChanged } from "firebase/auth";
 import { ref } from 'vue'
+import { Votes } from './votes'
 
 const firebaseConfig = {
   apiKey: "AIzaSyBVgnEmbi0Pmx2tcUPFxStmLnoVo3_bgLs",
@@ -21,10 +22,10 @@ onAuthStateChanged(auth, (user) => uid.value = user?.uid);
 
 const db = getFirestore();
 
-export function vote(voteKey: string, value: string){
+export function vote(votes: Votes){
   if(uid.value){
     const voteUserRef = doc(db, 'votes', uid.value)
-    setDoc(voteUserRef, {[voteKey]: value }, { merge: true })
+    setDoc(voteUserRef, votes, { merge: true })
   }
 }
 

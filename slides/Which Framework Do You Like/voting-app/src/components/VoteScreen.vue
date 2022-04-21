@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { vote } from '../firebase'
+import { votes, VoteKey } from '../votes';
 
 const props = defineProps<{
   title: string,
-  votekey: string,
+  votekey: VoteKey,
   options: string[],
 }>()
 
-const selected = ref<number>(-1)
+const selected = ref<number>(props.options.indexOf(votes.value[props.votekey] ?? ''))
 watch(selected, () => {
-  vote(props.votekey, props.options[selected.value])
+  votes.value[props.votekey] = props.options[selected.value]
 })
 </script>
 
@@ -50,14 +50,15 @@ h1{
 
 .options > button{
   background: none;
-  border: 2px solid rgb(139, 139, 0);
+  color: currentColor;
+  border: 2px solid #787878;
   border-radius: 5px;
   padding: 5px;
 }
 
 .options > .selected{
   border-color: green;
-  background-color: greenyellow;
+  background-color: #5c9900;
 }
 
 </style>

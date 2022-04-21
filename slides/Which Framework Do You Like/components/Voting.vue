@@ -39,6 +39,7 @@ section {
   cursor: pointer;
   display: flex;
   gap: 5px;
+  background-color: var(--prism-background);
 }
 
 .active{

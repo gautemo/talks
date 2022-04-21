@@ -4,7 +4,7 @@ import VoteScreen from './VoteScreen.vue';
 </script>
 
 <template>
-<VoteScreen title="Conditional rendering" votekey="if" :options="['JSX', 'Directive', 'Svelte syntax']">
+<VoteScreen title="Conditional rendering" votekey="if" :options="['React', 'Directive', 'Svelte']">
   <template #option1>
     <span>JSX</span>
   </template>

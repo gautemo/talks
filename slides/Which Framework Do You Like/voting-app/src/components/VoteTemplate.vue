@@ -4,7 +4,7 @@ import VoteScreen from './VoteScreen.vue';
 </script>
 
 <template>
-<VoteScreen title="JavaScript eller TypeScript?" votekey="template" :options="['JSX', 'HTML', 'SFC']">
+<VoteScreen title="Template" votekey="template" :options="['JSX', 'HTML', 'SFC']">
   <template #option1>
     <span>JSX</span>
   </template>

@@ -69,9 +69,11 @@ const initial = () => ({
   ],
 })
 export const votes = ref(initial())
+export const ready = ref(0)
 export type voteKeys = keyof typeof votes.value;
 onSnapshot(votesCollection, snapshot => {
   const newState = initial()
+  ready.value = snapshot.docs.length
   for(const doc of snapshot.docs){
     const data = doc.data()
     for(const [prop, value] of Object.entries(data)){
