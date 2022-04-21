@@ -367,3 +367,141 @@ import { store } from "./store";
 ---
 
 <Vote title="Global state" votekey="global"/>
+
+---
+
+## React komponent
+
+```jsx
+export function MyButton() {
+  return (
+    <button>Click me</button>
+  );
+}
+```
+
+---
+
+## React komponent
+
+```jsx{1,6}
+import { MyButton } from './MyButton'
+
+function MyApp() {
+  return (
+    <div>
+      <MyButton />
+    </div>
+  );
+}
+```
+
+---
+
+## Angular komponent
+
+*my-button.component.ts*:
+```ts
+@Component({
+  selector: 'app-my-button',
+  templateUrl: './my-button.component.html',
+  styleUrls: ['./my-button.component.css']
+})
+export class MyButtonComponent {
+  constructor() {}
+}
+```
+
+**my-button.component.html**:
+```html
+<button>Click me</button>
+```
+
+---
+
+## Angular komponent
+
+*app.module.ts*:
+```ts{4}
+@NgModule({
+  declarations: [
+    AppComponent,
+    MyButtonComponent,
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+*html fil*:
+```html
+<div>
+  <app-my-button></app-my-button>
+</div>
+```
+
+---
+
+## Vue komponent
+
+```vue
+<script lang="ts">
+</script>
+
+<template>
+  <button>Click me</button>
+</template>
+
+<style scoped>
+button {
+  cursor: pointer;
+}
+</style>
+```
+
+---
+
+## Vue komponent
+
+```vue{2,7}
+<script setup lang="ts">
+import MyButton from './MyButton.vue'
+</script>
+
+<template>
+  <div>
+    <MyButton/>
+  </div>
+</template>
+```
+
+---
+
+## Svelte komponent
+
+```svelte
+<script lang="ts">
+</script>
+
+<button>Click me</button>
+
+<style>
+button {
+  cursor: pointer;
+}
+</style>
+```
+
+---
+
+## Svelte komponent
+
+```svelte{2,6}
+<script lang="ts">
+import MyButton from './MyButton.svelte'
+</script>
+
+<div>
+  <MyButton/>
+</div>
+```

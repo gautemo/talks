@@ -154,7 +154,7 @@ h1{
 
 <div class="center">
   <img src="/qr-vote.png" alt="QR code"/>
-  <a href="https://gaute-talks.netlify.app/which-framework-do-you-like-voting/" target="_blank">https://gaute-talks.netlify.app/which-framework-do-you-like-voting/</a>
+  <a href="https://gaute-talks.netlify.app/which-framework-do-you-like-voting/" target="_blank">g-goto.web.app/a</a>
   <Ready/>
 </div>
 
@@ -206,34 +206,6 @@ h1{
 ## React komponent
 
 ```jsx
-export function MyButton() {
-  return (
-    <button>Click me</button>
-  );
-}
-```
-
----
-
-## React komponent
-
-```jsx{1,6}
-import { MyButton } from './MyButton'
-
-function MyApp() {
-  return (
-    <div>
-      <MyButton />
-    </div>
-  );
-}
-```
-
----
-
-## React data
-
-```jsx
 function Counter() {
   const [count, setCount] = useState(0)
   
@@ -259,56 +231,13 @@ function Counter() {
 
 ---
 
-## Angular komponent
-
-*my-button.component.ts*:
-```ts
-@Component({
-  selector: 'app-my-button',
-  templateUrl: './my-button.component.html',
-  styleUrls: ['./my-button.component.css']
-})
-export class MyButtonComponent {
-  constructor() {}
-}
-```
-
-**my-button.component.html**:
-```html
-<button>Click me</button>
-```
-
----
-
-## Angular komponent
-
-*app.module.ts*:
-```ts{4}
-@NgModule({
-  declarations: [
-    AppComponent,
-    MyButtonComponent,
-  ],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-```
-
-*html fil*:
-```html
-<div>
-  <app-my-button></app-my-button>
-</div>
-```
-
----
-
 ## Angular data
 
 ```ts
 @Component({
   selector: 'app-counter',
   templateUrl: './counter.component.html',
+  styleUrls: ['./counter.component.css']
 })
 export class CounterComponent {
   count = 0
@@ -338,41 +267,6 @@ export class CounterComponent {
 ## Vue komponent
 
 ```vue
-<script lang="ts">
-</script>
-
-<template>
-  <button>Click me</button>
-</template>
-
-<style scoped>
-button {
-  cursor: pointer;
-}
-</style>
-```
-
----
-
-## Vue komponent
-
-```vue{2,7}
-<script setup lang="ts">
-import MyButton from './MyButton.vue'
-</script>
-
-<template>
-  <div>
-    <MyButton/>
-  </div>
-</template>
-```
-
----
-
-## Vue data
-
-```vue
 <script setup lang="ts">
 const count = ref(0)
 </script>
@@ -381,6 +275,9 @@ const count = ref(0)
   <span>Count is {{count}}</span>
   <button @click="count++">Bump</button>
 </template>
+
+<style scoped>
+</style>
 ```
 
 ---
@@ -397,44 +294,14 @@ const count = ref(0)
 
 ```svelte
 <script lang="ts">
-</script>
-
-<button>Click me</button>
-
-<style>
-button {
-  cursor: pointer;
-}
-</style>
-```
-
----
-
-## Svelte komponent
-
-```svelte{2,6}
-<script lang="ts">
-import MyButton from './MyButton.svelte'
-</script>
-
-<div>
-  <MyButton/>
-</div>
-```
-
----
-
-## Svelte data
-
-```svelte
-<script lang="ts">
 let count = 0
 </script>
 
-<template>
-  <span>Count is {count}</span>
-  <button on:click={() => count++}>Bump</button>
-</template>
+<span>Count is {count}</span>
+<button on:click={() => count++}>Bump</button>
+
+<style>
+</style>
 ```
 
 ---
@@ -741,9 +608,6 @@ function MyComponent(props: { count: number }){
   return <p>Count: {props.count}</p>
 }
 ```
-```jsx
-<MyComponent count={count}>
-```
 
 </div>
 <div>
@@ -753,9 +617,6 @@ Angular
 class MyComponent {
   @Input() count!: number
 }
-```
-```html
-<app-my-component [count]="count"></app-my-component>
 ```
 
 </div>
@@ -772,9 +633,6 @@ defineProps<{
   <p>Count: {{count}}</p>
 </template>
 ```
-```html
-<MyComponent :count="count"/>
-```
 
 </div>
 <div>
@@ -785,9 +643,6 @@ Svelte
 export let count: number
 </script>
 <p>Count: {count}</p>
-```
-```html
-<MyComponent {count}/>
 ```
 
 </div>
@@ -821,12 +676,12 @@ layout: center
 
 ---
 
-# App size
+# App size - TodoMVC
 
 |           | Vue     | Svelte | React   | Angular
 | --------- | ------- | ------ | ------- | --------
-| Component | 1.45kb  | 2.31kb | 1.56kb  | 1.68kB  
 | Vendor    | 18.10kb | 1.54kb | 38.55kb | 41.74kB 
+| Component | 1.45kb  | 2.31kb | 1.56kb  | 1.68kB  
 
 ---
 
@@ -945,4 +800,3 @@ Svelte: Astro, SvelteKit, Elder.js
 - [frontend-framework-size-analysis](https://github.com/gautemo/frontend-framework-size-analysis)
 - [Metaframeworks SSG](https://bestofjs.org/projects?tags=ssg)
 - [Metaframeworks SSR](https://bestofjs.org/projects?tags=nodejs-framework)
-

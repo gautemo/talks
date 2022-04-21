@@ -9,17 +9,17 @@ setInterval(() => {
   if(index.value >= colors.length) index.value = 0
 }, 1000*120)
 const color = computed(() => {
-  if([13,14,15,16].includes(slidev.nav.currentPage)) return colors[0]
-  if([17,18,19,20].includes(slidev.nav.currentPage)) return colors[3]
-  if([21,22,23,24].includes(slidev.nav.currentPage)) return colors[2]
-  if([25,26,27,28].includes(slidev.nav.currentPage)) return colors[1]
+  if([13,14].includes(slidev.nav.currentPage)) return colors[0]
+  if([15,16].includes(slidev.nav.currentPage)) return colors[3]
+  if([17,18].includes(slidev.nav.currentPage)) return colors[2]
+  if([19,20].includes(slidev.nav.currentPage)) return colors[1]
   return colors[index.value]
 })
 </script>
 
 <template>
   <footer>
-    <div class="about-me" v-if="[2, 57].includes(slidev.nav.currentPage)">
+    <div class="about-me" v-if="[2, 49].includes(slidev.nav.currentPage)">
       <Homepage />
       <Twitter />
     </div>
