@@ -3,7 +3,7 @@ import { computed, ref } from 'vue'
 import { setVoteIndex, voteKeys, votes } from './firebase'
 const props = defineProps<{
   index: number
-  votekey: voteKeys
+  votekey?: voteKeys
 }>()
 
 function setActive(){
@@ -13,6 +13,7 @@ function setActive(){
 
 const active = ref(false)
 const nrVotes = computed(() => {
+  if(!props.votekey) return -1
   return votes.value[props.votekey].reduce((acc, curr) => acc + curr.points, 0)
 })
 </script>
@@ -20,8 +21,9 @@ const nrVotes = computed(() => {
 <template>
   <section @click="setActive" :class="{active: active}">
     <div class="column">
-      <p>Avstemning</p>
-      <p>Stemmer: {{nrVotes}}</p>
+      <p v-if="props.votekey">Avstemning</p>
+      <p v-else>Vinner</p>
+      <p v-if="props.votekey">Stemmer: {{nrVotes}}</p>
     </div>
     <img src="/qr-vote.png" alt="QR code" />
   </section>

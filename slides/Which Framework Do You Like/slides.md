@@ -613,7 +613,7 @@ Svelte
 </div>
 </section>
 
-<Voting :index="6" votekey="list"/>
+<Voting :index="5" votekey="list"/>
 
 ---
 
@@ -667,7 +667,7 @@ const moveX = (x) => position.x = x
 </div>
 </section>
 
-<Voting :index="8" votekey="state"/>
+<Voting :index="6" votekey="state"/>
 
 ---
 
@@ -721,7 +721,7 @@ $: double = count * 2
 </div>
 </section>
 
-<Voting :index="9" votekey="computed"/>
+<Voting :index="7" votekey="computed"/>
 
 ---
 
@@ -793,7 +793,7 @@ export let count: number
 </div>
 </section>
 
-<Voting :index="10" votekey="props"/>
+<Voting :index="8" votekey="props"/>
 
 ---
 
@@ -929,6 +929,7 @@ Svelte: Astro, SvelteKit, Elder.js
 ---
 
 <Winner/>
+<Voting :index="9"/>
 
 ---
 
