@@ -11,7 +11,36 @@ drawings:
 
 # Hvilket frontend rammeverk liker du...
 
+<div class="box" v-click-hide>
+  Mens vi venter, gå til:
+  <img src="/qr-vote.png" alt="QR code"/>
+  <a href="https://gaute-talks.netlify.app/which-framework-do-you-like-voting/" target="_blank">g-goto.web.app/a</a>
+</div>
+
 <h2 v-click>sånn egentlig?</h2>
+
+<style>
+  img{
+    border-radius: 15px;
+    height: 200px;
+    width: 200px;
+  }
+
+  .box{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 15px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  a{
+    width: fit-content;
+  }
+</style>
 
 ---
 
