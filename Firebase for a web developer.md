@@ -2,7 +2,7 @@
 Format: Presentation 👨‍🏫
 
 ### 16 April 2021 - conference CapraCon
-[Recording - norwegian](https://www.youtube.com/watch?v=KfhNnRVk3KA&ab_channel=CapraConsulting)
+[Recording - norwegian](https://www.youtube.com/watch?v=KfhNnRVk3KA&ab_channel=CapraConsulting)  
 [Slides](https://docs.google.com/presentation/d/1xlCC0iLlPjif_CNc7bIqZ6DWQ4jnqg_pUbZc1G6wHxg/edit?usp=sharing)  
 [Repo](https://github.com/gautemo/fama)
 
