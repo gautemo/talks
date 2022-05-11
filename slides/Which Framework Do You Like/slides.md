@@ -634,7 +634,6 @@ React
 
 ```jsx
 function MyComponent(props: { count: number }){
-  return <p>Count: {props.count}</p>
 }
 ```
 
@@ -658,9 +657,6 @@ defineProps<{
   count: number
 }>()
 </script>
-<template>
-  <p>Count: {{count}}</p>
-</template>
 ```
 
 </div>
@@ -671,7 +667,6 @@ Svelte
 <script lang="ts">
 export let count: number
 </script>
-<p>Count: {count}</p>
 ```
 
 </div>

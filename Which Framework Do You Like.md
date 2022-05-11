@@ -2,6 +2,7 @@
 Format: Presentation 👨‍🏫
 
 ### 22 April 2022 - conference CapraCon
+### 12 May 2022 - frontendForum, Gjensidige
 [Slides](https://gaute-talks.netlify.app/which-framework-do-you-like/index.html)  
 
 ## Description (Norwegian)
