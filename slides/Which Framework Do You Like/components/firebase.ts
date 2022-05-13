@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, onSnapshot, setDoc, doc } from "firebase/firestore";
+import { getFirestore, collection, onSnapshot, setDoc, doc, getDocs } from "firebase/firestore";
 import { ref, computed } from 'vue'
 
 const firebaseConfig = {
@@ -115,3 +115,8 @@ export const dx = computed(() => {
     { name: 'Vue', points: points.Vue },
   ].sort((a,b) => b.points - a.points)
 })
+
+// const votesData = await getDocs(votesCollection)
+// votesData.forEach((document) => {
+//   setDoc(doc(db, 'votes-gjensidige-frontend-forum', document.id), document.data())
+// });
