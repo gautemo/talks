@@ -40,7 +40,7 @@ jobs:
           npm i
           npm run build
           mv dist ../web/intro-to-kotlin
-      - name: build Frontend testing
+      - name: build Frontend testing workshop
         run: |
           cd "slides/Frontend testing workshop"
           npm i
