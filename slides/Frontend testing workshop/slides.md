@@ -3,6 +3,7 @@ theme: seriph
 background: bg.png
 class: 'text-center'
 highlighter: shiki
+routerMode: hash
 lineNumbers: false
 info: |
   ## Frontend testing workshop
