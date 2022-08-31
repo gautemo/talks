@@ -8,7 +8,6 @@ import { indentOnInput } from "@codemirror/language"
 import { defaultKeymap, history, historyKeymap } from "@codemirror/commands"
 import { snippets } from '../snippets'
 import { closeBrackets, closeBracketsKeymap } from '@codemirror/autocomplete'
-import { globalStoreCode } from './globalStoreCode'
 
 const props = defineProps<{
   snippetId: number
@@ -52,7 +51,6 @@ const runCode = async () => {
     output.value.error.push(error.message);
   }
   outputTimeout.value = window.setTimeout(() => (output.value = { log: [], error: []}), 6000);
-  globalStoreCode.value = manipCode
 }
 
 const updateCode = (code: string) => {

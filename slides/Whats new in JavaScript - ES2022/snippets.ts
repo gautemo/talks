@@ -62,10 +62,12 @@ console.log(object.hasOwnProperty('myNumber'));`,
   {
     initial:
       `const match = /\\d+/.exec('find the number 123 please');
-const start = match.index;`,
+const start = match.index;
+console.log(start);`,
     complete:
     `const match = /\\d+/d.exec('find the number 123 please');
-const [start, stop] = match.indices[0];`,
+const [start, stop] = match.indices[0];
+console.log(start, stop);`,
   },
   {
     initial:

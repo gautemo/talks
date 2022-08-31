@@ -182,7 +182,7 @@ layout: center
 
 ---
 
-<RegExpIndices/>
+<CodeSlide label="RegExp match indices" :snippetId="4"/>
 
 ---
 
