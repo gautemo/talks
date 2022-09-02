@@ -55,9 +55,9 @@ try {
 console.log(object.hasOwnProperty('myNumber'));`,
     complete:
       `const object = {
-        myNumber: 5
-      }
-      console.log(Object.hasOwn(object, 'myNumber'));`,
+  myNumber: 5
+}
+console.log(Object.hasOwn(object, 'myNumber'));`,
   },
   {
     initial:
@@ -75,11 +75,15 @@ console.log(start, stop);`,
   constructor() {
     this.name = 'Optimus Prime';
   };
-}`,
+}
+const robot = new Robot();
+console.log(robot.name);`,
     complete:
     `class Robot {
   name = 'Optimus Prime';
-}`,
+}
+const robot = new Robot();
+console.log(robot.name);`,
   },
   {
     initial:
@@ -105,7 +109,7 @@ console.log(start, stop);`,
   static price = 999;
   
   static {
-    const isSale = new Date().getHours() < 10;
+    const isSale = new Date().getHours() < 14;
     if(isSale) {
       this.price = 50;
     }
