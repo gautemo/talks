@@ -15,11 +15,11 @@ console.log(data.fact);`,
     initial:
       `const list = ['🐯', '🐥', '🦞'];
 const last = list[list.length - 1];
-console.log(last)`,
+console.log(last);`,
     complete:
     `const list = ['🐯', '🐥', '🦞'];
 const last = list.at(-1);
-console.log(last)`,
+console.log(last);`,
   },
   {
     initial:
@@ -30,9 +30,9 @@ console.log(last)`,
 }
 
 try {
-  save('something')
+  save('something');
 } catch (error) {
-  console.error(error)
+  console.error(error);
 }`,
     complete:
     `function save(data) {
@@ -42,22 +42,22 @@ try {
 }
 
 try {
-  save('something')
+  save('something');
 } catch (error) {
-  console.error(error, error.cause)
+  console.error(error, error.cause);
 }`,
   },
   {
     initial:
-      `const object = {
-  myNumber: 5
+      `const human = {
+  age: 5
 }
-console.log(object.hasOwnProperty('myNumber'));`,
+console.log(human.hasOwnProperty('age'));`,
     complete:
-      `const object = {
-  myNumber: 5
+      `const human = {
+  age: 5
 }
-console.log(Object.hasOwn(object, 'myNumber'));`,
+console.log(Object.hasOwn(human, 'age'));`,
   },
   {
     initial:
@@ -94,8 +94,8 @@ console.log(robot.name);`,
     `class Robot {
   #age = 0;
 
-  #increaseAge(addedYears) {
-    this.#age += addedYears;
+  #increaseAge() {
+    this.#age++;
   }
 }`,
   },
