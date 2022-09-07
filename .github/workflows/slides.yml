@@ -46,6 +46,12 @@ jobs:
           npm i
           npm run build
           mv dist ../web/frontend-testing-workshop
+      - name: build Whats new in JavaScript - ES2022
+        run: |
+          cd "slides/Whats new in JavaScript - ES2022"
+          npm i
+          npm run build
+          mv dist ../web/whats-new-in-javascript-es2022
       - name: deploy
         run: |
           cd slides

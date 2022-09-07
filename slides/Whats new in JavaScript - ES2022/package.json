@@ -14,7 +14,7 @@
     "@codemirror/state": "^6.1.1",
     "@codemirror/theme-one-dark": "^6.0.0",
     "@codemirror/view": "^6.2.0",
-    "@slidev/cli": "^0.35.5",
+    "@slidev/cli": "^0.35.6",
     "@slidev/theme-default": "*",
     "@slidev/theme-seriph": "*"
   },

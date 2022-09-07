@@ -112,7 +112,7 @@ span:nth-child(6) {
 
 ---
 layout: center
-clicks: 3
+clicks: 4 
 ---
 
 <section>
@@ -128,8 +128,8 @@ clicks: 3
 
 <section v-click="3">
   <div>ES6</div>
-  <div>===</div>
-  <div>ES2015</div>
+  <div v-click="4">===</div>
+  <div v-click="4">ES2015</div>
 </section>
 
 <style>
@@ -200,5 +200,4 @@ layout: center
 
 # Takk for meg!
 
-TODO
-<Tweet id="1468895442184323072"/>
+<Tweet id="1567600650917216258" scale="0.7"/>
