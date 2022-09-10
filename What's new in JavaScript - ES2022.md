@@ -2,9 +2,9 @@
 Format: Lightning talk ⚡
 
 ### 08 September 2022 - JavaZone
-TODO: ~~[Recording - norwegian]()~~  
+[Recording - norwegian](https://vimeo.com/748031775)  
 [repo](https://github.com/gautemo/ES-Intro/tree/master/es13)  
-TODO: ~~[slides](https://gaute-talks.netlify.app/whats-new-in-javascript-es2022/index.html)~~  
+[slides](https://gaute-talks.netlify.app/whats-new-in-javascript-es2022/index.html)  
 
 
 ## Description
