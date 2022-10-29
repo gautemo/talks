@@ -8,4 +8,4 @@ Format: Workshop 👨‍💻
 
 ## Description
 
-What PWA is. Why PWA is the answer to everything. Why PWA is NOT the answer to everything. How to transform a website to a PWA. Hands-on by creating the App Shake PWA.
+What PWA is. Why PWA is the answer to everything. Why PWA is NOT the answer to everything. How to transform a website into a PWA. Hands-on by creating the App Shake PWA.
