@@ -6,7 +6,7 @@ Format: Workshop 👨‍💻
 
 [Slides](https://gaute-talks.netlify.app/intro-to-kotlin/index.html)  
 
-### Description
+## Description
 
 Introduction to Kotlin and the benefits of the language. Then jumping into tasks at your own pace and a final competition.
 
