@@ -5,6 +5,10 @@ Format: Presentation 👨‍🏫
 [Slides](https://docs.google.com/presentation/d/1yMCeY4Cyarlz6v9gF0rPkrN7TdqCCE1DdLApnD-YVb0/edit?usp=sharing)  
 [Repo](https://github.com/gautemo/blog-devto-backend)
 
+## Description
+
+I've been writing many developer blogs myself. There are some good reasons why you should write and I'll show you how to create your blog.
+
 ## Private notes 🤫
 
 What's your motivation for blogging?:  

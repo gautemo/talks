@@ -1,14 +1,22 @@
 # Intro to React Hooks
+
 Format: Presentation 👨‍🏫
 
 ### 1 September 2021 - Capra
+
 [Slides](https://docs.google.com/presentation/d/1WH8K-EbINJ01FaVO7nZp_KJhhCgdoJaFNvVRiKLuO3M/edit?usp=sharing)  
 [Article](https://dev.to/gautemeekolsen/explain-react-hooks-like-i-m-1nkp)
 
+## Description
+
+React version 16.8 introduced hooks, a new way to write components with functions. Let's look at the hooks and which one you most likely will use.
+
 ## Private notes 🤫
+
 <details>
   <summary>Expand</summary>
-function:
+
+  function:
 ```jsx
 function App(props){
   return <h1>Hei {props.name}</h1>
