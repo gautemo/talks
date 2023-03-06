@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kartlegging av web rendering</title>
+</head>
+<body>
+  <section>
+    <h1>Kartlegging av web rendering</h1>
+    <h2>
+      Av
+      <a href="https://gaute.dev" target="_blank" rel="noopener noreferrer">Gaute Meek Olsen</a>
+    </h2>
+    <img 
+      src="https://pbs.twimg.com/profile_images/1291071272407924737/wRtyy8aN_400x400.jpg"
+      alt="Gaute Meek Olsen"
+      height="200"
+      width="200"
+    >
+  </section>
+  <section>
+    <h2>Men nå har det blitt så mange begreper</h2>
+    <ul>
+      <li>SPA</li>
+      <li>MPA</li>
+      <li>SSG</li>
+      <li>SSR</li>
+      <li>CSR</li>
+      <li>Hydration</li>
+      <li>Resumability</li>
+      <li>Islands</li>
+      <li>Progressive enhancement</li>
+      <li>Partial hydration</li>
+      <li>Edge rendering</li>
+      <li>...</li>
+    </ul>
+  </section>
+
+  <style>
+    @import url(https://fonts.bunny.net/css?family=be-vietnam-pro:400);
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      font-size: 1.1rem;
+    }
+
+    body {
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+    }
+
+    section {
+      height: 100%;
+      scroll-snap-align: start;
+      background-image: linear-gradient( 135deg, #FFF6B7 10%, #F6416C 100%);
+      padding: 1rem;
+    }
+
+    h1 {
+      text-align: center;
+      padding-top: 1em;
+      font-size: 2.5em;
+      text-shadow: 2px 2px #F6416C;
+    }
+
+    img {
+      border-radius: 50%;
+    }
+
+    section:first-child {
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      justify-items: center;
+    }
+
+    a {
+      color: #2b6daf;
+    }
+
+    section:nth-child(2) {
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 5em;
+      font-size: 1.3em;
+      display: grid;
+      grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+      text-align: center;
+    }
+  </style>
+</body>
+</html>
