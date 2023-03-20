@@ -1,14 +1,16 @@
 <script setup lang="ts">
 import Server from './Server.vue'
 
-const props = defineProps<{ step: number, working: boolean }>()
+const props = defineProps<{ steps: string[], working: boolean }>()
 </script>
 
 <template>
   <main>
     <slot></slot>
     <section>
-      <div v-for="index in props.step" :key="index" :class="{ left: index % 2 === 0 }"></div>
+      <div v-for="(step, index) in props.steps" :key="index" :class="{ left: index % 2 !== 0 }">
+        {{ step }}
+      </div>
     </section>
     <Server :working="props.working"/>
   </main>
@@ -25,12 +27,14 @@ main {
 section {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 35px;
 }
 
 div {
   border-bottom: 3px solid #000;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 div::after {
@@ -41,7 +45,7 @@ div::after {
   transform: rotate(25deg);
   position: absolute;
   right: 0;
-  top: -5px;
+  top: 22px;
 }
 
 div::before {
@@ -52,7 +56,7 @@ div::before {
   transform: rotate(-25deg);
   position: absolute;
   right: 0;
-  top: 5px;
+  top: 31px;
 }
 
 .left::after {

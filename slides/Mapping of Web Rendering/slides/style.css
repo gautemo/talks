@@ -1,0 +1,10 @@
+.ssr-enter-active,
+.ssr-leave-active {
+  transition: all 2s ease;
+}
+
+.ssr-enter-from,
+.ssr-leave-to {
+  opacity: 0;
+}
+
