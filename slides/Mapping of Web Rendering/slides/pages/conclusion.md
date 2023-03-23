@@ -13,7 +13,7 @@
 ---
 
 <section>
-  <img src="zelda.png"/>
+  <img src="/zelda.png"/>
   <p v-click id="a">Initiell last</p>
   <p v-click id="one">SSR/SSG</p>
   <p v-click id="b">Videre interaktivitet</p>
