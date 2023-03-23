@@ -4,17 +4,8 @@
 
 - Det kommer an på
 - Hva skal du lage?
-- Hvem skal bruke det?
-- Hva er du/teamet effektiv i?
 
 </v-clicks>
-
----
-
-# Hva er viktigst?
-
-- UX - User Experience
-- DX - Developer Experience
 
 ---
 

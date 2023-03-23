@@ -92,10 +92,6 @@ li {
 
 ---
 
-<Tweet id="1636943182322704385" :scale="0.7"/>
-
----
-
 Eksempel - handleliste
 
 <Handlekurv :preffilled="true" :items="['egg', 'melk']"/>
