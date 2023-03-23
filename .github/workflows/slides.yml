@@ -52,6 +52,12 @@ jobs:
           npm i
           npm run build
           mv dist ../web/whats-new-in-javascript-es2022
+      - name: build Mapping of Web Rendering
+        run: |
+          cd "slides/Mapping of Web Rendering/slides"
+          npm i
+          npm run build
+          mv dist ../web/mapping-of-web-rendering          
       - name: deploy
         run: |
           cd slides

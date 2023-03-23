@@ -12,6 +12,7 @@ fonts:
   sans: 'Be Vietnam Pro'
   serif: 'Be Vietnam Pro'
 title: Kartlegging av web rendering
+routerMode: hash
 ---
 
 <section>
