@@ -57,7 +57,7 @@ jobs:
           cd "slides/Mapping of Web Rendering/slides"
           npm i
           npm run build
-          mv dist ../web/mapping-of-web-rendering          
+          mv dist ../../web/mapping-of-web-rendering          
       - name: deploy
         run: |
           cd slides
