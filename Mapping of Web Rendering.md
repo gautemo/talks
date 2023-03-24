@@ -2,6 +2,7 @@
 Format: Presentation 👨‍🏫
 
 ### 24 March 2023 - conference CapraCon
+[slides](https://gaute-talks.netlify.app/mapping-of-web-rendering/index.html)  
 
 ## Description (Norwegian)
 Nettsider kan bygges på så mange forskjellige måter, og vi kaster fra oss forkortelser og begreper. Bli med for å finne ut hva som faktisk menes med SPA, MPA, SSG, SSR, CSR, hydration, resumability, islands, osv. Og ikke minst så skal vi se på for hvilke type løsninger du bør velge hva.
