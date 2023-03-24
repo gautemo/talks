@@ -11,7 +11,7 @@
 
 # To ord om CSR + SPA
 
-- Beste utvikleropplevelsen?
+- God utvikleropplevelse
 - Dårlig SEO - Search Engine Optimization?
 - Klienten må laste inn mye kode?
 

@@ -3,10 +3,7 @@
 <v-clicks>
 
 - Ting er sjeldent bare en ting
-  - CSR og MPA/SPA
-  - SSR/SSG, hydration og SPA/MPA
-  - SSR, Islands, Hydration og MPA
-  - SSR og Streaming
+- F.eks. en app kan være SSR/SSG hydrated over til en CSR SPA
 
 </v-clicks>
 
