@@ -66,5 +66,4 @@ jobs:
           mv dist ../web/whats-new-in-javascript-es2023                
       - name: deploy
         run: |
-          cd slides
-          netlify deploy --dir web --prod --auth ${{ secrets.NETLIFY_AUTH_TOKEN }}  --site ${{ secrets.NETLIFY_SITE_ID }}
+          netlify deploy --dir slides/web --prod --auth ${{ secrets.NETLIFY_AUTH_TOKEN }}  --site ${{ secrets.NETLIFY_SITE_ID }}
