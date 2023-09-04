@@ -57,7 +57,13 @@ jobs:
           cd "slides/Mapping of Web Rendering/slides"
           npm i
           npm run build
-          mv dist ../../web/mapping-of-web-rendering          
+          mv dist ../../web/mapping-of-web-rendering   
+      - name: build Whats new in JavaScript - ES2023
+        run: |
+          cd "slides/Whats new in JavaScript - ES2023"
+          npm i
+          npm run build
+          mv dist ../web/whats-new-in-javascript-es2023                
       - name: deploy
         run: |
           cd slides

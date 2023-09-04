@@ -3,7 +3,7 @@ theme: default
 class: 'text-center'
 highlighter: shiki
 info: |
-  ## What's new in JavaScript - ES2021
+  ## What's new in JavaScript - ES2022
   By [Gaute Meek Olsen](https://twitter.com/GauteMeekOlsen)
 drawings:
   persist: false

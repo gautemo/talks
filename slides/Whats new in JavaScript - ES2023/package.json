@@ -1,0 +1,24 @@
+{
+  "name": "whats-new-in-javascript---es2023",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.1.0",
+    "@codemirror/commands": "^6.0.1",
+    "@codemirror/lang-javascript": "^6.0.2",
+    "@codemirror/language": "^6.2.1",
+    "@codemirror/state": "^6.1.1",
+    "@codemirror/theme-one-dark": "^6.0.0",
+    "@codemirror/view": "^6.2.0",
+    "@slidev/cli": "^0.43.0-beta.7",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest"
+  },
+  "devDependencies": {
+    "@iconify-json/ic": "^1.1.14"
+  }
+}
