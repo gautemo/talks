@@ -2,8 +2,8 @@ export const snippets = [
   {
     initial:
       `const array = [1, 2, 3, 4, 5]
-const lastEven = array.find((n) => n % 2 === 0)
-console.log(lastEven)`,
+const even = array.find((n) => n % 2 === 0)
+console.log(even)`,
     complete:
       `const array = [1, 2, 3, 4, 5]
 const lastEven = array.findLast((n) => n % 2 === 0)
@@ -31,12 +31,10 @@ console.log(array.findLastIndex((n) => n % 2 === 0))`,
     initial:
     `const array = [3, 2, 1]
 const sorted = array.sort((a, b) => a - b)
-console.log(array)
 console.log(sorted)`,
     complete:
     `const array = [3, 2, 1]
 const sorted = array.toSorted((a, b) => a - b)
-console.log(array)
 console.log(sorted)`,
   },
   {
@@ -73,9 +71,9 @@ console.log(fix)`,
   },
   {
     initial:
-      `const symbol1 = Symbol('my-symbol')
+      `const symbol = Symbol('my-symbol')
 const symbol2 = Symbol('my-symbol')
-console.log(symbol1 === symbol2)
+console.log(symbol === symbol2)
 
 const cache = new WeakMap()
 const key = {}
@@ -84,23 +82,13 @@ console.log(cache.get(key))`,
     complete:
     `const symbol = Symbol('my-symbol')
 
-/* symbol as key */
 const weakMap = new WeakMap()
 weakMap.set(symbol, 10)
-console.log(weakMap.get(symbol))
 
-/* symbol as entry */
 const weakSet = new WeakSet()
 weakSet.add(symbol)
-console.log(weakSet.has(symbol))
-const weakRef = new WeakRef(symbol)
-console.log(weakRef.deref())
 
-const registry = new FinalizationRegistry((value) => {
-  console.log(value)
-})
-
-registry.register(symbol, 'weakRef is lost')`,
+const weakRef = new WeakRef(symbol)`,
   },
   {
     initial:

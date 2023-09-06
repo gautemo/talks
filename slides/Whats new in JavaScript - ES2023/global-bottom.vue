@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="about-me" v-if="[1,2,14].includes($nav.currentPage)">
+    <div class="about-me" v-if="[1,2,13].includes($nav.currentPage)">
       <Homepage/>
       <Twitter/>
     </div>

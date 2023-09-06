@@ -144,11 +144,11 @@ ul li {
 
 ---
 
-<CodeSlide label="toSorted" :snippetId="2"/>
+<CodeSlide label="toReversed" :snippetId="3"/>
 
 ---
 
-<CodeSlide label="toReversed" :snippetId="3"/>
+<CodeSlide label="toSorted" :snippetId="2"/>
 
 ---
 
