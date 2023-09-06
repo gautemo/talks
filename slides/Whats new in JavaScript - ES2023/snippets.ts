@@ -51,13 +51,13 @@ console.log(reversed)`,
   },
   {
     initial:
-    `const array = ['🍎', '🍌', '🍊']
-const myFruit = array.splice(0, 1, '🍏')
+    `const array = ['🍎', '🥝', '🍊']
+const myFruit = array.splice(0, 1, '🥦')
 console.log(array)
 console.log(myFruit)`,
     complete:
-    `const array = ['🍎', '🍌', '🍊']
-const myFruit = array.toSpliced(0, 1, '🍏')
+    `const array = ['🍎', '🥝', '🍊']
+const myFruit = array.toSpliced(0, 1, '🥦')
 console.log(array)
 console.log(myFruit)`,
   },
