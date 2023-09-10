@@ -1,10 +1,10 @@
 # What's new in JavaScript - ES2023
 Format: Lightning talk ⚡
 
-### 07 September 2022 - JavaZone
-[Recording - norwegian](https://vimeo.com/748031775)  
+### 07 September 2023 - JavaZone
+[Recording - norwegian](https://vimeo.com/861948019)  
 [repo](https://github.com/gautemo/ES-Intro/tree/master/es14)  
-[slides](https://gaute-talks.netlify.app/whats-new-in-javascript-es2022/index.html)  
+[slides](https://gaute-talks.netlify.app/whats-new-in-javascript-es2023/#/1)  
 
 
 ## Description
