@@ -1,0 +1,9 @@
+:not(pre) > code:before, :not(pre) > code:after {
+  content: '';
+}
+
+:not(pre) > code {
+  background-color: #2f2f2f;
+  color: #aac8e4;
+  padding: .15em .5em;
+}
