@@ -1,24 +1,9 @@
-# Hva er greia med signals?
-
-```js
-function signal(value) {
-  return {
-    get value() {
-      // track
-      return value
-    },
-    set value(newValue) {
-      value = newValue
-      // notify all trackers
-    }
-  }
-}
-```
-
 ---
 layout: center
 transition: fade
 ---
+
+# Hva er greia med signals?
 
 ```mermaid { scale: 1.5 }
 graph TD;
@@ -32,6 +17,8 @@ graph TD;
 layout: center
 transition: fade
 ---
+
+# Hva er greia med signals?
 
 ```mermaid { scale: 1.5 }
 graph TD;
@@ -47,6 +34,8 @@ graph TD;
 layout: center
 transition: fade
 ---
+
+# Hva er greia med signals?
 
 ```mermaid { scale: 1.5 }
 graph TD;
@@ -65,6 +54,8 @@ layout: center
 transition: fade
 ---
 
+# Hva er greia med signals?
+
 ```mermaid { scale: 1.5 }
 graph TD;
     A[count=2]---B[double=count * 2];
@@ -79,6 +70,8 @@ graph TD;
 layout: center
 ---
 
+# Hva er greia med signals?
+
 ```mermaid { scale: 1.5 }
 graph TD;
     A[count=2]---B[double=count * 2];
@@ -87,4 +80,23 @@ graph TD;
     B===E["&lt;p&gt;double is 4&lt;/p&gt;"];
     linkStyle 3 stroke:#ff0000,color:red;
     style E stroke:#ff0000
+```
+
+---
+
+# Hva er greia med signals?
+
+```js
+function signal(value) {
+  return {
+    get value() {
+      // track
+      return value
+    },
+    set value(newValue) {
+      value = newValue
+      // notify all trackers
+    }
+  }
+}
 ```

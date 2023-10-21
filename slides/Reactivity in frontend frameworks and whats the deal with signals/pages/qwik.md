@@ -9,13 +9,13 @@
 # Qwik reaktivitet
 
 ```jsx {monaco}
-import { component$, useSignal } from '@builder.io/qwik'
+import { component$, useSignal, useComputed$, useTask$, $ } from '@builder.io/qwik'
 
 export default component$(() => {
   const count = useSignal(0)
-  function increase() {
+  const increase = $(() => {
     count.value++
-  }
+  })
 
   return (
     <>
@@ -50,13 +50,13 @@ graph TD;
 
 # Qwik oppsummering
 
-|                                            | <logos-qwik-icon class="text-5xl"/>                           |
-| ------------------------------------------ | ------------------------------------------------------------- |
-| mutable vs immutable API                   |  <span v-click>Mutable</span>                                 |
-| Ummidelbar oppdatering                     |  <emojione-cross-mark-button v-click class="text-2xl"/>       |
-| Re-render                                  |  <material-symbols-jump-to-element v-click class="text-3xl"/> |
-| Fungerer utenfor komponenten               |  <emojione-cross-mark-button v-click class="text-2xl"/>       |
-| Fungerer utenfor rammeverk                 |  <emojione-cross-mark-button v-click class="text-2xl"/>       |
+|                                            | <logos-qwik-icon class="text-5xl"/>                          |
+| ------------------------------------------ | ------------------------------------------------------------ |
+| mutable vs immutable API                   | <span v-click>Mutable</span>                                 |
+| Ummidelbar oppdatering                     | <emojione-cross-mark-button v-click class="text-2xl"/>       |
+| Re-render                                  | <material-symbols-jump-to-element v-click class="text-3xl"/> |
+| Fungerer utenfor komponenten               | <emojione-cross-mark-button v-click class="text-2xl"/>       |
+| Fungerer utenfor rammeverk                 | <emojione-cross-mark-button v-click class="text-2xl"/>       |
 
 <!--
 Calling a 'use*()' method outside 'component$(() => { HERE })' is not allowed.

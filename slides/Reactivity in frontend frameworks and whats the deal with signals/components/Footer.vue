@@ -5,26 +5,27 @@ import Twitter from './Twitter.vue'
 
 const props = defineProps<{ page: number, totalPages: number }>()
 
-console.log(props)
-
-const colors = ['#5fd3f3a1', '#f73c01a1', '#3eb27fa1', '#bd032da1']
+const colors = ['#62d5fa', '#64b687', '#3a5792', '#613cb1', '#a580ed', '#a73a37', '#eb5027']
 const index = ref(0)
 setInterval(() => {
   index.value++
   if(index.value >= colors.length) index.value = 0
-}, 1000*120)
+}, 1000*45)
 const color = computed(() => {
-  if([13,14].includes(props.page)) return colors[0]
-  if([15,16].includes(props.page)) return colors[3]
-  if([17,18].includes(props.page)) return colors[2]
-  if([19,20].includes(props.page)) return colors[1]
+  if([12,13,14,15].includes(props.page)) return colors[0]
+  if([16,17,18,19].includes(props.page)) return colors[1]
+  if([20,21,22,23].includes(props.page)) return colors[2]
+  if([24,25,26,27].includes(props.page)) return colors[3]
+  if([28,29,30,31].includes(props.page)) return colors[4]
+  if([32,33,34,35].includes(props.page)) return colors[5]
+  if([36,37,38,39, 40].includes(props.page)) return colors[6]
   return colors[index.value]
 })
 </script>
 
 <template>
   <footer>
-    <div class="about-me" v-if="[1, 3, 49].includes(page)">
+    <div class="about-me" v-if="[1, 2, 43].includes(page)">
       <Homepage />
       <Twitter />
     </div>

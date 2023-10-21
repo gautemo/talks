@@ -9,7 +9,7 @@
 # React reaktivitet
 
 ```jsx {monaco}
-import { useState } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 
 export function Component() {
   const [count, setCount] = useState(0)

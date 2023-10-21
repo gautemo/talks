@@ -10,7 +10,7 @@
  
 ```html {monaco}
 <script setup>
-import { ref } from 'vue'
+import { ref, reactive, computed, watchEffect } from 'vue'
 
 const count = ref(0)
 function increase() {

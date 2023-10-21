@@ -9,7 +9,7 @@
 # Preact reaktivitet
  
 ```jsx {monaco}
-import { signal } from '@preact/signals'
+import { signal, computed, effect } from '@preact/signals'
 
 export function Component() {
   const count = signal(0)
@@ -50,10 +50,10 @@ graph TD;
 
 # Preact oppsummering
 
-|                                            | <logos-preact class="text-5xl"/>                        |
-| ------------------------------------------ | ------------------------------------------------------------- |
-| mutable vs immutable API                   |  <span v-click>Mutable</span>                               |
-| Ummidelbar oppdatering                     |  <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
-| Re-render                                  |  <material-symbols-jump-to-element v-click class="text-3xl"/> |
-| Fungerer utenfor komponenten               |  <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
-| Fungerer utenfor rammeverk                 |  <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
+|                                            | <logos-preact class="text-5xl"/>                             |
+| ------------------------------------------ | ------------------------------------------------------------ |
+| mutable vs immutable API                   | <span v-click>Mutable</span>                                 |
+| Ummidelbar oppdatering                     | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
+| Re-render                                  | <material-symbols-jump-to-element v-click class="text-3xl"/> |
+| Fungerer utenfor komponenten               | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
+| Fungerer utenfor rammeverk                 | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |

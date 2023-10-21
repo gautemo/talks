@@ -15,15 +15,11 @@ mdc: true
 monaco: true
 ---
 
-# Reaktivitet i webrammeverk og hva greia med signals er
+<h1 class="translate-y-30px">Reaktivitet i webrammeverk og hva greia med signals er</h1>
 
----
+<img src="/bricks.svg" alt="Lego bricks" class="scale-70 translate-y-30px">
 
-# Rammeverk
-
-<img src="/bricks.svg" alt="Lego bricks" class="scale-120 translate-x-10em translate-y-30px">
-
-<h1 class="scale-120 translate-x-370px translate-y--220px c-black">Reaktivitet</h1>
+<h2 class="scale-80 translate-x--228px translate-y--190px c-black">Reaktivitet</h2>
 
 ---
 
@@ -70,16 +66,36 @@ h1{
 src: ./pages/signals.md
 ---
 ---
+transition: fade
+---
 
 # Reaktivitet tabell
 
-|                                            | <logos-react class="text-5xl"/> | <logos-vue class="text-5xl"/>   | <logos-solidjs-icon class="text-5xl"/>   | <logos-preact class="text-5xl"/>   | <logos-qwik-icon class="text-5xl"/>   | <logos-angular-icon class="text-5xl"/>   |
-| ------------------------------------------ | ------------------------------- | ------------------------------- | ---------------------------------------- | ---------------------------------- | ------------------------------------- | ---------------------------------------- |
-| mutable vs immutable API                   |                                 |                                 |                                          |                                    |                                       |                                          |
-| Ummidelbar oppdatering                     |                                 |                                 |                                          |                                    |                                       |                                          |
-| Re-render                                  |                                 |                                 |                                          |                                    |                                       |                                          |
-| Fungerer utenfor komponenten               |                                 |                                 |                                          |                                    |                                       |                                          |
-| Fungerer utenfor rammeverk                 |                                 |                                 |                                          |                                    |                                       |                                          |
+|                                            | <logos-react class="text-5xl"/> | <logos-svelte-icon class="text-5xl svelte"/> | <logos-vue class="text-5xl"/> | <logos-solidjs-icon class="text-5xl"/>   | <logos-preact class="text-5xl"/>   | <logos-qwik-icon class="text-5xl"/>   | <logos-angular-icon class="text-5xl"/>   | <logos-svelte-icon class="text-5xl svelte"/> |
+| ------------------------------------------ | ------------------------------- | -------------------------------------------- | ----------------------------- | ---------------------------------------- | ---------------------------------- | ------------------------------------- | ---------------------------------------- | -------------------------------------------- |
+| mutable vs immutable API                   |                                 |                                              |                               |                                          |                                    |                                       |                                          |                                              |
+| Ummidelbar oppdatering                     |                                 |                                              |                               |                                          |                                    |                                       |                                          |                                              |
+| Re-render                                  |                                 |                                              |                               |                                          |                                    |                                       |                                          |                                              |
+| Fungerer utenfor komponenten               |                                 |                                              |                               |                                          |                                    |                                       |                                          |                                              |
+| Fungerer utenfor rammeverk                 |                                 |                                              |                               |                                          |                                    |                                       |                                          |                                              |
+
+<style>
+.svelte {
+  outline: 1px dashed red;
+}
+</style>
+
+---
+
+# Reaktivitet tabell
+
+|                                            | <logos-react class="text-5xl"/> | <logos-vue class="text-5xl"/> | <logos-solidjs-icon class="text-5xl"/>   | <logos-preact class="text-5xl"/>   | <logos-qwik-icon class="text-5xl"/>   | <logos-angular-icon class="text-5xl"/>   | <logos-svelte-icon class="text-5xl"/> |
+| ------------------------------------------ | ------------------------------- | ----------------------------- | ---------------------------------------- | ---------------------------------- | ------------------------------------- | ---------------------------------------- | ------------------------------------- |
+| mutable vs immutable API                   |                                 |                               |                                          |                                    |                                       |                                          |                                       |
+| Ummidelbar oppdatering                     |                                 |                               |                                          |                                    |                                       |                                          |                                       |
+| Re-render                                  |                                 |                               |                                          |                                    |                                       |                                          |                                       |
+| Fungerer utenfor komponenten               |                                 |                               |                                          |                                    |                                       |                                          |                                       |
+| Fungerer utenfor rammeverk                 |                                 |                               |                                          |                                    |                                       |                                          |                                       |
 
 ---
 src: ./pages/react.md
@@ -108,3 +124,37 @@ src: ./pages/angular.md
 ---
 src: ./pages/svelte5.md
 ---
+---
+
+# Reaktivitet API
+
+|                              | <logos-react class="text-5xl"/> | <logos-vue class="text-5xl"/> | <logos-solidjs-icon class="text-5xl"/> | <logos-preact class="text-5xl"/> | <logos-qwik-icon class="text-5xl"/> | <logos-angular-icon class="text-5xl"/> | <logos-svelte-icon class="text-5xl"/> |
+| -----------------------------| ------------------------------- | ----------------------------- | -------------------------------------- | -------------------------------- | ----------------------------------- | -------------------------------------- | ------------------------------------- |
+| State                        | `useState`                      | `ref`/`reactive`              | `createSignal`                         | `signal`                         | `useSignal`                         | `signal`                               | `$state`                              |
+| Beregnet tilstand            | `useMemo`                       | `computed`                    | `() => `                               | `computed`                       | `useComputed$`                      | `computed`                             | `$derived`                            |
+| Effekt                       | `useEffect`                     | `watchEffect`                 | `createEffect`                         | `effect`                         | `useTask$`                          | `effect`                               | `$effect`                             |
+
+<style>
+table {
+  scale: 0.9;
+  translate: -46px 0;
+}
+</style>
+
+---
+
+# Reaktivitet tabell
+
+|                              | <logos-react class="text-5xl"/>                | <logos-vue class="text-5xl"/>                       | <logos-solidjs-icon class="text-5xl"/>               | <logos-preact class="text-5xl"/>                     | <logos-qwik-icon class="text-5xl"/>                  | <logos-angular-icon class="text-5xl"/>              | <logos-svelte-icon class="text-5xl"/>                |
+| -----------------------------| ---------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------- |
+| mutable vs immutable API     | Immutable                                      | Mutable                                             | Immutable                                            | Mutable                                              | Mutable                                              | Immutable                                           | Mutable                                              |
+| Ummidelbar oppdatering       | <emojione-cross-mark-button class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/>  | <emojione-white-heavy-check-mark class="text-2xl"/>  | <emojione-cross-mark-button class="text-2xl"/>       | <emojione-white-heavy-check-mark class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/>  |
+| Re-render                    | <noto-deciduous-tree class="text-2xl"/>        | <openmoji-puzzle-piece class="text-3xl"/>           | <material-symbols-jump-to-element class="text-3xl"/> | <material-symbols-jump-to-element class="text-3xl"/> | <material-symbols-jump-to-element class="text-3xl"/> | <noto-deciduous-tree class="text-2xl"/>             | <material-symbols-jump-to-element class="text-3xl"/> |
+| Fungerer utenfor komponenten | <emojione-cross-mark-button class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/>  | <emojione-white-heavy-check-mark class="text-2xl"/>  | <emojione-cross-mark-button class="text-2xl"/>       | <openmoji-palm-down-hand class="text-2xl"/>(2/3)    | <emojione-white-heavy-check-mark class="text-2xl"/>  |
+| Fungerer utenfor rammeverk   | <emojione-cross-mark-button class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/> | <openmoji-palm-down-hand class="text-2xl"/>          | <emojione-white-heavy-check-mark class="text-2xl"/>  | <emojione-cross-mark-button class="text-2xl"/>       | <openmoji-palm-down-hand class="text-2xl"/>(2/3)    | <emojione-cross-mark-button class="text-2xl"/>       |
+
+---
+layout: center
+---
+
+# Takk for mæ!

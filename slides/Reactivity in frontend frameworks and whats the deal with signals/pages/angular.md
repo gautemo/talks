@@ -9,7 +9,7 @@
 # Angular reaktivitet
  
 ```js {monaco}
-import { Component, signal } from '@angular/core'
+import { Component, signal, computed, effect } from '@angular/core'
 
 @Component({
   selector: 'count-component',
@@ -54,13 +54,13 @@ graph TD;
 
 # Angular oppsummering
 
-|                                            | <logos-angular-icon class="text-5xl"/>                                     |
-| ------------------------------------------ | -------------------------------------------------------------------------- |
-| mutable vs immutable API                   |  <span v-click>Immutable</span>                                            |
-| Ummidelbar oppdatering                     |  <emojione-white-heavy-check-mark v-click class="text-2xl"/>               |
-| Re-render                                  |  <noto-deciduous-tree v-click class="text-2xl"/>                           |
-| Fungerer utenfor komponenten               |  <span v-click><openmoji-palm-down-hand class="text-2xl"/>(2/3)</span>     |
-| Fungerer utenfor rammeverk                 |  <span v-click><openmoji-palm-down-hand class="text-2xl"/>(2/3)</span>     |
+|                                            | <logos-angular-icon class="text-5xl"/>                                |
+| ------------------------------------------ | --------------------------------------------------------------------- |
+| mutable vs immutable API                   | <span v-click>Immutable</span>                                        |
+| Ummidelbar oppdatering                     | <emojione-white-heavy-check-mark v-click class="text-2xl"/>           |
+| Re-render                                  | <noto-deciduous-tree v-click class="text-2xl"/>                       |
+| Fungerer utenfor komponenten               | <span v-click><openmoji-palm-down-hand class="text-2xl"/>(2/3)</span> |
+| Fungerer utenfor rammeverk                 | <span v-click><openmoji-palm-down-hand class="text-2xl"/>(2/3)</span> |
 
 <!--
 effect() can only be used within an injection context

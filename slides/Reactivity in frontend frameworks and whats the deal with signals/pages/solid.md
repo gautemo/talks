@@ -9,15 +9,18 @@
 # Solid reaktivitet
  
 ```jsx {monaco}
-import { createSignal } from 'solid-js'
+import { createSignal, createEffect } from 'solid-js'
 
 export function Component() {
   const [count, setCount] = createSignal(0)
+  function increase() {
+    setCount(count() + 1)
+  }
 
   return (
     <>
       <p>Count: { count() }</p>
-      <button onClick={() => setCount(count() + 1)}>Bump</button>
+      <button onClick={increase}>Bump</button>
     </>
   )
 }
@@ -47,11 +50,11 @@ graph TD;
 
 # Solid oppsummering
 
-|                                            | <logos-solidjs-icon class="text-5xl"/>                        |
-| ------------------------------------------ | ------------------------------------------------------------- |
-| mutable vs immutable API                   |  <span v-click>Immutable</span>                               |
-| Ummidelbar oppdatering                     |  <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
-| Re-render                                  |  <material-symbols-jump-to-element v-click class="text-3xl"/> |
-| Fungerer utenfor komponenten               |  <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
-| Fungerer utenfor rammeverk                 |  <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
+|                                            | <logos-solidjs-icon class="text-5xl"/>                       |
+| ------------------------------------------ | ------------------------------------------------------------ |
+| mutable vs immutable API                   | <span v-click>Immutable</span>                               |
+| Ummidelbar oppdatering                     | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
+| Re-render                                  | <material-symbols-jump-to-element v-click class="text-3xl"/> |
+| Fungerer utenfor komponenten               | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
+| Fungerer utenfor rammeverk                 | <openmoji-palm-down-hand v-click class="text-2xl"/>          |
 
