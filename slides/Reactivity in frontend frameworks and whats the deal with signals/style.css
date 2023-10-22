@@ -7,3 +7,7 @@
   color: #aac8e4;
   padding: .15em .5em;
 }
+
+.slidev-code .line.dishonored {
+  opacity: 0.45;
+}

@@ -8,11 +8,12 @@
 transition: fade
 ---
 
-# Svelte 5 reaktivitet
+# Svelte 4 reaktivitet
  
-```html {monaco}
+```html
 <script>
-	let count = $state(0)
+  let count = 0
+  $: double = count * 2
   function increase() {
     count++
   }
@@ -22,23 +23,82 @@ transition: fade
 <button on:click={increase}>Bump</button>
 ```
 
-<div v-click>
-<i>state.js:</i>
+---
+transition: fade
+---
 
-```js {monaco}
-export let count = $state(0)
+# Svelte 5 reaktivitet
+ 
+```html {2,3}
+<script>
+  let count = $state(0)
+  const double = $derived(count * 2)
+  function increase() {
+    count++
+  }
+</script>
+
+<p>Count: { count }</p>
+<button on:click={increase}>Bump</button>
 ```
 
-</div>
-<Copy framework="svelte"/>
+---
+transition: fade
+---
+
+# Svelte 5 reaktivitet
+ 
+```html {4}
+<script>
+  let count = $state(0)
+  const double = $derived(count * 2)
+  $effect(() => console.log(double))
+  function increase() {
+    count++
+  }
+</script>
+
+<p>Count: { count }</p>
+<button on:click={increase}>Bump</button>
+```
+
+---
+transition: fade
+---
+
+# Svelte 5 reaktivitet
+ 
+```html {6-8}
+<script>
+  let count = $state(0)
+  const double = $derived(count * 2)
+  $effect(() => console.log(double))
+  function increase() {
+    count++
+    console.log(count) // 1
+    console.log(double) // 2
+  }
+</script>
+
+<p>Count: { count }</p>
+<button on:click={increase}>Bump</button>
+```
+
+---
+transition: fade
+---
+
+# Svelte 5 reaktivitet
+ 
+```js
+export let count = $state(0) // ❌
+```
 
 ---
 
 # Svelte 5 reaktivitet
  
-<i>state.js:</i>
-
-```js {monaco}
+```js
 function createCounter() {
 	let value = $state(0);
 
@@ -82,7 +142,7 @@ graph TD;
 |                                            | <logos-svelte-icon class="text-5xl"/> v4                     | <logos-svelte-icon class="text-5xl"/> v5                     |
 | ------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | mutable vs immutable API                   | <span v-click>Mutable</span>                                 | <span v-click>Mutable</span>                                 |
-| Ummidelbar oppdatering                     | <emojione-cross-mark-button v-click class="text-2xl"/>       | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
+| State er alltid i sync                     | <emojione-cross-mark-button v-click class="text-2xl"/>       | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
 | Re-render                                  | <material-symbols-jump-to-element v-click class="text-3xl"/> | <material-symbols-jump-to-element v-click class="text-3xl"/> |
 | Fungerer utenfor komponenten               | <emojione-cross-mark-button v-click class="text-2xl"/>       | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
 | Fungerer utenfor rammeverk                 | <emojione-cross-mark-button v-click class="text-2xl"/>       | <emojione-cross-mark-button v-click class="text-2xl"/>       |

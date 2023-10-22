@@ -5,10 +5,12 @@
 <logos-solidjs-icon class="text-9xl scale-200 translate-x-3em translate-y-60px" />
 
 ---
+transition: fade
+---
 
 # Solid reaktivitet
  
-```jsx {monaco}
+```jsx
 import { createSignal, createEffect } from 'solid-js'
 
 export function Component() {
@@ -17,8 +19,6 @@ export function Component() {
   createEffect(() => console.log(double()))
   function increase() {
     setCount(count() + 1)
-    // count = 1
-    // double = 2
   }
 
   return (
@@ -29,7 +29,58 @@ export function Component() {
   )
 }
 ```
-<Copy framework="solid"/>
+
+---
+transition: fade
+---
+
+# Solid reaktivitet
+ 
+```jsx {8,9,10}
+import { createSignal, createEffect } from 'solid-js'
+
+export function Component() {
+  const [count, setCount] = createSignal(0)
+  const double = () => count() * 2
+  createEffect(() => console.log(double()))
+  function increase() {
+    setCount(count() + 1)
+    console.log(count()) // 1
+    console.log(double()) // 2
+  }
+
+  return (
+    <>
+      <p>Count: { count() }</p>
+      <button onClick={increase}>Bump</button>
+    </>
+  )
+}
+```
+
+---
+
+# Solid reaktivitet
+ 
+```jsx
+import { createSignal, createEffect } from 'solid-js'
+
+const [count, setCount] = createSignal(0)
+const double = () => count() * 2
+createEffect(() => console.log(double()))
+function increase() {
+  setCount(count() + 1)
+}
+
+export function Component() {
+  return (
+    <>
+      <p>Count: { count() }</p>
+      <button onClick={increase}>Bump</button>
+    </>
+  )
+}
+```
 
 ---
 layout: center
@@ -58,7 +109,7 @@ graph TD;
 |                                            | <logos-solidjs-icon class="text-5xl"/>                       |
 | ------------------------------------------ | ------------------------------------------------------------ |
 | mutable vs immutable API                   | <span v-click>Immutable</span>                               |
-| Ummidelbar oppdatering                     | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
+| State er alltid i sync                     | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
 | Re-render                                  | <material-symbols-jump-to-element v-click class="text-3xl"/> |
 | Fungerer utenfor komponenten               | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
 | Fungerer utenfor rammeverk                 | <openmoji-palm-down-hand v-click class="text-2xl"/>          |

@@ -5,11 +5,32 @@
 <logos-angular-icon class="text-9xl scale-200 translate-x-3em translate-y-60px" />
 
 ---
+transition: fade
+---
 
 # Angular reaktivitet
  
-```js {monaco}
-import { Component, signal, computed, effect } from '@angular/core'
+```js
+import { Component } from '@angular/core'
+
+@Component({
+  selector: 'count-component',
+  templateUrl: './count.component.html',
+})
+export class CountComponent {
+  increase() {
+  }
+}
+```
+
+---
+transition: fade
+---
+
+# Angular reaktivitet
+ 
+```js {1,8,11}
+import { Component, signal } from '@angular/core'
 
 @Component({
   selector: 'count-component',
@@ -19,11 +40,116 @@ export class CountComponent {
   count = signal(0)
 
   increase() {
-    count.set(this.count() + 1)
+    this.count.set(this.count() + 1)
   }
 }
 ```
-<Copy framework="angular"/>
+
+---
+transition: fade
+---
+
+# Angular reaktivitet
+ 
+```js {1,9}
+import { Component, signal, computed } from '@angular/core'
+
+@Component({
+  selector: 'count-component',
+  templateUrl: './count.component.html',
+})
+export class CountComponent {
+  count = signal(0)
+  double = computed(() => this.count() * 2)
+
+  increase() {
+    this.count.set(this.count() + 1)
+  }
+}
+```
+
+---
+transition: fade
+---
+
+# Angular reaktivitet
+ 
+```js {1,11-13}
+import { Component, signal, computed, effect } from '@angular/core'
+
+@Component({
+  selector: 'count-component',
+  templateUrl: './count.component.html',
+})
+export class CountComponent {
+  count = signal(0)
+  double = computed(() => this.count() * 2)
+
+  constructor() {
+    effect(() => console.log(this.double()))
+  }
+
+  increase() {
+    this.count.set(this.count() + 1)
+  }
+}
+```
+
+---
+transition: fade
+---
+
+# Angular reaktivitet
+ 
+```js {16-18}
+import { Component, signal, computed, effect } from '@angular/core'
+
+@Component({
+  selector: 'count-component',
+  templateUrl: './count.component.html',
+})
+export class CountComponent {
+  count = signal(0)
+  double = computed(() => this.count() * 2)
+
+  constructor() {
+    effect(() => console.log(this.double()))
+  }
+
+  increase() {
+    this.count.set(this.count() + 1)
+    console.log(this.count()) // 1
+    console.log(this.double()) // 2
+  }
+}
+```
+
+---
+
+# Angular reaktivitet
+ 
+```js {3,4,11-15}
+import { Component, signal, computed, effect } from '@angular/core'
+
+const count = signal(0)
+const double = computed(() => count() * 2)
+
+@Component({
+  selector: 'count-component',
+  templateUrl: './count.component.html',
+})
+export class CountComponent {
+  count = count
+  double = double
+  constructor() {
+    effect(() => console.log(double()))
+  }
+
+  increase() {
+    count.set(count() + 1)
+  }
+}
+```
 
 ---
 layout: center
@@ -57,7 +183,7 @@ graph TD;
 |                                            | <logos-angular-icon class="text-5xl"/>                                |
 | ------------------------------------------ | --------------------------------------------------------------------- |
 | mutable vs immutable API                   | <span v-click>Immutable</span>                                        |
-| Ummidelbar oppdatering                     | <emojione-white-heavy-check-mark v-click class="text-2xl"/>           |
+| State er alltid i sync                     | <emojione-white-heavy-check-mark v-click class="text-2xl"/>           |
 | Re-render                                  | <noto-deciduous-tree v-click class="text-2xl"/>                       |
 | Fungerer utenfor komponenten               | <span v-click><openmoji-palm-down-hand class="text-2xl"/>(2/3)</span> |
 | Fungerer utenfor rammeverk                 | <span v-click><openmoji-palm-down-hand class="text-2xl"/>(2/3)</span> |
