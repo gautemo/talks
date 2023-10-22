@@ -12,20 +12,20 @@ setInterval(() => {
   if(index.value >= colors.length) index.value = 0
 }, 1000*45)
 const color = computed(() => {
-  if([11,12,13,14].includes(props.page)) return colors[0]
-  if([15,16,17,18].includes(props.page)) return colors[1]
-  if([19,20,21,22].includes(props.page)) return colors[2]
-  if([23,24,25,26].includes(props.page)) return colors[3]
-  if([27,28,29,30].includes(props.page)) return colors[4]
-  if([31,32,33,34].includes(props.page)) return colors[5]
-  if([35,36,37,38,39].includes(props.page)) return colors[6]
+  if(11 >= props.page && props.page <= 21) return colors[0]
+  if(22 >= props.page && props.page <= 32) return colors[1]
+  if(33 >= props.page && props.page <= 38) return colors[2]
+  if(39 >= props.page && props.page <= 47) return colors[3]
+  if(48 >= props.page && props.page <= 54) return colors[4]
+  if(55 >= props.page && props.page <= 63) return colors[5]
+  if(64 >= props.page && props.page <= 72) return colors[6]
   return colors[index.value]
 })
 </script>
 
 <template>
   <footer>
-    <div class="about-me" v-if="[1, 2, 43].includes(page)">
+    <div class="about-me" v-if="[1, 2, 75].includes(page)">
       <Homepage />
       <Twitter />
     </div>

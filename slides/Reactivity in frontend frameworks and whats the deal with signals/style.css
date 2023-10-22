@@ -15,3 +15,7 @@
 .slidev-page {
   cursor: url(/circle.png), auto;
 }
+
+.slidev-page .shiki-dark {
+  background-color: #000 !important;
+}
