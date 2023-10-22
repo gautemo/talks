@@ -11,3 +11,7 @@
 .slidev-code .line.dishonored {
   opacity: 0.45;
 }
+
+.slidev-page {
+  cursor: url(/circle.png), auto;
+}
