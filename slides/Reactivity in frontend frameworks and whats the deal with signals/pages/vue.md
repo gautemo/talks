@@ -23,6 +23,7 @@ function increase() {
   <button @click="increase">Bump</button>
 </template>
 ```
+<Copy framework="vue"/>
 
 ---
 layout: center

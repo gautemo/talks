@@ -30,6 +30,7 @@ export let count = $state(0)
 ```
 
 </div>
+<Copy framework="svelte"/>
 
 ---
 

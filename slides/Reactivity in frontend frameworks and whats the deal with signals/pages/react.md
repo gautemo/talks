@@ -25,6 +25,7 @@ export function Component() {
   )
 }
 ```
+<Copy framework="react"/>
 
 ---
 layout: center

@@ -13,8 +13,15 @@ import { component$, useSignal, useComputed$, useTask$, $ } from '@builder.io/qw
 
 export default component$(() => {
   const count = useSignal(0)
+  const double = useComputed$(() => count.value * 2)
+  useTask$(({track}) => {
+    track(() => double.value)
+    console.log(double.value)
+  })
   const increase = $(() => {
     count.value++
+    // count = 1
+    // double = 0
   })
 
   return (
@@ -25,6 +32,7 @@ export default component$(() => {
   )
 })
 ```
+<Copy framework="qwik"/>
 
 ---
 layout: center

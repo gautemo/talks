@@ -22,8 +22,8 @@ export class CountComponent {
     count.set(this.count() + 1)
   }
 }
-
 ```
+<Copy framework="angular"/>
 
 ---
 layout: center

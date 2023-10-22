@@ -82,7 +82,7 @@ graph TD;
     style E stroke:#ff0000
 ```
 
----
+<!-- ---
 
 # Hva er greia med signals?
 
@@ -99,4 +99,4 @@ function signal(value) {
     }
   }
 }
-```
+``` -->

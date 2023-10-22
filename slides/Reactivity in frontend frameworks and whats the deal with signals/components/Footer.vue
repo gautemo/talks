@@ -12,13 +12,13 @@ setInterval(() => {
   if(index.value >= colors.length) index.value = 0
 }, 1000*45)
 const color = computed(() => {
-  if([12,13,14,15].includes(props.page)) return colors[0]
-  if([16,17,18,19].includes(props.page)) return colors[1]
-  if([20,21,22,23].includes(props.page)) return colors[2]
-  if([24,25,26,27].includes(props.page)) return colors[3]
-  if([28,29,30,31].includes(props.page)) return colors[4]
-  if([32,33,34,35].includes(props.page)) return colors[5]
-  if([36,37,38,39, 40].includes(props.page)) return colors[6]
+  if([11,12,13,14].includes(props.page)) return colors[0]
+  if([15,16,17,18].includes(props.page)) return colors[1]
+  if([19,20,21,22].includes(props.page)) return colors[2]
+  if([23,24,25,26].includes(props.page)) return colors[3]
+  if([27,28,29,30].includes(props.page)) return colors[4]
+  if([31,32,33,34].includes(props.page)) return colors[5]
+  if([35,36,37,38,39].includes(props.page)) return colors[6]
   return colors[index.value]
 })
 </script>

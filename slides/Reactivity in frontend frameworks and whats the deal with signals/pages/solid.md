@@ -13,8 +13,12 @@ import { createSignal, createEffect } from 'solid-js'
 
 export function Component() {
   const [count, setCount] = createSignal(0)
+  const double = () => count() * 2
+  createEffect(() => console.log(double()))
   function increase() {
     setCount(count() + 1)
+    // count = 1
+    // double = 2
   }
 
   return (
@@ -25,6 +29,7 @@ export function Component() {
   )
 }
 ```
+<Copy framework="solid"/>
 
 ---
 layout: center

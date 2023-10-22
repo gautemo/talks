@@ -64,6 +64,12 @@ jobs:
           npm i
           npm run build
           mv dist ../web/whats-new-in-javascript-es2023                
+      - name: build Whats new in JavaScript - ES2023
+        run: |
+          cd "slides/Reactivity in frontend frameworks and whats the deal with signals"
+          npm i
+          npm run build
+          mv dist ../web/reactivity-in-frontend-frameworks-and-whats-the-deal-with-signals               
       - name: deploy
         run: |
           netlify deploy --dir slides/web --prod --auth ${{ secrets.NETLIFY_AUTH_TOKEN }}  --site ${{ secrets.NETLIFY_SITE_ID }}

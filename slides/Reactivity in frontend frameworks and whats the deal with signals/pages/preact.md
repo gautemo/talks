@@ -13,8 +13,12 @@ import { signal, computed, effect } from '@preact/signals'
 
 export function Component() {
   const count = signal(0)
+  const double = computed(() => count.value * 2)
+  effect(() => console.log(double.value))
   function increase() {
     count.value++
+    // count = 1
+    // double = 2
   }
 
   return (
@@ -25,6 +29,7 @@ export function Component() {
   )
 }
 ```
+<Copy framework="preact"/>
 
 ---
 layout: center
