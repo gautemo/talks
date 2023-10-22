@@ -98,6 +98,10 @@ transition: fade
 | Fungerer utenfor rammeverk                 |                                 |                               |                                          |                                    |                                       |                                          |                                       |
 
 ---
+
+<Counter />
+
+---
 src: ./pages/react.md
 ---
 
