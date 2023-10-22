@@ -145,6 +145,12 @@ table {
 }
 </style>
 
+<!--
+Sje så likt det e da! Koffer driv vi med, "vi må velg rammeverk X fordi det e kun det folk har erfaring med" osv... 
+Hvis man kan nå i et rammeverk, klarer man det i et anna.
+Men det er jo mer te et rammeverk enn kun reaktivitet, ska sies.
+-->
+
 ---
 
 # Reaktivitet tabell
