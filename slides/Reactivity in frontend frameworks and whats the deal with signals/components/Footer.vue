@@ -24,7 +24,7 @@ const color = computed(() => {
 
 <template>
   <footer>
-    <div class="about-me" v-if="[1, 2, 76].includes(page)">
+    <div class="about-me" v-if="[1, 2, 69].includes(page)">
       <Homepage />
       <Twitter />
     </div>
