@@ -5,20 +5,19 @@ import Twitter from './Twitter.vue'
 
 const props = defineProps<{ page: number, totalPages: number }>()
 
-const colors = ['#62d5fa', '#64b687', '#3a5792', '#613cb1', '#a580ed', '#a73a37', '#eb5027']
+const colors = ['#62d5fa', '#64b687', '#3a5792', '#613cb1', '#a73a37', '#eb5027']
 const index = ref(0)
 setInterval(() => {
   index.value++
   if(index.value >= colors.length) index.value = 0
 }, 1000*45)
 const color = computed(() => {
-  if(12 >= props.page && props.page <= 22) return colors[0]
-  if(23 >= props.page && props.page <= 33) return colors[1]
-  if(34 >= props.page && props.page <= 39) return colors[2]
-  if(40 >= props.page && props.page <= 48) return colors[3]
-  if(49 >= props.page && props.page <= 55) return colors[4]
-  if(56 >= props.page && props.page <= 64) return colors[5]
-  if(65 >= props.page && props.page <= 73) return colors[6]
+  if(12 <= props.page && props.page <= 22) return colors[0]
+  if(23 <= props.page && props.page <= 33) return colors[1]
+  if(34 <= props.page && props.page <= 39) return colors[2]
+  if(40 <= props.page && props.page <= 48) return colors[3]
+  if(49 <= props.page && props.page <= 57) return colors[4]
+  if(58 <= props.page && props.page <= 66) return colors[5]
   return colors[index.value]
 })
 </script>

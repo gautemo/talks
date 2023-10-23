@@ -71,13 +71,13 @@ transition: fade
 
 # Reaktivitet tabell
 
-|                                            | <logos-react class="text-5xl"/> | <logos-svelte-icon class="text-5xl svelte"/> | <logos-vue class="text-5xl"/> | <logos-solidjs-icon class="text-5xl"/>   | <logos-preact class="text-5xl"/>   | <logos-qwik-icon class="text-5xl"/>   | <logos-angular-icon class="text-5xl"/>   | <logos-svelte-icon class="text-5xl svelte"/> |
-| ------------------------------------------ | ------------------------------- | -------------------------------------------- | ----------------------------- | ---------------------------------------- | ---------------------------------- | ------------------------------------- | ---------------------------------------- | -------------------------------------------- |
-| mutable vs immutable API                   |                                 |                                              |                               |                                          |                                    |                                       |                                          |                                              |
-| State er alltid i sync                     |                                 |                                              |                               |                                          |                                    |                                       |                                          |                                              |
-| Re-render                                  |                                 |                                              |                               |                                          |                                    |                                       |                                          |                                              |
-| Fungerer utenfor komponenten               |                                 |                                              |                               |                                          |                                    |                                       |                                          |                                              |
-| Fungerer utenfor rammeverk                 |                                 |                                              |                               |                                          |                                    |                                       |                                          |                                              |
+|                                            | <logos-react class="text-5xl"/> | <logos-svelte-icon class="text-5xl svelte"/> | <logos-vue class="text-5xl"/> | <logos-solidjs-icon class="text-5xl"/>   | <logos-preact class="text-5xl"/>   | <logos-angular-icon class="text-5xl"/>   | <logos-svelte-icon class="text-5xl svelte"/> |
+| ------------------------------------------ | ------------------------------- | -------------------------------------------- | ----------------------------- | ---------------------------------------- | ---------------------------------- | ---------------------------------------- | -------------------------------------------- |
+| mutable vs immutable API                   |                                 |                                              |                               |                                          |                                    |                                          |                                              |
+| State er alltid i sync                     |                                 |                                              |                               |                                          |                                    |                                          |                                              |
+| Re-render                                  |                                 |                                              |                               |                                          |                                    |                                          |                                              |
+| Fungerer utenfor komponenten               |                                 |                                              |                               |                                          |                                    |                                          |                                              |
+| Fungerer utenfor rammeverk                 |                                 |                                              |                               |                                          |                                    |                                          |                                              |
 
 <style>
 .svelte {
@@ -89,13 +89,13 @@ transition: fade
 
 # Reaktivitet tabell
 
-|                                            | <logos-react class="text-5xl"/> | <logos-vue class="text-5xl"/> | <logos-solidjs-icon class="text-5xl"/>   | <logos-preact class="text-5xl"/>   | <logos-qwik-icon class="text-5xl"/>   | <logos-angular-icon class="text-5xl"/>   | <logos-svelte-icon class="text-5xl"/> |
-| ------------------------------------------ | ------------------------------- | ----------------------------- | ---------------------------------------- | ---------------------------------- | ------------------------------------- | ---------------------------------------- | ------------------------------------- |
-| mutable vs immutable API                   |                                 |                               |                                          |                                    |                                       |                                          |                                       |
-| State er alltid i sync                     |                                 |                               |                                          |                                    |                                       |                                          |                                       |
-| Re-render                                  |                                 |                               |                                          |                                    |                                       |                                          |                                       |
-| Fungerer utenfor komponenten               |                                 |                               |                                          |                                    |                                       |                                          |                                       |
-| Fungerer utenfor rammeverk                 |                                 |                               |                                          |                                    |                                       |                                          |                                       |
+|                                            | <logos-react class="text-5xl"/> | <logos-vue class="text-5xl"/> | <logos-solidjs-icon class="text-5xl"/>   | <logos-preact class="text-5xl"/>   | <logos-angular-icon class="text-5xl"/>   | <logos-svelte-icon class="text-5xl"/> |
+| ------------------------------------------ | ------------------------------- | ----------------------------- | ---------------------------------------- | ---------------------------------- | ---------------------------------------- | ------------------------------------- |
+| mutable vs immutable API                   |                                 |                               |                                          |                                    |                                          |                                       |
+| State er alltid i sync                     |                                 |                               |                                          |                                    |                                          |                                       |
+| Re-render                                  |                                 |                               |                                          |                                    |                                          |                                       |
+| Fungerer utenfor komponenten               |                                 |                               |                                          |                                    |                                          |                                       |
+| Fungerer utenfor rammeverk                 |                                 |                               |                                          |                                    |                                          |                                       |
 
 ---
 
@@ -118,10 +118,6 @@ src: ./pages/preact.md
 ---
 
 ---
-src: ./pages/qwik.md
----
-
----
 src: ./pages/angular.md
 ---
 
@@ -132,11 +128,11 @@ src: ./pages/svelte5.md
 
 # Reaktivitet API
 
-|                              | <logos-react class="text-5xl"/> | <logos-vue class="text-5xl"/> | <logos-solidjs-icon class="text-5xl"/> | <logos-preact class="text-5xl"/> | <logos-qwik-icon class="text-5xl"/> | <logos-angular-icon class="text-5xl"/> | <logos-svelte-icon class="text-5xl"/> |
-| -----------------------------| ------------------------------- | ----------------------------- | -------------------------------------- | -------------------------------- | ----------------------------------- | -------------------------------------- | ------------------------------------- |
-| State                        | `useState`                      | `ref`/`reactive`              | `createSignal`                         | `signal`                         | `useSignal`                         | `signal`                               | `$state`                              |
-| Beregnet tilstand            | `useMemo`                       | `computed`                    | `() => `                               | `computed`                       | `useComputed$`                      | `computed`                             | `$derived`                            |
-| Effekt                       | `useEffect`                     | `watchEffect`                 | `createEffect`                         | `effect`                         | `useTask$`                          | `effect`                               | `$effect`                             |
+|                              | <logos-react class="text-5xl"/> | <logos-vue class="text-5xl"/> | <logos-solidjs-icon class="text-5xl"/> | <logos-preact class="text-5xl"/> | <logos-angular-icon class="text-5xl"/> | <logos-svelte-icon class="text-5xl"/> |
+| -----------------------------| ------------------------------- | ----------------------------- | -------------------------------------- | -------------------------------- | -------------------------------------- | ------------------------------------- |
+| State                        | `useState`                      | `ref`/`reactive`              | `createSignal`                         | `signal`                         | `signal`                               | `$state`                              |
+| Beregnet tilstand            | `useMemo`                       | `computed`                    | `() => `                               | `computed`                       | `computed`                             | `$derived`                            |
+| Effekt                       | `useEffect`                     | `watchEffect`                 | `createEffect`                         | `effect`                         | `effect`                               | `$effect`                             |
 
 <style>
 table {
@@ -155,13 +151,13 @@ Men det er jo mer te et rammeverk enn kun reaktivitet, ska sies.
 
 # Reaktivitet tabell
 
-|                              | <logos-react class="text-5xl"/>                | <logos-vue class="text-5xl"/>                       | <logos-solidjs-icon class="text-5xl"/>               | <logos-preact class="text-5xl"/>                     | <logos-qwik-icon class="text-5xl"/>                  | <logos-angular-icon class="text-5xl"/>              | <logos-svelte-icon class="text-5xl"/>                |
-| -----------------------------| ---------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------- |
-| mutable vs immutable API     | Immutable                                      | Mutable                                             | Immutable                                            | Mutable                                              | Mutable                                              | Immutable                                           | Mutable                                              |
-| State er alltid i sync       | <emojione-cross-mark-button class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/>  | <emojione-white-heavy-check-mark class="text-2xl"/>  | <emojione-cross-mark-button class="text-2xl"/>       | <emojione-white-heavy-check-mark class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/>  |
-| Re-render                    | <noto-deciduous-tree class="text-2xl"/>        | <openmoji-puzzle-piece class="text-3xl"/>           | <material-symbols-jump-to-element class="text-3xl"/> | <material-symbols-jump-to-element class="text-3xl"/> | <material-symbols-jump-to-element class="text-3xl"/> | <noto-deciduous-tree class="text-2xl"/>             | <material-symbols-jump-to-element class="text-3xl"/> |
-| Fungerer utenfor komponenten | <emojione-cross-mark-button class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/>  | <emojione-white-heavy-check-mark class="text-2xl"/>  | <emojione-cross-mark-button class="text-2xl"/>       | <openmoji-palm-down-hand class="text-2xl"/>(2/3)    | <emojione-white-heavy-check-mark class="text-2xl"/>  |
-| Fungerer utenfor rammeverk   | <emojione-cross-mark-button class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/> | <openmoji-palm-down-hand class="text-2xl"/>          | <emojione-white-heavy-check-mark class="text-2xl"/>  | <emojione-cross-mark-button class="text-2xl"/>       | <openmoji-palm-down-hand class="text-2xl"/>(2/3)    | <emojione-cross-mark-button class="text-2xl"/>       |
+|                              | <logos-react class="text-5xl"/>                | <logos-vue class="text-5xl"/>                       | <logos-solidjs-icon class="text-5xl"/>               | <logos-preact class="text-5xl"/>                     | <logos-angular-icon class="text-5xl"/>              | <logos-svelte-icon class="text-5xl"/>                |
+| -----------------------------| ---------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------- |
+| mutable vs immutable API     | Immutable                                      | Mutable                                             | Immutable                                            | Mutable                                              | Immutable                                           | Mutable                                              |
+| State er alltid i sync       | <emojione-cross-mark-button class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/>  | <emojione-white-heavy-check-mark class="text-2xl"/>  | <emojione-white-heavy-check-mark class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/>  |
+| Re-render                    | <noto-deciduous-tree class="text-2xl"/>        | <openmoji-puzzle-piece class="text-3xl"/>           | <material-symbols-jump-to-element class="text-3xl"/> | <material-symbols-jump-to-element class="text-3xl"/> | <noto-deciduous-tree class="text-2xl"/>             | <material-symbols-jump-to-element class="text-3xl"/> |
+| Fungerer utenfor komponenten | <emojione-cross-mark-button class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/>  | <emojione-white-heavy-check-mark class="text-2xl"/>  | <openmoji-palm-down-hand class="text-2xl"/>(2/3)    | <emojione-white-heavy-check-mark class="text-2xl"/>  |
+| Fungerer utenfor rammeverk   | <emojione-cross-mark-button class="text-2xl"/> | <emojione-white-heavy-check-mark class="text-2xl"/> | <openmoji-palm-down-hand class="text-2xl"/>          | <emojione-white-heavy-check-mark class="text-2xl"/>  | <openmoji-palm-down-hand class="text-2xl"/>(2/3)    | <emojione-cross-mark-button class="text-2xl"/>       |
 
 ---
 layout: center
