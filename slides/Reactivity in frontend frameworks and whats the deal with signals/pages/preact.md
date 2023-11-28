@@ -8,7 +8,7 @@
 transition: fade
 ---
 
-# Preact reaktivitet
+# Preact reactivity
  
 ```jsx
 export function Component() {
@@ -28,7 +28,7 @@ export function Component() {
 transition: fade
 ---
 
-# Preact reaktivitet
+# Preact reactivity
  
 ```jsx {1,4,6,11}
 import { signal } from '@preact/signals'
@@ -52,7 +52,7 @@ export function Component() {
 transition: fade
 ---
 
-# Preact reaktivitet
+# Preact reactivity
  
 ```jsx {1,5}
 import { signal, computed } from '@preact/signals'
@@ -77,7 +77,7 @@ export function Component() {
 transition: fade
 ---
 
-# Preact reaktivitet
+# Preact reactivity
  
 ```jsx {1,6}
 import { signal, computed, effect } from '@preact/signals'
@@ -103,7 +103,7 @@ export function Component() {
 transition: fade
 ---
 
-# Preact reaktivitet
+# Preact reactivity
  
 ```jsx {8,9,10}
 import { signal, computed, effect } from '@preact/signals'
@@ -129,7 +129,7 @@ export function Component() {
 
 ---
 
-# Preact reaktivitet
+# Preact reactivity
  
 ```jsx {3-8}
 import { signal, computed, effect } from '@preact/signals'
@@ -160,12 +160,12 @@ layout: center
 ```mermaid
 graph TD;
     A---B;
-    A---C[C - state brukes];
+    A---C[C - state used];
     B---E;
     C---D;
     C---F;
     D---G;
-    D---H[H - state brukes];
+    D---H[H - state used];
     F---I;
     style C stroke:#ff0000,stroke-dasharray: 5 5
     style H stroke:#ff0000,stroke-dasharray: 5 5
@@ -173,12 +173,12 @@ graph TD;
 
 ---
 
-# Preact oppsummering
+# Preact summary
 
 |                                            | <logos-preact class="text-5xl"/>                             |
 | ------------------------------------------ | ------------------------------------------------------------ |
 | mutable vs immutable API                   | <span v-click>Mutable</span>                                 |
-| State er alltid i sync                     | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
+| State is always in sync                    | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
 | Re-render                                  | <material-symbols-jump-to-element v-click class="text-3xl"/> |
-| Fungerer utenfor komponenten               | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
-| Fungerer utenfor rammeverk                 | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
+| Works outside the component                | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
+| Works outside the framework                | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |

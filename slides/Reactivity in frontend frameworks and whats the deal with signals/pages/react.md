@@ -8,7 +8,7 @@
 transition: fade
 ---
 
-# React reaktivitet
+# React reactivity
 
 ```jsx
 export function Component() {
@@ -28,7 +28,7 @@ export function Component() {
 transition: fade
 ---
 
-# React reaktivitet
+# React reactivity
 
 ```jsx {1,4,6,11}
 import { useState } from 'react'
@@ -52,7 +52,7 @@ export function Component() {
 transition: fade
 ---
 
-# React reaktivitet
+# React reactivity
 
 ```jsx {5}
 import { useState } from 'react'
@@ -77,7 +77,7 @@ export function Component() {
 transition: fade
 ---
 
-# React reaktivitet
+# React reactivity
 
 ```jsx {5}
 import { useState, useMemo } from 'react'
@@ -102,7 +102,7 @@ export function Component() {
 transition: fade
 ---
 
-# React reaktivitet
+# React reactivity
 
 ```jsx {5}
 import { useState } from 'react'
@@ -127,7 +127,7 @@ export function Component() {
 transition: fade
 ---
 
-# React reaktivitet
+# React reactivity
 
 ```jsx {6}
 import { useState, useEffect } from 'react'
@@ -153,7 +153,7 @@ export function Component() {
 transition: fade
 ---
 
-# React reaktivitet
+# React reactivity
 
 ```jsx {8,9,10}
 import { useState, useEffect } from 'react'
@@ -179,7 +179,7 @@ export function Component() {
 
 ---
 
-# React reaktivitet
+# React reactivity
 
 ```jsx {3}
 import { useState, useEffect } from 'react'
@@ -213,7 +213,7 @@ layout: center
 ```mermaid
 graph TD;
     A---B;
-    A---C[C - state endring];
+    A---C[C - state changed];
     B---E;
     C---D;
     C---F;
@@ -231,12 +231,12 @@ graph TD;
 
 ---
 
-# React oppsummering
+# React summary
 
 |                                            | <logos-react class="text-5xl"/>                          |
 | ------------------------------------------ | -------------------------------------------------------- |
 | mutable vs immutable API                   |  <span v-click>Immutable</span>                          |
-| State er alltid i sync                     |  <emojione-cross-mark-button v-click class="text-2xl"/>  |
+| State is always in sync                    |  <emojione-cross-mark-button v-click class="text-2xl"/>  |
 | Re-render                                  |  <noto-deciduous-tree v-click class="text-2xl"/>         |
-| Fungerer utenfor komponenten               |  <emojione-cross-mark-button v-click class="text-2xl"/>  |
-| Fungerer utenfor rammeverk                 |  <emojione-cross-mark-button v-click class="text-2xl"/>  |
+| Works outside the component                |  <emojione-cross-mark-button v-click class="text-2xl"/>  |
+| Works outside the framework                |  <emojione-cross-mark-button v-click class="text-2xl"/>  |

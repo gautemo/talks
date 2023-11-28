@@ -8,7 +8,7 @@
 transition: fade
 ---
 
-# Vue reaktivitet
+# Vue reactivity
  
 ```html
 <script setup>
@@ -26,7 +26,7 @@ function increase() {
 transition: fade
 ---
 
-# Vue reaktivitet
+# Vue reactivity
  
 ```html {2,4,6,11}
 <script setup>
@@ -48,7 +48,7 @@ function increase() {
 transition: fade
 ---
 
-# Vue reaktivitet
+# Vue reactivity
  
 ```html {2,4,6,11}
 <script setup>
@@ -70,7 +70,7 @@ function increase() {
 transition: fade
 ---
 
-# Vue reaktivitet
+# Vue reactivity
  
 ```html
 <script setup>
@@ -92,7 +92,7 @@ function increase() {
 transition: fade
 ---
 
-# Vue reaktivitet
+# Vue reactivity
  
 ```html {5}
 <script setup>
@@ -115,7 +115,7 @@ function increase() {
 transition: fade
 ---
 
-# Vue reaktivitet
+# Vue reactivity
  
 ```html {6}
 <script setup>
@@ -139,7 +139,7 @@ function increase() {
 transition: fade
 ---
 
-# Vue reaktivitet
+# Vue reactivity
  
 ```html {8,9,10}
 <script setup>
@@ -163,7 +163,7 @@ function increase() {
 
 ---
 
-# Vue reaktivitet
+# Vue reactivity
 
 <p>state.js:</p>
 
@@ -209,12 +209,12 @@ layout: center
 ```mermaid
 graph TD;
     A---B;
-    A---C[C - state brukes];
+    A---C[C - state used];
     B---E;
     C---D;
     C---F;
     D---G;
-    D---H[H - state brukes];
+    D---H[H - state used];
     F---I;
     style C stroke:#ff0000
     style H stroke:#ff0000
@@ -222,13 +222,13 @@ graph TD;
 
 ---
 
-# Vue oppsummering
+# Vue summary
 
 |                                            | <logos-vue class="text-5xl"/>                                 |
 | ------------------------------------------ | ------------------------------------------------------------- |
 | mutable vs immutable API                   |  <span v-click>Mutable</span>                                 |
-| State er alltid i sync                     |  <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
+| State is always in sync                    |  <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
 | Re-render                                  |  <openmoji-puzzle-piece v-click class="text-3xl"/>            |
-| Fungerer utenfor komponenten               |  <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
-| Fungerer utenfor rammeverk                 |  <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
+| Works outside the component                |  <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
+| Works outside the framework                |  <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
 

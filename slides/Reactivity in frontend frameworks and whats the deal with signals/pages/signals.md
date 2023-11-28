@@ -3,7 +3,7 @@ layout: center
 transition: fade
 ---
 
-# Hva er greia med signals?
+# What's the deal with signals?
 
 ```mermaid { scale: 1.5 }
 graph TD;
@@ -18,7 +18,7 @@ layout: center
 transition: fade
 ---
 
-# Hva er greia med signals?
+# What's the deal with signals?
 
 ```mermaid { scale: 1.5 }
 graph TD;
@@ -35,7 +35,7 @@ layout: center
 transition: fade
 ---
 
-# Hva er greia med signals?
+# What's the deal with signals?
 
 ```mermaid { scale: 1.5 }
 graph TD;
@@ -54,7 +54,7 @@ layout: center
 transition: fade
 ---
 
-# Hva er greia med signals?
+# What's the deal with signals?
 
 ```mermaid { scale: 1.5 }
 graph TD;
@@ -70,7 +70,7 @@ graph TD;
 layout: center
 ---
 
-# Hva er greia med signals?
+# What's the deal with signals?
 
 ```mermaid { scale: 1.5 }
 graph TD;
@@ -82,9 +82,9 @@ graph TD;
     style E stroke:#ff0000
 ```
 
-<!-- ---
+---
 
-# Hva er greia med signals?
+# What's the deal with signals?
 
 ```js
 function signal(value) {
@@ -99,4 +99,4 @@ function signal(value) {
     }
   }
 }
-``` -->
+```

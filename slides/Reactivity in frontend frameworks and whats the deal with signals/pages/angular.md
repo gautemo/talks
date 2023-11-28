@@ -8,7 +8,7 @@
 transition: fade
 ---
 
-# Angular reaktivitet
+# Angular reactivity
  
 ```js
 import { Component } from '@angular/core'
@@ -27,7 +27,7 @@ export class CountComponent {
 transition: fade
 ---
 
-# Angular reaktivitet
+# Angular reactivity
  
 ```js {1,8,11}
 import { Component, signal } from '@angular/core'
@@ -49,7 +49,7 @@ export class CountComponent {
 transition: fade
 ---
 
-# Angular reaktivitet
+# Angular reactivity
  
 ```js {1,9}
 import { Component, signal, computed } from '@angular/core'
@@ -72,7 +72,7 @@ export class CountComponent {
 transition: fade
 ---
 
-# Angular reaktivitet
+# Angular reactivity
  
 ```js {1,11-13}
 import { Component, signal, computed, effect } from '@angular/core'
@@ -99,7 +99,7 @@ export class CountComponent {
 transition: fade
 ---
 
-# Angular reaktivitet
+# Angular reactivity
  
 ```js {16-18}
 import { Component, signal, computed, effect } from '@angular/core'
@@ -126,7 +126,7 @@ export class CountComponent {
 
 ---
 
-# Angular reaktivitet
+# Angular reactivity
  
 ```js {3,4,11-15}
 import { Component, signal, computed, effect } from '@angular/core'
@@ -160,7 +160,7 @@ layout: center
 ```mermaid
 graph TD;
     A---B;
-    A---C[C - state endring];
+    A---C[C - state changed];
     B---E;
     C---D;
     C---F;
@@ -178,15 +178,15 @@ graph TD;
 
 ---
 
-# Angular oppsummering
+# Angular summary
 
 |                                            | <logos-angular-icon class="text-5xl"/>                                |
 | ------------------------------------------ | --------------------------------------------------------------------- |
 | mutable vs immutable API                   | <span v-click>Immutable</span>                                        |
-| State er alltid i sync                     | <emojione-white-heavy-check-mark v-click class="text-2xl"/>           |
+| State is always in sync                    | <emojione-white-heavy-check-mark v-click class="text-2xl"/>           |
 | Re-render                                  | <noto-deciduous-tree v-click class="text-2xl"/>                       |
-| Fungerer utenfor komponenten               | <span v-click><openmoji-palm-down-hand class="text-2xl"/>(2/3)</span> |
-| Fungerer utenfor rammeverk                 | <span v-click><openmoji-palm-down-hand class="text-2xl"/>(2/3)</span> |
+| Works outside the component                | <span v-click><openmoji-palm-down-hand class="text-2xl"/>(2/3)</span> |
+| Works outside the framework                | <span v-click><openmoji-palm-down-hand class="text-2xl"/>(2/3)</span> |
 
 <!--
 effect() can only be used within an injection context

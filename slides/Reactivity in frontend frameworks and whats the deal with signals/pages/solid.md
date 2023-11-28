@@ -8,7 +8,7 @@
 transition: fade
 ---
 
-# Solid reaktivitet
+# Solid reactivity
  
 ```jsx
 import { createSignal, createEffect } from 'solid-js'
@@ -34,7 +34,7 @@ export function Component() {
 transition: fade
 ---
 
-# Solid reaktivitet
+# Solid reactivity
  
 ```jsx {8,9,10}
 import { createSignal, createEffect } from 'solid-js'
@@ -60,7 +60,7 @@ export function Component() {
 
 ---
 
-# Solid reaktivitet
+# Solid reactivity
  
 ```jsx
 import { createSignal, createEffect } from 'solid-js'
@@ -91,12 +91,12 @@ layout: center
 ```mermaid
 graph TD;
     A---B;
-    A---C[C - state brukes];
+    A---C[C - state used];
     B---E;
     C---D;
     C---F;
     D---G;
-    D---H[H - state brukes];
+    D---H[H - state used];
     F---I;
     style C stroke:#ff0000,stroke-dasharray: 5 5
     style H stroke:#ff0000,stroke-dasharray: 5 5
@@ -104,13 +104,13 @@ graph TD;
 
 ---
 
-# Solid oppsummering
+# Solid summary
 
 |                                            | <logos-solidjs-icon class="text-5xl"/>                       |
 | ------------------------------------------ | ------------------------------------------------------------ |
 | mutable vs immutable API                   | <span v-click>Immutable</span>                               |
-| State er alltid i sync                     | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
+| State is always in sync                    | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
 | Re-render                                  | <material-symbols-jump-to-element v-click class="text-3xl"/> |
-| Fungerer utenfor komponenten               | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
-| Fungerer utenfor rammeverk                 | <openmoji-palm-down-hand v-click class="text-2xl"/>          |
+| Works outside the component                | <emojione-white-heavy-check-mark v-click class="text-2xl"/>  |
+| Works outside the framework                | <openmoji-palm-down-hand v-click class="text-2xl"/>          |
 
