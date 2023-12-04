@@ -3,6 +3,7 @@ Format: Presentation 👨‍🏫
 
 ### 23 October 2023 - Trondheim Developer Conference / TDC
 ### 29 November 2023 - Framsia, meetup
+[Recording - norwegian](https://vimeo.com/877133194)  
 [Slides](https://gaute-talks.netlify.app/reactivity-in-frontend-frameworks-and-whats-the-deal-with-signals)  
 
 ## Description (Norwegian)
