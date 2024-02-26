@@ -1,0 +1,25 @@
+.options{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.options.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.options > div{
+  border: 3px solid #787878;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+pre::-webkit-scrollbar{
+  height: 8px;
+}
+
+pre::-webkit-scrollbar-thumb { 
+  background: #99999938;
+}

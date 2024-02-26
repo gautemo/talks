@@ -1,0 +1,17 @@
+{
+  "name": "choosing-the-correct-frontendframework-in-2024",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@iconify-json/logos": "^1.1.42",
+    "@slidev/cli": "^0.48.0-beta.6",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "vue": "^3.4.19"
+  }
+}
