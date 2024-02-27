@@ -457,11 +457,84 @@ createEffect(() => {
 
 ---
 
-Mutable vs immutable
+# Mutable vs immutable
+
+<section class="options">
+
+<div>
+Immutable
+
+```js
+const [count, setCount] = useState(0)
+setCount(count + 1)
+```
+
+</div>
+<div>
+Mutable
+
+```js
+const count = ref(0)
+count.value++
+```
+
+</div>
+</section>
 
 ---
 
-Stabilitet vs innovasjon
+# Mutable vs immutable
+
+<section class="options">
+
+<div>
+Immutable
+
+```js
+const [person, setPerson] = useState({ name: 'Gaute', age: 32 })
+setPerson({ ...person, age: person + 1 })
+```
+
+<section v-click="1">
+  <logos-react/>
+  <logos-solidjs-icon />
+  <logos-angular-icon />
+  <logos-preact class="opacity-60"/>
+</section>
+</div>
+<div>
+Mutable
+
+```js
+const person = reactive({ name: 'Gaute', age: 32 })
+person.age++
+```
+
+<section v-click="1">
+  <logos-vue />
+  <logos-svelte-icon />
+  <logos-preact />
+  <logos-angular-icon class="opacity-60"/>
+</section>
+</div>
+</section>
+
+---
+
+# Stabilitet og innovasjon
+
+<Arrow x1="100" y1="200" x2="850" y2="200" />
+<Arrow x1="800" y1="200" x2="100" y2="200" />
+
+<p class="translate-x-20 translate-y-18">Lite endringer</p>
+<p class="translate-x-168 translate-y-8">Innovasjon</p>
+
+<logos-react class="text-4xl translate-y-10 translate-x-60" v-click="1"/>
+<logos-vue class="text-4xl translate-y-10 translate-x-110" v-click="4"/>
+<logos-solidjs-icon class="text-4xl translate-y-10 translate-x-50" v-click="2"/>
+<logos-angular-icon class="text-4xl translate-y-10 translate-x-130" v-click="5"/>
+<logos-svelte-icon class="text-4xl translate-y-10 translate-x-130" v-click="6"/>
+<logos-preact class="text-4xl translate-y-10 translate-x-30" v-click="3"/>
 
 ---
 layout: center
@@ -487,11 +560,6 @@ url: https://npmtrends.com/@angular/core-vs-preact-vs-react-vs-solid-js-vs-svelt
   ]"/>
 
 ---
-
-- Comunity
-- Økosystem
-
----
 layout: center
 ---
 
@@ -508,28 +576,59 @@ Performance
 
 # Gautes tanker om React
 
+- Best på popularitet og økosystem
+- "React isn’t great at anything except being popular"
+
+TODO - nevn tidligere
+- Performance
+- Learning curve
+- Bundle size
+- Scalability
+- Community and support
+- Financial backing
+- Developer experience
+- Hireability
+
+<!-- Source https://joshcollinsworth.com/blog/self-fulfilling-prophecy-of-react -->
+
 ---
 
 # Gautes tanker om Vue
+
+- Ikke best på noe, men i toppen på alt
 
 ---
 
 # Gautes tanker om Angular
 
+- Har føltes litt tungt med mye boilerplate
+- Har tatt gjort store forbedringer i det siste
+
 ---
 
 # Gautes tanker om Svelte
+
+- Versjon 5 blir et skifte
 
 ---
 
 # Gautes tanker om Solid
 
+- Nytt og bedre JSX rammeverk
+- Lite team og økosystem
+
 ---
 
 # Gautes tanker om Preact
 
----
-
-Konklusjon
+- Et bedre alternativ til React med mindre økosystem
 
 ---
+
+# Konklusjon
+
+---
+layout: center
+---
+
+# Takk for meg!
