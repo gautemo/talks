@@ -20,18 +20,18 @@ routerMode: hash
 
 # Sånn gjør du riktig valg av frontendrammeverk i 2024
 
-<logos-vue class="text-6xl translate-x--10 translate-y-5 opacity-50"/>
-<logos-react class="text-6xl translate-x--15 translate-y--65  opacity-50"/>
-<logos-svelte-icon class="text-6xl translate-x--10 translate-y-27  opacity-50"/>
-<logos-angular-icon class="text-6xl translate-x-100 translate-y--60  opacity-50"/>
-<logos-solidjs-icon class="text-6xl translate-x--25 translate-y--65  opacity-50"/>
-<logos-preact class="text-6xl translate-x--10 translate-y--55  opacity-50"/>
-<logos-nextjs-icon class="text-6xl translate-x--30 translate-y-30  opacity-50"/>
+<logos-vue class="text-6xl translate-x-20 translate-y-5 opacity-50"/>
+<logos-react class="text-6xl translate-x-15 translate-y--65  opacity-50"/>
+<logos-svelte-icon class="text-6xl translate-x--80 translate-y--70  opacity-50"/>
+<logos-angular-icon class="text-6xl translate-x--90 translate-y-20  opacity-50"/>
+<logos-solidjs-icon class="text-6xl translate-x-5 translate-y-15  opacity-50"/>
+<logos-preact class="text-6xl translate-x-10 translate-y--70  opacity-50"/>
+<!-- <logos-nextjs-icon class="text-6xl translate-x--30 translate-y-30  opacity-50"/>
 <logos-remix-icon class="text-6xl translate-x-10 translate-y-10  opacity-50"/>
 <logos-nuxt-icon class="text-6xl translate-x-30 translate-y-5  opacity-50"/>
 <logos-analog class="text-6xl translate-x--100 translate-y-5  opacity-50"/>
 <logos-astro-icon class="text-6xl translate-x-20 translate-y--80  opacity-50"/>
-<logos-fresh class="text-6xl translate-x-5 translate-y-20  opacity-50"/>
+<logos-fresh class="text-6xl translate-x-5 translate-y-20  opacity-50"/> -->
 
 <style>
   h1 {
@@ -42,46 +42,7 @@ routerMode: hash
   }
 
   .bg {
-    background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-  }
-</style>
-
----
-layout: cover
-class: text-center
-transition: fade
----
-
-<div class="bg"></div>
-
-# Sånn gjør du riktig valg av frontendrammeverk i 2024
-
-<logos-vue class="text-6xl translate-x--10 translate-y-5"/>
-<logos-react class="text-6xl translate-x--15 translate-y--65"/>
-<logos-svelte-icon class="text-6xl translate-x--10 translate-y-27"/>
-<logos-angular-icon class="text-6xl translate-x-100 translate-y--60"/>
-<logos-solidjs-icon class="text-6xl translate-x--25 translate-y--65"/>
-<logos-preact class="text-6xl translate-x--10 translate-y--55"/>
-<logos-nextjs-icon class="text-6xl translate-x--30 translate-y-30" v-click.hide="1"/>
-<logos-remix-icon class="text-6xl translate-x-10 translate-y-10" v-click.hide="1"/>
-<logos-nuxt-icon class="text-6xl translate-x-30 translate-y-5" v-click.hide="1"/>
-<logos-analog class="text-6xl translate-x--100 translate-y-5" v-click.hide="1"/>
-<logos-astro-icon class="text-6xl translate-x-20 translate-y--80" v-click.hide="1"/>
-<logos-fresh class="text-6xl translate-x-5 translate-y-20" v-click.hide="1"/>
-
-<style>
-  h1 {
-    font-weight: bold;
-    font-size: 4rem !important;
-    translate: 0 30px;
-    visibility: hidden;
-  }
-
-  .bg {
-    background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     position: absolute;
     inset: 0;
     z-index: -1;
@@ -104,7 +65,7 @@ class: text-center
 
 <style>
   .bg {
-    background-image: linear-gradient(to top, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     position: absolute;
     inset: 0;
     z-index: -1;
@@ -178,6 +139,7 @@ Hvorfor er det jeg som står her?
     <tr>
       <td v-click="1"></td>
       <td v-click="2">kuizzi.app: <logos-vue/></td>
+      <td v-click="3">2024: Sånn gjør du riktig valg av frontendrammeverk i 2024</td>
     </tr>
   </tbody>
 </table>
@@ -193,13 +155,51 @@ Hvorfor er det jeg som står her?
 
 # Hva er et frontend rammeverk?
 
-<ul>
-  <li v-click>Abstraksjon</li>
-  <li v-click>Oppsett/struktur for å lage HTML, JS og CSS</li>
-  <li v-click>Lar deg utvikle UI komponenter</li>
-  <li v-click>Holder på data</li>
-  <li v-click>Reaktiv UI basert på data</li>
-</ul>
+- Abstraksjon
+- Oppsett/struktur for å lage HTML, JS og CSS
+- Lar deg utvikle UI komponenter
+- Holder på data
+- Reaktiv UI basert på data
+- ++
+
+---
+
+# Hva er viktig å vurdere?
+
+- Utvikler opplevelse
+- Lærings kurve
+- Dokumentasjon
+- Performance
+- Bundle size
+- Skalerbarhet
+- Økosystemet
+- Tåler tidas tann
+- Jobbmuligheter/Ansettelsesmuligheter
+
+<!-- Source https://joshcollinsworth.com/blog/self-fulfilling-prophecy-of-react -->
+
+---
+
+# Hva er viktig å vurdere?
+
+- Utvikler opplevelse
+  - Lærings kurve
+  - Dokumentasjon
+- Performance
+  - Bundle size
+  - Skalerbarhet
+- Popularitet
+  - Økosystemet
+  - Tåler tidas tann
+  - Jobbmuligheter/Ansettelsesmuligheter
+
+---
+
+# Hva er viktig å vurdere?
+
+- Utvikler opplevelse
+- Performance
+- Popularitet
 
 ---
 preload: false
@@ -245,6 +245,10 @@ Vi må slutte å velge React kun basert på at det er det flest folk kan. Det gj
     align-items: center;
   }
 </style>
+
+---
+src: ./pages/framework-intro.md
+---
 
 ---
 layout: center
@@ -567,10 +571,43 @@ layout: center
 
 ---
 
-Performance
-- Bundle size
-- Rendering speed
-- Memory usage
+<BarChart title="Hello world size" postfix="kB" :bars="[
+  { name: 'React', points: 39.16 }, 
+  { name: 'Vue', points: 16.48 }, 
+  { name: 'Angular', points: 35.77 },
+  { name: 'Svelte', points: 1.67 },
+  { name: 'Preact', points: 4.12 },
+  { name: 'Solid', points: 2.47 },
+  ]"/>
+
+---
+
+```mermaid
+xychart-beta
+    title "Vekst per komponent"
+    x-axis "Antall komponenter" [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    y-axis "Størrelse i kB" 0 --> 240
+    line "Vue" [18.45,32.65,46.85,61.05,75.25,89.45,103.65,117.85,132.05,146.25,160.45]
+    line "React" [38.79,51.89,64.99,78.09,91.19,104.29,117.39,130.49,143.59,156.69,169.79]
+    line "Angular" [43.97,60.67,77.37,94.07,110.77,127.47,144.17,160.87,177.57,194.27,210.97]
+    line "Svelte 4" [1.8,25.3,48.8,72.3,95.8,119.3,142.8,166.3,189.8,213.3,236.8]
+    line "Svelte 5" [6.34,21.94,37.54,53.14,68.74,84.34,99.94,115.54,131.14,146.74,162.34]
+    line "Preact" [6.37,19.07,31.77,44.47,57.17,69.87,82.57,95.27,107.97,120.67,133.37]
+    line "Solid" [3.37,19.27,35.17,51.07,66.97,82.87,98.77,114.67,130.57,146.47,162.37]
+    
+```
+
+<p class="translate-x-177 translate-y--120 color-yellow">Svelte 4 (237 kB)</p>
+<p class="translate-x-177 translate-y--120 color-red">Angular (211 kB)</p>
+<p class="translate-x-177 translate-y--120 color-green">React (170 kB)</p>
+<p class="translate-x-177 translate-y--125">Solid (162 kB)</p>
+<p class="translate-x-177 translate-y--130">Svelte 5 (162 kB)</p>
+<p class="translate-x-177 translate-y--135 color-blue">Vue (160 kB)</p>
+<p class="translate-x-177 translate-y--136 color-white">Preact (133 kB)</p>
+
+---
+
+# TODO performance benchmark
 
 ---
 
@@ -578,18 +615,6 @@ Performance
 
 - Best på popularitet og økosystem
 - "React isn’t great at anything except being popular"
-
-TODO - nevn tidligere
-- Performance
-- Learning curve
-- Bundle size
-- Scalability
-- Community and support
-- Financial backing
-- Developer experience
-- Hireability
-
-<!-- Source https://joshcollinsworth.com/blog/self-fulfilling-prophecy-of-react -->
 
 ---
 

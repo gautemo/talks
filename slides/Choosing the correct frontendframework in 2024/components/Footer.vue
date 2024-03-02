@@ -23,8 +23,8 @@ const color = computed(() => {
 </script>
 
 <template>
-  <footer :class="{theme: page > 3}">
-    <div class="about-me" v-if="[1, 4, 70].includes(page)">
+  <footer :class="{theme: page > 2}">
+    <div class="about-me" v-if="[1, 2, 3, 70].includes(page)">
       <Homepage />
       <Twitter />
     </div>
