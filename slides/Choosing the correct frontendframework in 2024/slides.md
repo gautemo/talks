@@ -266,6 +266,25 @@ src: ./pages/mental-model.md
 <section class="options">
 
 <div>
+Separert
+
+```html
+<p>Kode24-dagen {{version}}</p>
+```
+```js
+export class MyComponent {
+  version = 3
+}
+```
+```css
+p { color: black; }
+```
+
+<section v-click="1">
+  <logos-angular-icon/>
+</section>
+</div>
+<div>
 JSX
 
 ```jsx
@@ -281,10 +300,11 @@ function MyComponent() {
   <logos-react/>
   <logos-preact />
   <logos-solidjs-icon />
+  <logos-vue class="opacity-70"/>
 </section>
 </div>
 <div>
-SFC
+Single File Component (SFC)
 
 ```svelte
 <script>
@@ -417,48 +437,8 @@ dedicated components
 </section>
 
 ---
-
-# Signals?
-
-<section class="options">
-
-<div>
-Re-run
-
-```jsx
-const [count, setCount] = useState(0)
-
-useEffect(() => {
-  console.log(count)
-}, [count])
-```
-
-<section v-click="1">
-  <logos-react/>
-  <logos-preact class="opacity-50"/>
-</section>
-</div>
-<div>
-Signal
-
-```jsx
-const [count, setCount] = createSignal(0)
-
-createEffect(() => {
-  console.log(count())
-})
-```
-
-<section v-click="1">
-  <logos-vue />
-  <logos-solidjs-icon />
-  <logos-preact />
-  <logos-angular-icon />
-  <logos-svelte-icon class="opacity-80"/>
-</section>
-</div>
-</section>
-
+src: ./pages/signals.md
+---
 ---
 
 # Mutable vs immutable
@@ -496,7 +476,10 @@ Immutable
 
 ```js
 const [person, setPerson] = useState({ name: 'Gaute', age: 32 })
-setPerson({ ...person, age: person + 1 })
+setPerson({
+  ...person,
+  age: person.age + 1,
+})
 ```
 
 <section v-click="1">
@@ -547,10 +530,15 @@ layout: center
 # Popularitet og økosystem
 
 ---
-layout: iframe
 
-url: https://npmtrends.com/@angular/core-vs-preact-vs-react-vs-solid-js-vs-svelte-vs-vue
----
+<BarChart title="NPM weekly downloads" :bars="[
+  { name: 'React', points: 25_100_000 }, 
+  { name: 'Vue', points: 4_900_000 }, 
+  { name: 'Angular', points: 3_500_000 },
+  { name: 'Svelte', points: 960_000 },
+  { name: 'Preact', points: 3_400_000 },
+  { name: 'Solid', points: 225_000 },
+  ]"/>
 
 ---
 
@@ -562,6 +550,18 @@ url: https://npmtrends.com/@angular/core-vs-preact-vs-react-vs-solid-js-vs-svelt
   { name: 'Preact', points: 13 },
   { name: 'Solid', points: 6 },
   ]"/>
+
+<div v-click>
+
+
+Popularitet gir fordeler i blant annet:
+- Antall Utviklere/jobber
+- Antall NPM pakker
+  - state
+  - UI-bibliotek
+- Antall meta-rammeverk
+
+</div>
 
 ---
 layout: center
@@ -579,6 +579,43 @@ layout: center
   { name: 'Preact', points: 4.12 },
   { name: 'Solid', points: 2.47 },
   ]"/>
+
+---
+
+<BarChart title="Hello world size" postfix="kB" :bars="[
+  { name: 'React', points: 39.16 }, 
+  { name: 'Vue', points: 16.48 }, 
+  { name: 'Angular', points: 35.77 },
+  { name: 'Svelte 4', points: 1.67 },
+  { name: 'Svelte 5', points: 6.34 },
+  { name: 'Preact', points: 4.12 },
+  { name: 'Solid', points: 2.47 },
+  ]"/>
+
+---
+
+```mermaid
+xychart-beta
+    title "Vekst per komponent"
+    x-axis "Antall komponenter" [1, 10]
+    y-axis "Størrelse i kB" 0 --> 60
+    line "Vue" [18.45,32.65]
+    line "React" [38.79,51.89]
+    line "Angular" [43.97,60.67]
+    line "Svelte 4" [1.8,25.3]
+    line "Svelte 5" [6.34,21.94]
+    line "Preact" [6.37,19.07]
+    line "Solid" [3.37,19.27]
+    
+```
+
+<p class="translate-x-177 translate-y--68 color-yellow">Svelte 4 (25 kB)</p>
+<p class="translate-x-177 translate-y--134 color-red">Angular (61 kB)</p>
+<p class="translate-x-177 translate-y--128 color-green">React (52 kB)</p>
+<p class="translate-x-177 translate-y--87">Solid (19 kB)</p>
+<p class="translate-x-177 translate-y--103">Svelte 5 (22 kB)</p>
+<p class="translate-x-177 translate-y--128 color-blue">Vue (33 kB)</p>
+<p class="translate-x-177 translate-y--112 color-white">Preact (19 kB)</p>
 
 ---
 
@@ -607,7 +644,31 @@ xychart-beta
 
 ---
 
-# TODO performance benchmark
+# krausest/js-framework-benchmark
+
+<BarChart title="Data og DOM endringer" :bars="[
+  { name: 'React', points: 1.53 }, 
+  { name: 'Vue', points: 1.24 }, 
+  { name: 'Angular', points: 1.35 },
+  { name: 'Svelte 5', points: 1.08 },
+  { name: 'Preact', points: 1.5 },
+  { name: 'Solid', points: 1.08 },
+  { name: 'Vanilla', points: 1.02 },
+  ]"/>
+
+---
+
+# krausest/js-framework-benchmark
+
+<BarChart title="Memory" :bars="[
+  { name: 'React', points: 2.81 }, 
+  { name: 'Vue', points: 2.13 }, 
+  { name: 'Angular', points: 3.12 },
+  { name: 'Svelte 5', points: 1.52 },
+  { name: 'Preact', points: 2.04 },
+  { name: 'Solid', points: 1.45 },
+  { name: 'Vanilla', points: 1.03 },
+  ]"/>
 
 ---
 
@@ -633,6 +694,7 @@ xychart-beta
 
 # Gautes tanker om Svelte
 
+- Hadde vært mitt valg om det ikke var for Vue
 - Versjon 5 blir et skifte
 
 ---
