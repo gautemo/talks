@@ -1,13 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "build:slides": "slidev build",
+    "build:slides": "slidev build --base /which-framework-do-you-like",
     "build:voting": "vite build voting-app",
     "dev:slides": "slidev",
     "dev:voting": "vite voting-app"
   },
   "dependencies": {
-    "@slidev/cli": "^0.28.10",
+    "@slidev/cli": "0.48.0-beta.21",
     "@slidev/theme-default": "^0.21.2",
     "@slidev/theme-seriph": "^0.21.2",
     "@vueuse/shared": "^7.7.1",

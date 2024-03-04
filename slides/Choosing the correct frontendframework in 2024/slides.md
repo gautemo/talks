@@ -26,12 +26,6 @@ routerMode: hash
 <logos-angular-icon class="text-6xl translate-x--90 translate-y-20  opacity-50"/>
 <logos-solidjs-icon class="text-6xl translate-x-5 translate-y-15  opacity-50"/>
 <logos-preact class="text-6xl translate-x-10 translate-y--70  opacity-50"/>
-<!-- <logos-nextjs-icon class="text-6xl translate-x--30 translate-y-30  opacity-50"/>
-<logos-remix-icon class="text-6xl translate-x-10 translate-y-10  opacity-50"/>
-<logos-nuxt-icon class="text-6xl translate-x-30 translate-y-5  opacity-50"/>
-<logos-analog class="text-6xl translate-x--100 translate-y-5  opacity-50"/>
-<logos-astro-icon class="text-6xl translate-x-20 translate-y--80  opacity-50"/>
-<logos-fresh class="text-6xl translate-x-5 translate-y-20  opacity-50"/> -->
 
 <style>
   h1 {
@@ -202,18 +196,6 @@ Hvorfor er det jeg som står her?
 - Popularitet
 
 ---
-preload: false
----
-
-# Hvilket frontendrammeverk skal man velge?
-
-<logos-react v-motion class="text-8xl" :initial="{ x: 1200, y: 500, scale: 0.2 }" :enter="{ x: 0, y: 0, scale: 1, transition: { duration: 7000, delay: 1000 } }"/>
-
-<!--
-Vi må slutte å velge React kun basert på at det er det flest folk kan. Det gjør at React har blitt en standard, så flere føler de må lære React for å følge jobbmarkedet og boblen blir da bare større. Det er en ond spiral! Jeg sier ikke at React er et feil valg, men du må velge det for de riktige grunnene i såfall.
--->
-
----
 
 # Hvem er du?
 
@@ -268,20 +250,24 @@ src: ./pages/mental-model.md
 <div>
 Separert
 
+<p class="file">component.html:</p>
 ```html
 <p>Kode24-dagen {{version}}</p>
 ```
+<p class="file">component.js:</p>
 ```js
 export class MyComponent {
   version = 3
 }
 ```
+<p class="file">component.css:</p>
 ```css
 p { color: black; }
 ```
 
 <section v-click="1">
   <logos-angular-icon/>
+  <logos-vue class="opacity-50"/>
 </section>
 </div>
 <div>
@@ -300,7 +286,7 @@ function MyComponent() {
   <logos-react/>
   <logos-preact />
   <logos-solidjs-icon />
-  <logos-vue class="opacity-70"/>
+  <logos-vue class="opacity-80"/>
 </section>
 </div>
 <div>
@@ -319,9 +305,18 @@ const version = 3
 <section v-click="1">
   <logos-vue />
   <logos-svelte-icon />
+  <logos-angular-icon class="opacity-80"/>
 </section>
 </div>
 </section>
+
+<style>
+  .file {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    font-size: 0.5rem;
+  }
+</style>
 
 ---
 
@@ -341,7 +336,7 @@ JSX
 Directive
 
 ```vue
-<p v-if="day">☀️</p>
+<p v-if="isDay">☀️</p>
 ```
 
 </div>
@@ -575,17 +570,6 @@ layout: center
   { name: 'React', points: 39.16 }, 
   { name: 'Vue', points: 16.48 }, 
   { name: 'Angular', points: 35.77 },
-  { name: 'Svelte', points: 1.67 },
-  { name: 'Preact', points: 4.12 },
-  { name: 'Solid', points: 2.47 },
-  ]"/>
-
----
-
-<BarChart title="Hello world size" postfix="kB" :bars="[
-  { name: 'React', points: 39.16 }, 
-  { name: 'Vue', points: 16.48 }, 
-  { name: 'Angular', points: 35.77 },
   { name: 'Svelte 4', points: 1.67 },
   { name: 'Svelte 5', points: 6.34 },
   { name: 'Preact', points: 4.12 },
@@ -672,47 +656,20 @@ xychart-beta
 
 ---
 
-# Gautes tanker om React
-
-- Best på popularitet og økosystem
-- "React isn’t great at anything except being popular"
-
----
-
-# Gautes tanker om Vue
-
-- Ikke best på noe, men i toppen på alt
-
----
-
-# Gautes tanker om Angular
-
-- Har føltes litt tungt med mye boilerplate
-- Har tatt gjort store forbedringer i det siste
-
----
-
-# Gautes tanker om Svelte
-
-- Hadde vært mitt valg om det ikke var for Vue
-- Versjon 5 blir et skifte
-
----
-
-# Gautes tanker om Solid
-
-- Nytt og bedre JSX rammeverk
-- Lite team og økosystem
-
----
-
-# Gautes tanker om Preact
-
-- Et bedre alternativ til React med mindre økosystem
-
----
-
 # Konklusjon
+
+- Alle sider kan lages med alle rammeverkene
+- Basert på hva du vektlegger mest finnes det bedre valg
+
+---
+layout: iframe-right
+
+url: https://frontend-framework-chooser.pages.dev/
+---
+
+# Din egen velger
+
+<img src="/qr1.png" alt="QR code to https://frontend-framework-chooser.pages.dev/">
 
 ---
 layout: center

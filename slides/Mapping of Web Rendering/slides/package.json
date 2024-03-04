@@ -2,19 +2,19 @@
   "name": "slides",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build --base /mapping-of-web-rendering",
     "dev": "slidev",
     "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^0.40.2",
-    "@slidev/theme-default": "*",
-    "@slidev/theme-seriph": "*"
+    "@slidev/cli": "0.48.0-beta.21",
+    "@slidev/theme-default": "0.25.0",
+    "@slidev/theme-seriph": "0.25.0"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.1.17",
-    "@iconify-json/mdi": "^1.1.50",
-    "@iconify-json/svg-spinners": "^1.1.1",
-    "@iconify-json/uim": "^1.1.5"
+    "@iconify-json/logos": "^1.1.42",
+    "@iconify-json/mdi": "^1.1.64",
+    "@iconify-json/svg-spinners": "^1.1.2",
+    "@iconify-json/uim": "^1.1.9"
   }
 }

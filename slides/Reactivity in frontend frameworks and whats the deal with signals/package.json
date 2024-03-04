@@ -2,20 +2,20 @@
   "name": "reactivity-in-frontend-frameworks-and-whats-the-deal-with-signals",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build --base /reactivity-in-frontend-frameworks-and-whats-the-deal-with-signals",
     "dev": "slidev",
     "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^0.43.15",
-    "@slidev/theme-default": "latest",
-    "@slidev/theme-seriph": "latest"
+    "@slidev/cli": "0.48.0-beta.21",
+    "@slidev/theme-default": "0.25.0",
+    "@slidev/theme-seriph": "0.25.0"
   },
   "devDependencies": {
-    "@iconify-json/emojione": "^1.1.9",
-    "@iconify-json/logos": "^1.1.40",
-    "@iconify-json/material-symbols": "^1.1.65",
-    "@iconify-json/noto": "^1.1.16",
-    "@iconify-json/openmoji": "^1.1.42"
+    "@iconify-json/emojione": "^1.1.10",
+    "@iconify-json/logos": "^1.1.42",
+    "@iconify-json/material-symbols": "^1.1.74",
+    "@iconify-json/noto": "^1.1.18",
+    "@iconify-json/openmoji": "^1.1.49"
   }
 }

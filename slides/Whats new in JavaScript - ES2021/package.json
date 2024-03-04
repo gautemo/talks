@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build --base /whats-new-in-javascript-es2021",
     "dev": "slidev",
     "export": "slidev export"
   },
@@ -15,12 +15,12 @@
     "@codemirror/state": "^0.19.6",
     "@codemirror/theme-one-dark": "^0.19.1",
     "@codemirror/view": "^0.19.27",
-    "@slidev/cli": "^0.27.18",
+    "@slidev/cli": "0.48.0-beta.21",
     "@slidev/theme-default": "0.21.1"
   },
   "name": "whats-new-in-javascript---es2021",
   "devDependencies": {
-    "@iconify-json/ic": "^1.0.7",
+    "@iconify-json/ic": "^1.1.17",
     "@vueuse/shared": "^7.1.2"
   }
 }

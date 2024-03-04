@@ -34,8 +34,6 @@ function Counter() {
 - AngularJS oppstod 2010
 - Angular oppstod 2016
 - Dagens versjon v17
-- Decorators
-- Dependency injection
 - 2023 signals & control flow
 
 ---
@@ -139,6 +137,7 @@ const count = ref(0)
 
 ## Svelte komponent
 
+````md magic-move
 ```svelte
 <script lang="ts">
 let count = 0
@@ -150,11 +149,6 @@ let count = 0
 <style>
 </style>
 ```
-
----
-
-## Svelte komponent
-
 ```svelte
 <script lang="ts">
 let count = $state(0)
@@ -166,6 +160,7 @@ let count = $state(0)
 <style>
 </style>
 ```
+````
 
 ---
 

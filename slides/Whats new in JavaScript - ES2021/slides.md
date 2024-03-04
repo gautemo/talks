@@ -76,7 +76,7 @@ clicks: 14
 <p class="top font">JavaScript created 1995</p>
 <p v-click="1" class="top font">Standarized by ECMAScript</p>
 
-<table v-click="1" class="font">
+<table v-click="1" class="font scale-82 translate-y--12">
   <thead>
     <tr>
       <th>Year</th>

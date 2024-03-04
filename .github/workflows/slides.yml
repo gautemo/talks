@@ -9,66 +9,64 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
 
+      - name: pnpm install
+        run: |
+          cd slides
+          pnpm install
       - name: build Intro to Vite
         run: |
           cd "slides/Intro to Vite"
-          npm i
-          npm run build
+          pnpm build
           mv dist ../web/intro-to-vite
       - name: build Whats new in JavaScript - ES2021
         run: |
           cd "slides/Whats new in JavaScript - ES2021"
-          npm i
-          npm run build
+          pnpm build
           mv dist ../web/whats-new-in-javascript-es2021
       - name: build Which Framework Do You Like
         run: |
           cd "slides/Which Framework Do You Like"
-          npm i
-          npm run build:slides
+          pnpm build:slides
           mv dist ../web/which-framework-do-you-like
       - name: build Which Framework Do You Like - Voting app
         run: |
           cd "slides/Which Framework Do You Like"
-          npm run build:voting
+          pnpm build:voting
           mv voting-app/dist ../web/which-framework-do-you-like-voting      
       - name: build Intro to Kotlin
         run: |
           cd "slides/Intro to Kotlin"
-          npm i
-          npm run build
+          pnpm build
           mv dist ../web/intro-to-kotlin
       - name: build Frontend testing workshop
         run: |
           cd "slides/Frontend testing workshop"
-          npm i
-          npm run build
+          pnpm build
           mv dist ../web/frontend-testing-workshop
       - name: build Whats new in JavaScript - ES2022
         run: |
           cd "slides/Whats new in JavaScript - ES2022"
-          npm i
-          npm run build
+          pnpm build
           mv dist ../web/whats-new-in-javascript-es2022
       - name: build Mapping of Web Rendering
         run: |
           cd "slides/Mapping of Web Rendering/slides"
-          npm i
-          npm run build
+          pnpm build
           mv dist ../../web/mapping-of-web-rendering   
       - name: build Whats new in JavaScript - ES2023
         run: |
           cd "slides/Whats new in JavaScript - ES2023"
-          npm i
-          npm run build
+          pnpm build
           mv dist ../web/whats-new-in-javascript-es2023                
       - name: build Whats new in JavaScript - ES2023
         run: |
           cd "slides/Reactivity in frontend frameworks and whats the deal with signals"
-          npm i
-          npm run build
+          pnpm build
           mv dist ../web/reactivity-in-frontend-frameworks-and-whats-the-deal-with-signals               
       - name: deploy
         run: |
