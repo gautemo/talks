@@ -68,7 +68,7 @@ jobs:
           cd "slides/Reactivity in frontend frameworks and whats the deal with signals"
           pnpm build
           mv dist ../web/reactivity-in-frontend-frameworks-and-whats-the-deal-with-signals               
-      - name: build Whats new in JavaScript - ES2023
+      - name: build Choosing the correct frontendframework in 2024
         run: |
           cd "slides/Choosing the correct frontendframework in 2024"
           pnpm build

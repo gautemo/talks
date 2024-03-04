@@ -670,6 +670,30 @@ url: https://frontend-framework-chooser.pages.dev/
 # Din egen velger
 
 <img src="/qr1.png" alt="QR code to https://frontend-framework-chooser.pages.dev/">
+https://frontend-framework-chooser.pages.dev/
+
+---
+
+<section>
+  <div>
+    <h2>Din egen velger</h2>
+    <img src="/qr1.png" alt="QR code to https://frontend-framework-chooser.pages.dev/">
+    <p class="translate-y--3">https://frontend-framework-chooser.pages.dev/</p>
+  </div>
+  <div>
+    <h2>Slides</h2>
+    <img src="/qr2.png" alt="QR code to https://gaute-talks.netlify.app/choosing-the-correct-frontendframework-in-2024/index.html">
+    <p class="translate-y--3">https://gaute-talks.netlify.app/choosing-the-correct-frontendframework-in-2024/index.html</p>
+  </div>
+</section>
+
+<style>
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+</style>
 
 ---
 layout: center
