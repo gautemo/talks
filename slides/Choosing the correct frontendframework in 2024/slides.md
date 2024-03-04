@@ -693,6 +693,10 @@ section {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
+
+img {
+  max-height: 290px;
+}
 </style>
 
 ---

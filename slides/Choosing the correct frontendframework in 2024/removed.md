@@ -144,3 +144,37 @@ graph TD;
 # Gautes tanker om Preact
 
 - Et bedre alternativ til React med mindre økosystem
+
+---
+
+# Vue bidrar økosystemet bidrar utover
+
+<logos-vitejs class="text-6xl translate-x-20 translate-y-30"/>
+<logos-react class="text-3xl translate-x--15 translate-y-10"/>
+<logos-remix-icon class="bg-white text-3xl"/>
+<logos-angular-icon class="text-3xl translate-x-12 translate-y-5"/>
+<logos-solidjs-icon class="text-3xl translate-x--45 translate-y-37"/>
+<logos-preact class="text-3xl translate-y-23"/>
+<logos-svelte-icon class="text-3xl translate-x--10 translate-y-40"/>
+<logos-qwik-icon class="text-3xl translate-x--35 translate-y-50"/>
+<logos-lit-icon class="text-3xl translate-x--65 translate-y-50"/>
+<Arrow x1="130" y1="220" x2="100" y2="200" />
+<Arrow x1="180" y1="215" x2="180" y2="180" />
+<Arrow x1="215" y1="215" x2="245" y2="190" />
+<Arrow x1="215" y1="245" x2="265" y2="245" />
+<Arrow x1="210" y1="270" x2="265" y2="295" />
+<Arrow x1="185" y1="290" x2="210" y2="320" />
+<Arrow x1="160" y1="290" x2="150" y2="320" />
+<Arrow x1="140" y1="270" x2="100" y2="285" />
+
+<img src="/volar.svg" class="h-18 translate-x-90 translate-y-15"/>
+<logos-astro-icon class="bg-white text-3xl translate-x-80 translate-y-25"/>
+<logos-mdx class="text-4xl translate-x-100 translate-y-25"/>
+<Arrow x1="430" y1="300" x2="400" y2="340" />
+<Arrow x1="470" y1="300" x2="500" y2="340" />
+
+<img src="/nitro.svg" class="h-18 translate-x-150 translate-y--15"/>
+<img src="/solidstart.svg" class="h-10 translate-x-140"/>
+<logos-analog class="text-3xl translate-x-165 translate-y--10"/>
+<Arrow x1="670" y1="300" x2="650" y2="350" />
+<Arrow x1="720" y1="300" x2="730" y2="350" />

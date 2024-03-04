@@ -5,6 +5,7 @@ import Twitter from './Twitter.vue'
 
 const props = defineProps<{ page: number, totalPages: number }>()
 
+// react, vue, solid, preact, angular, svelte
 const colors = ['#62d5fa', '#64b687', '#3a5792', '#613cb1', '#a73a37', '#eb5027']
 const index = ref(0)
 setInterval(() => {
@@ -12,19 +13,19 @@ setInterval(() => {
   if(index.value >= colors.length) index.value = 0
 }, 1000*45)
 const color = computed(() => {
-  if(13 <= props.page && props.page <= 23) return colors[0]
-  if(24 <= props.page && props.page <= 34) return colors[1]
-  if(35 <= props.page && props.page <= 40) return colors[2]
-  if(41 <= props.page && props.page <= 49) return colors[3]
-  if(50 <= props.page && props.page <= 58) return colors[4]
-  if(59 <= props.page && props.page <= 67) return colors[5]
+  if(10 <= props.page && props.page <= 11) return colors[0]
+  if(12 <= props.page && props.page <= 13) return colors[4]
+  if(14 <= props.page && props.page <= 15) return colors[1]
+  if(16 <= props.page && props.page <= 17) return colors[5]
+  if(18 <= props.page && props.page <= 19) return colors[3]
+  if(20 <= props.page && props.page <= 21) return colors[2]
   return colors[index.value]
 })
 </script>
 
 <template>
   <footer :class="{theme: page > 2}">
-    <div class="about-me" v-if="[1, 2, 3, 70].includes(page)">
+    <div class="about-me" v-if="[1, 2, 3, 42, 43, 44, 45].includes(page)">
       <Homepage />
       <Twitter />
     </div>
