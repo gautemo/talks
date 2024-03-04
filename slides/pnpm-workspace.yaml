@@ -5,6 +5,7 @@ packages:
   - 'Intro to Kotlin'
   - 'Intro to Vite'
   - 'Mapping of Web Rendering/slides'
+  - 'Mapping of Web Rendering/slides/theme'
   - 'Reactivity in frontend frameworks and whats the deal with signals'
   - 'Whats new in JavaScript - ES2021'
   - 'Whats new in JavaScript - ES2022'

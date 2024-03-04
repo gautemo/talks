@@ -134,6 +134,21 @@ importers:
         specifier: ^1.1.9
         version: 1.1.9
 
+  Mapping of Web Rendering/slides/theme:
+    dependencies:
+      '@slidev/types':
+        specifier: 0.48.0-beta.21
+        version: 0.48.0-beta.21
+      codemirror-theme-vars:
+        specifier: ^0.1.2
+        version: 0.1.2
+      prism-theme-vars:
+        specifier: ^0.2.4
+        version: 0.2.4
+      theme-vitesse:
+        specifier: ^0.7.6
+        version: 0.7.6
+
   Reactivity in frontend frameworks and whats the deal with signals:
     dependencies:
       '@slidev/cli':
@@ -298,7 +313,7 @@ importers:
         version: 0.48.0-beta.21(@types/markdown-it@13.0.7)(postcss@8.4.35)
       '@slidev/theme-default':
         specifier: ^0.21.2
-        version: 0.21.2
+        version: link:../Mapping of Web Rendering/slides/theme
       '@slidev/theme-seriph':
         specifier: ^0.21.2
         version: 0.21.3
@@ -3227,7 +3242,7 @@ packages:
       vue:
         optional: true
     dependencies:
-      vue: 3.4.21(typescript@4.9.5)
+      vue: 3.4.21(typescript@5.3.3)
       vue-demi: 0.14.7(vue@3.4.21)
 
   /@vueuse/shared@8.9.4(vue@3.4.21):
@@ -6931,6 +6946,11 @@ packages:
     engines: {vscode: ^1.43.0}
     dev: false
 
+  /theme-vitesse@0.7.6:
+    resolution: {integrity: sha512-67s1XWJdXPgqhtuxJ7o02dPx76aLov/aRY5jl3Awwy4yhZDNoHoiA087WEuD6jYh7o6+hF7X+O4nqoBXKMO3Zw==}
+    engines: {vscode: ^1.43.0}
+    dev: false
+
   /to-fast-properties@2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
@@ -7010,7 +7030,6 @@ packages:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
     hasBin: true
-    dev: false
 
   /uc.micro@1.0.6:
     resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
@@ -7682,7 +7701,7 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
-      vue: 3.4.21(typescript@4.9.5)
+      vue: 3.4.21(typescript@5.3.3)
 
   /vue-resize@2.0.0-alpha.1(vue@3.4.21):
     resolution: {integrity: sha512-7+iqOueLU7uc9NrMfrzbG8hwMqchfVfSzpVlCMeJQe4pyibqyoifDNbKTZvwxZKDvGkB+PdFeKvnGZMoEb8esg==}
@@ -7757,7 +7776,6 @@ packages:
       '@vue/server-renderer': 3.4.21(vue@3.4.21)
       '@vue/shared': 3.4.21
       typescript: 5.3.3
-    dev: false
 
   /w3c-keyname@2.2.8:
     resolution: {integrity: sha512-dpojBhNsCNN7T82Tm7k26A6G9ML3NkhDsnw9n/eoxSRlVBB4CEtIQ/KTCLI2Fwf3ataSXRhYFkQi3SlnFwPvPQ==}
