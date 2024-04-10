@@ -35,7 +35,7 @@ layout: center
 
 ---
 
-# Background
+# Background/The Story
 
 <v-clicks>
 
@@ -235,6 +235,16 @@ const unsub = onSnapshot(doc(db, "cities", "SF"), (doc) => {
 
 ---
 
-# Let's look at some code!
+```js
+import { GoogleAuthProvider, signInWithRedirect, signInAnonymously } from 'firebase/auth'
+
+signInWithRedirect(auth, new GoogleAuthProvider())
+// or
+signInAnonymously(auth)
+```
+
+---
+
+# Let's look at the app, firebase console, and some code!
 
 ![Firebase](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWM4MnM2ZGNocG04bzB0MnByZWk0a3JnMGw1NjgxNWp0OW1nZTI5dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nP8SZtRxihoTZ6W90N/giphy.gif)
