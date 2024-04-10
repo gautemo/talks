@@ -57,22 +57,27 @@ jobs:
         run: |
           cd "slides/Mapping of Web Rendering/slides"
           pnpm build
-          mv dist ../../web/mapping-of-web-rendering   
+          mv dist ../../web/mapping-of-web-rendering
       - name: build Whats new in JavaScript - ES2023
         run: |
           cd "slides/Whats new in JavaScript - ES2023"
           pnpm build
-          mv dist ../web/whats-new-in-javascript-es2023                
+          mv dist ../web/whats-new-in-javascript-es2023
       - name: build Whats new in JavaScript - ES2023
         run: |
           cd "slides/Reactivity in frontend frameworks and whats the deal with signals"
           pnpm build
-          mv dist ../web/reactivity-in-frontend-frameworks-and-whats-the-deal-with-signals               
+          mv dist ../web/reactivity-in-frontend-frameworks-and-whats-the-deal-with-signals
       - name: build Choosing the correct frontendframework in 2024
         run: |
           cd "slides/Choosing the correct frontendframework in 2024"
           pnpm build
-          mv dist ../web/choosing-the-correct-frontendframework-in-2024               
+          mv dist ../web/choosing-the-correct-frontendframework-in-2024
+      - name: How I built Kuizzi
+        run: |
+          cd "slides/How I built Kuizzi"
+          pnpm build
+          mv dist ../web/how-i-built-kuizzi
       - name: deploy
         run: |
           netlify deploy --dir slides/web --prod --auth ${{ secrets.NETLIFY_AUTH_TOKEN }}  --site ${{ secrets.NETLIFY_SITE_ID }}
