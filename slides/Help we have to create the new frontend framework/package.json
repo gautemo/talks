@@ -1,0 +1,17 @@
+{
+  "name": "help-we-have-to-create-the-new-frontend-framework",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.48.3",
+    "@slidev/theme-default": "0.25.0",
+    "@slidev/theme-seriph": "0.25.0",
+    "vue": "^3.4.21",
+    "@iconify-json/game-icons": "1.1.7"
+  }
+}
