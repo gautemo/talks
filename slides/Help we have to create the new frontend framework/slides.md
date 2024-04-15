@@ -394,7 +394,7 @@ layout: center
 
 # Components
 
-<Option text="JS abstraksjon"/>
+<Option text="JS abstraksjon" :disabled="true"/>
 <Option text="Web Components"/>
 
 ---
@@ -415,6 +415,7 @@ D[HTML templates]
 
 # Templating style
 
+<div class="grid grid-cols-2">
 <Option text="Tag function">
 
 ```js
@@ -444,6 +445,170 @@ const name = 'Capra'
 ```
 
 </Option>
+</div>
+
+---
+
+<ToDo/>
+
+---
+
+# Events
+
+<div class="flex flex-col gap-5">
+
+```js
+buttonElement.addEventListener('click', () => console.log('🐭'))
+```
+
+```js
+buttonElement.onclick = () => console.log('🐭')
+```
+
+```html
+<button onclick="console.log('🐭')">Press me</button>
+```
+
+</div>
+
+---
+
+<ToDo/>
+
+---
+
+# Reactivity
+
+|               | Rammeverk                                                                                    |
+| ------------- | -------------------------------------------------------------------------------------------- |
+| Med signals   | <logos-vue /><logos-solidjs-icon /><logos-preact /><logos-qwik-icon /><logos-angular-icon /> |
+| Snart signals | <logos-svelte-icon /><logos-lit-icon />                                                      |
+| Uten signals  | <logos-react />                                                                              |
+
+---
+
+# Reactivity
+
+<Option text="JavaScript Signals standard proposal"/>
+<Option text="Egen signals implementasjon"/>
+
+---
+
+<ToDo/>
+
+---
+
+# Dynamic DOM
+
+
+<Toggle :options="['Tag function', 'JSX', 'SFC']"><template #0>
+
+<div class="grid grid-cols-2">
+<Option text="JavaScript">
+
+```js
+html`
+  ${ isVisible ? html`<p>👋</p>` : '' }
+`
+```
+
+</Option>
+<Option text="Dedicated component">
+
+```js
+html`<goat-if if="${isVisible}">
+  <p>👋</p>
+</goat-if>`
+```
+
+</Option>
+<Option text="Attributes">
+
+```js
+html`
+  <p if="${isVisible}">👋</p>
+`
+```
+
+</Option>
+</div>
+
+</template>
+<template #1>
+
+<div class="grid grid-cols-3">
+<Option text="JavaScript">
+
+```jsx
+{ isVisible ? <p>👋</p> : '' }
+```
+
+</Option>
+<Option text="Dedicated component">
+
+```js
+<goat-if if={isVisible}>
+  <p>👋</p>
+</goat-if>
+```
+
+</Option>
+<Option text="Attributes">
+
+```js
+<p if={isVisible}>👋</p>
+```
+
+</Option>
+</div>
+
+</template>
+<template #2>
+
+<div class="grid grid-cols-3">
+<Option text="Dedicated component">
+
+```html
+<goat-if if="{isVisible}">
+  <p>👋</p>
+</goat-if>
+```
+
+</Option>
+<Option text="Attributes">
+
+```html
+<p if="{isVisible}">👋</p>
+```
+
+</Option>
+<Option text="Special syntax">
+
+```html
+@if({isVisible}){
+  <p>👋</p>
+}
+```
+
+</Option>
+</div>
+
+</template>
+</Toggle>
+
+---
+
+<ToDo/>
+
+---
+
+# Styling
+
+<div class="grid grid-cols-2">
+  <Option text="Global styles only"/>
+  <Option text="Scoped styles with shadow DOM"/>
+  <Option text="Scoped styles with scoped CSS"/>
+</div>
 
 ---
 

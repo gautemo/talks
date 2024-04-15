@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-defineProps<{ text: string }>()
+defineProps<{ text: string, disabled?: boolean }>()
 
-const disabled = ref(false)
 const selected = ref(false)
 </script>
 
@@ -13,10 +12,6 @@ const selected = ref(false)
       {{ text }}
       <slot></slot>
     </div>
-    <label>
-      Disable
-      <input type="checkbox" v-model="disabled">
-    </label>
   </section>
 </template>
 
@@ -30,7 +25,9 @@ div {
   border: 5px solid white;
   font-size: 1.2rem;
   border-radius: 10px;
+  padding: 10px;
   min-width: 200px;
+  height: 100%;
   min-height: 100px;
   display: grid;
   place-items: center;
