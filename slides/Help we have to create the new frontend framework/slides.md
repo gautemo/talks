@@ -489,8 +489,33 @@ buttonElement.onclick = () => console.log('🐭')
 
 # Reactivity
 
-<Option text="JavaScript Signals standard proposal"/>
-<Option text="Egen signals implementasjon"/>
+<div class="grid grid-cols-2">
+  <Option text="JavaScript Signals standard proposal"/>
+  <Option text="Egen signals implementasjon"/>
+</div>
+
+---
+
+# Reactivity
+
+<div class="grid grid-cols-2">
+  <Option text="Mutable">
+
+  ```js
+  const state = signal({ count: 0 })
+  state.count++
+  ```
+
+  </Option>
+  <Option text="Immutable">
+
+  ```js
+  const [state, setState] = signal({ count: 0 })
+  setState({ count: state().count + 1 })
+  ```
+
+  </Option>
+</div>
 
 ---
 
