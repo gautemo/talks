@@ -412,6 +412,12 @@ D[HTML templates]
 ```
 
 ---
+layout: center
+---
+
+# La oss utvikle komponenter 🧑‍💻
+
+---
 
 # Templating style
 
@@ -470,6 +476,12 @@ buttonElement.onclick = () => console.log('🐭')
 ```
 
 </div>
+
+---
+layout: center
+---
+
+# La oss utvikle events 🧑‍💻
 
 ---
 
