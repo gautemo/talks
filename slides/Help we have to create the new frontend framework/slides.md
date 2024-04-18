@@ -454,6 +454,12 @@ const name = 'Capra'
 </div>
 
 ---
+layout: center
+---
+
+# La oss utvikle bedre templating 🧑‍💻
+
+---
 
 <ToDo/>
 
@@ -528,6 +534,12 @@ layout: center
 
   </Option>
 </div>
+
+---
+layout: center
+---
+
+# La oss utvikle reaktivitet med signals 🧑‍💻
 
 ---
 
@@ -648,5 +660,45 @@ html`
 </div>
 
 ---
+layout: center
+---
+
+# La oss utvikle scoped css 🧑‍💻
+
+---
 
 <ToDo/>
+
+---
+layout: center
+---
+
+# La oss utvikle SSG 🧑‍💻
+
+---
+
+<ToDo/>
+
+---
+layout: center
+---
+
+# La oss utvikle SSR 🧑‍💻
+
+---
+
+<ToDo/>
+
+---
+
+<img src="/async.png" alt="async meme" class="scale-75 translate-y--25 translate-x-40">
+
+---
+
+# La oss benchmarke litt ⏱️
+
+---
+layout: center
+---
+
+# TAKK FOR MEG 🥵
