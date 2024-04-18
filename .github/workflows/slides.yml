@@ -78,6 +78,11 @@ jobs:
           cd "slides/How I built Kuizzi"
           pnpm build
           mv dist ../web/how-i-built-kuizzi
+      - name: Help we have to create the new frontend framework
+        run: |
+          cd "slides/Help we have to create the new frontend framework"
+          pnpm build
+          mv dist ../web/help-we-have-to-create-the-new-frontend-framework
       - name: deploy
         run: |
           netlify deploy --dir slides/web --prod --auth ${{ secrets.NETLIFY_AUTH_TOKEN }}  --site ${{ secrets.NETLIFY_SITE_ID }}

@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build  --base /how-i-built-kuizzi",
+    "build": "slidev build --base /how-i-built-kuizzi",
     "dev": "slidev",
     "export": "slidev export --dark"
   },
