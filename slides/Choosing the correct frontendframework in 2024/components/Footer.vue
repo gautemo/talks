@@ -6,7 +6,7 @@ import Twitter from './Twitter.vue'
 const props = defineProps<{ page: number, totalPages: number }>()
 
 // react, vue, solid, preact, angular, svelte
-const colors = ['#62d5fa', '#64b687', '#3a5792', '#613cb1', '#a73a37', '#eb5027']
+const colors = ['#62d5fa', '#64b687', '#3a5792', '#613cb1', '#a73a37', '#eb5027', '#324fff']
 const index = ref(0)
 setInterval(() => {
   index.value++
@@ -19,13 +19,14 @@ const color = computed(() => {
   if(16 <= props.page && props.page <= 17) return colors[5]
   if(18 <= props.page && props.page <= 19) return colors[3]
   if(20 <= props.page && props.page <= 21) return colors[2]
+  if(22 <= props.page && props.page <= 24) return colors[6]
   return colors[index.value]
 })
 </script>
 
 <template>
   <footer :class="{theme: page > 2}">
-    <div class="about-me" v-if="[1, 2, 3, 42, 43, 44, 45].includes(page)">
+    <div class="about-me" v-if="[1, 2, 3, 50, 51, 52, 53].includes(page)">
       <Homepage />
       <Twitter />
     </div>
