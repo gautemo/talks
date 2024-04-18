@@ -26,6 +26,7 @@ routerMode: hash
 <logos-angular-icon class="text-6xl translate-x--90 translate-y-20  opacity-50"/>
 <logos-solidjs-icon class="text-6xl translate-x-5 translate-y-15  opacity-50"/>
 <logos-preact class="text-6xl translate-x-10 translate-y--70  opacity-50"/>
+<logos-lit-icon class="text-6xl translate-x-40 translate-y--58  opacity-50"/>
 
 <style>
   h1 {
@@ -56,6 +57,7 @@ class: text-center
 <logos-angular-icon class="text-7xl translate-y--25" />
 <logos-solidjs-icon class="text-7xl translate-y--25" />
 <logos-preact class="text-7xl translate-y--25" />
+<logos-lit-icon class="text-7xl translate-y--25" />
 
 <style>
   .bg {
@@ -243,31 +245,35 @@ src: ./pages/mental-model.md
 ---
 ---
 
-# Komponent
+# Template
 
-<section class="options">
+<section class="options grid">
 
 <div>
-Separert
+HTML fil
 
-<p class="file">component.html:</p>
 ```html
 <p>Kode24-dagen {{version}}</p>
-```
-<p class="file">component.js:</p>
-```js
-export class MyComponent {
-  version = 3
-}
-```
-<p class="file">component.css:</p>
-```css
-p { color: black; }
 ```
 
 <section v-click="1">
   <logos-angular-icon/>
-  <logos-vue class="opacity-50"/>
+  <logos-vue class="opacity-80"/>
+</section>
+</div>
+<div>
+template literals
+
+```js
+const version = 0
+return html`
+  <p>Kode24-dagen ${this.version}</p>
+`
+```
+
+<section v-click="1">
+  <logos-angular-icon/>
+  <logos-lit-icon />
 </section>
 </div>
 <div>
@@ -305,7 +311,6 @@ const version = 3
 <section v-click="1">
   <logos-vue />
   <logos-svelte-icon />
-  <logos-angular-icon class="opacity-80"/>
 </section>
 </div>
 </section>
@@ -320,12 +325,12 @@ const version = 3
 
 ---
 
-# Hvordan liker du å skrive din template?
+# Hvordan liker du å skrive dynamisk template?
 
 <section class="options grid">
 
 <div>
-JSX
+JS
 
 ```jsx
 { isDay && <p>☀️</p> }
@@ -364,12 +369,12 @@ dedicated components
 
 ---
 
-# Hvordan liker du å skrive din template?
+# Hvordan liker du å skrive dynamisk template?
 
 <section class="options grid">
 
 <div>
-JSX
+JS
 
 ```jsx
 <ul>
@@ -382,6 +387,7 @@ JSX
 <section v-click="1">
   <logos-react/>
   <logos-preact />
+  <logos-lit-icon />
 </section>
 </div>
 <div>
@@ -496,6 +502,7 @@ person.age++
   <logos-vue />
   <logos-svelte-icon />
   <logos-preact />
+  <logos-lit-icon />
   <logos-angular-icon class="opacity-60"/>
 </section>
 </div>
@@ -527,12 +534,13 @@ layout: center
 ---
 
 <BarChart title="NPM weekly downloads" :bars="[
-  { name: 'React', points: 25_100_000 }, 
-  { name: 'Vue', points: 4_900_000 }, 
-  { name: 'Angular', points: 3_500_000 },
-  { name: 'Svelte', points: 960_000 },
-  { name: 'Preact', points: 3_400_000 },
-  { name: 'Solid', points: 225_000 },
+  { name: 'React', points: 22_400_000 }, 
+  { name: 'Vue', points: 4_800_000 }, 
+  { name: 'Angular', points: 3_300_000 },
+  { name: 'Svelte', points: 1_000_000 },
+  { name: 'Preact', points: 3_500_000 },
+  { name: 'Solid', points: 320_000 },
+  { name: 'Lit', points: 1_600_000 },
   ]"/>
 
 ---
@@ -544,6 +552,7 @@ layout: center
   { name: 'Svelte', points: 21 },
   { name: 'Preact', points: 13 },
   { name: 'Solid', points: 6 },
+  { name: 'Lit', points: 6 },
   ]"/>
 
 <div v-click>
@@ -574,6 +583,7 @@ layout: center
   { name: 'Svelte 5', points: 6.34 },
   { name: 'Preact', points: 4.12 },
   { name: 'Solid', points: 2.47 },
+  { name: 'Lit', points: 5.55 },
   ]"/>
 
 ---
@@ -583,23 +593,25 @@ xychart-beta
     title "Vekst per komponent"
     x-axis "Antall komponenter" [1, 10]
     y-axis "Størrelse i kB" 0 --> 60
-    line "Vue" [18.45,32.65]
+    line "Vue" [18.49,32.65]
     line "React" [38.79,51.89]
-    line "Angular" [43.97,60.67]
+    line "Angular" [44.23,60.67]
     line "Svelte 4" [1.8,25.3]
-    line "Svelte 5" [6.34,21.94]
-    line "Preact" [6.37,19.07]
+    line "Svelte 5" [5.7,21.94]
+    line "Preact" [6.31,19.07]
     line "Solid" [3.37,19.27]
+    line "Lit" [5.52,20.62]
     
 ```
 
-<p class="translate-x-177 translate-y--68 color-yellow">Svelte 4 (25 kB)</p>
+<p class="translate-x-177 translate-y--72 color-yellow">Svelte 4 (25 kB)</p>
 <p class="translate-x-177 translate-y--134 color-red">Angular (61 kB)</p>
 <p class="translate-x-177 translate-y--128 color-green">React (52 kB)</p>
 <p class="translate-x-177 translate-y--87">Solid (19 kB)</p>
-<p class="translate-x-177 translate-y--103">Svelte 5 (22 kB)</p>
+<p class="translate-x-177 translate-y--108">Svelte 5 (22 kB)</p>
 <p class="translate-x-177 translate-y--128 color-blue">Vue (33 kB)</p>
 <p class="translate-x-177 translate-y--112 color-white">Preact (19 kB)</p>
+<p class="translate-x-177 translate-y--132 color-white">Lit (21 kB)</p>
 
 ---
 
@@ -607,36 +619,39 @@ xychart-beta
 xychart-beta
     title "Vekst per komponent"
     x-axis "Antall komponenter" [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-    y-axis "Størrelse i kB" 0 --> 240
-    line "Vue" [18.45,32.65,46.85,61.05,75.25,89.45,103.65,117.85,132.05,146.25,160.45]
+    y-axis "Størrelse i kB" 0 --> 200
+    line "Vue" [18.49,32.69,46.89,61.09,75.29,89.49,103.69,117.89,132.09,146.29,160.49]
     line "React" [38.79,51.89,64.99,78.09,91.19,104.29,117.39,130.49,143.59,156.69,169.79]
-    line "Angular" [43.97,60.67,77.37,94.07,110.77,127.47,144.17,160.87,177.57,194.27,210.97]
+    line "Angular" [44.23,60.73,77.23,93.73,110.23,126.73,143.23,159.73,176.23,192.73,209.23]
     line "Svelte 4" [1.8,25.3,48.8,72.3,95.8,119.3,142.8,166.3,189.8,213.3,236.8]
-    line "Svelte 5" [6.34,21.94,37.54,53.14,68.74,84.34,99.94,115.54,131.14,146.74,162.34]
-    line "Preact" [6.37,19.07,31.77,44.47,57.17,69.87,82.57,95.27,107.97,120.67,133.37]
+    line "Svelte 5" [5.7,20.7,35.7,50.7,65.7,80.7,95.7,110.7,125.7,140.7,155.7]
+    line "Preact" [6.31,19.01,31.71,44.41,57.11,69.81,82.51,95.21,107.91,120.61,133.31]
     line "Solid" [3.37,19.27,35.17,51.07,66.97,82.87,98.77,114.67,130.57,146.47,162.37]
+    line "Lit" [5.52,20.62,35.72,50.82,65.92,81.02,96.12,111.22,126.32,141.42,156.52]
     
 ```
 
-<p class="translate-x-177 translate-y--120 color-yellow">Svelte 4 (237 kB)</p>
-<p class="translate-x-177 translate-y--120 color-red">Angular (211 kB)</p>
-<p class="translate-x-177 translate-y--120 color-green">React (170 kB)</p>
-<p class="translate-x-177 translate-y--125">Solid (162 kB)</p>
-<p class="translate-x-177 translate-y--130">Svelte 5 (162 kB)</p>
-<p class="translate-x-177 translate-y--135 color-blue">Vue (160 kB)</p>
-<p class="translate-x-177 translate-y--136 color-white">Preact (133 kB)</p>
+<p class="translate-x-177 translate-y--133 color-yellow">Svelte 4 (237 kB)</p>
+<p class="translate-x-177 translate-y--135 color-red">Angular (209 kB)</p>
+<p class="translate-x-177 translate-y--133 color-green">React (170 kB)</p>
+<p class="translate-x-177 translate-y--139">Solid (162 kB)</p>
+<p class="translate-x-177 translate-y--135">Svelte 5 (156 kB)</p>
+<p class="translate-x-177 translate-y--154 color-blue">Vue (160 kB)</p>
+<p class="translate-x-177 translate-y--146 color-white">Preact (133 kB)</p>
+<p class="translate-x-177 translate-y--169 color-purple">Lit (157 kB)</p>
 
 ---
 
 # krausest/js-framework-benchmark
 
 <BarChart title="Data og DOM endringer" :bars="[
-  { name: 'React', points: 1.53 }, 
-  { name: 'Vue', points: 1.24 }, 
-  { name: 'Angular', points: 1.35 },
-  { name: 'Svelte 5', points: 1.08 },
-  { name: 'Preact', points: 1.5 },
-  { name: 'Solid', points: 1.08 },
+  { name: 'React', points: 1.55 }, 
+  { name: 'Vue', points: 1.25 }, 
+  { name: 'Angular', points: 1.37 },
+  { name: 'Svelte 5', points: 1.09 },
+  { name: 'Preact', points: 1.50 },
+  { name: 'Solid', points: 1.10 },
+  { name: 'Lit', points: 1.20 },
   { name: 'Vanilla', points: 1.02 },
   ]"/>
 
@@ -645,13 +660,14 @@ xychart-beta
 # krausest/js-framework-benchmark
 
 <BarChart title="Memory" :bars="[
-  { name: 'React', points: 2.81 }, 
-  { name: 'Vue', points: 2.13 }, 
-  { name: 'Angular', points: 3.12 },
-  { name: 'Svelte 5', points: 1.52 },
-  { name: 'Preact', points: 2.04 },
-  { name: 'Solid', points: 1.45 },
-  { name: 'Vanilla', points: 1.03 },
+  { name: 'React', points: 2.84 }, 
+  { name: 'Vue', points: 2.18 }, 
+  { name: 'Angular', points: 3.18 },
+  { name: 'Svelte 5', points: 1.50 },
+  { name: 'Preact', points: 2.17 },
+  { name: 'Solid', points: 1.46 },
+  { name: 'Lit', points: 1.62 },
+  { name: 'Vanilla', points: 1.04 },
   ]"/>
 
 ---

@@ -19,6 +19,7 @@ function MyComponent(state) {
   <logos-preact />
 </section>
 </div>
+<logos-lit-icon v-click="1" class="translate-y-45" />
 <div>
 UI create function
 

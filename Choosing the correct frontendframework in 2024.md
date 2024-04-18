@@ -2,6 +2,7 @@
 Format: Presentation 👨‍🏫
 
 ### 5 March 2024 - Kode24-dagen 3.0
+### 18 April 2024 - NRK faggruppemøte
 [Slides](https://gaute-talks.netlify.app/choosing-the-correct-frontendframework-in-2024/index.html)  
 
 ## Description (Norwegian)

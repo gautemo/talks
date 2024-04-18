@@ -35,6 +35,7 @@ function Counter() {
 - Angular oppstod 2016
 - Dagens versjon v17
 - 2023 signals & control flow
+- 202x skal merges med Wiz
 
 ---
 
@@ -187,5 +188,66 @@ function Counter() {
       <button onClick={increment}>Bump</button>
     </>
   );
+}
+```
+
+---
+
+## Lit
+
+- Av Google
+- 5/6 år gammel?
+- fast, lightweight, close-to-the-platform
+
+---
+
+## Lit komponent
+
+```js
+class MyCounter extends LitElement {
+  static get properties() {
+    return {
+      count: { type: Number },
+    }
+  }
+
+  constructor() {
+    super()
+    this.count = 0
+  }
+
+  increment() {
+    this.count++
+  }
+
+  render() {
+    return html`
+      <span>Count is ${this.count}</span>
+      <button @click=${this.increment}>Bump</button>
+    `
+  }
+}
+```
+
+---
+
+## Lit komponent (TS)
+
+```js
+@customElement('my-counter')
+export class MyCounter extends LitElement {
+  @property()
+  count: number = 0
+
+  increment() {
+    this.count++
+  }
+      
+  render() {
+    return html`
+      <span>Count is ${this.count}</span>
+      <button @click=${this.increment}>Bump</button>
+    `
+  }
 }
 ```
