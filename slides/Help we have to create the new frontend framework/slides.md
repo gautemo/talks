@@ -307,6 +307,8 @@ class: text-center
 ## Capra må lage det nye rammeverket
 # 🐐 / GOAT
 
+<img src="/goat.gif" alt="goat" class="scale-75 translate-x-45 translate-y--15" v-click>
+
 ---
 layout: two-cols
 ---
@@ -365,13 +367,13 @@ layout: two-cols
 - Masse ekspertise
 - Meninger
 
-<Arrow x1="100" y1="200" x2="850" y2="200" v-click="1"/>
+<!-- <Arrow x1="100" y1="200" x2="850" y2="200" v-click="1"/>
 <Arrow x1="800" y1="200" x2="100" y2="200" v-click="1"/>
 
 <p class="translate-x-20 translate-y-18" v-click="1">Forståelse</p>
-<p class="translate-x-168 translate-y-8" v-click="1">Så lenge det fungerer</p>
+<p class="translate-x-168 translate-y-8" v-click="1">Så lenge det fungerer</p> -->
 
-<div class="translate-y-17" v-click="2">
+<div class="translate-y-17" v-click>
   <p>Det dere skal gå hjem med</p>
   <ul>
     <li>Kunnskap om webben</li>
@@ -644,6 +646,12 @@ html`
 
 </template>
 </Toggle>
+
+---
+layout: center
+---
+
+# La oss utvikle conditional rendering 🧑‍💻
 
 ---
 
