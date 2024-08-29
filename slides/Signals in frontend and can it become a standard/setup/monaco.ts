@@ -4,6 +4,7 @@ export default defineMonacoSetup(async (monaco) => {
   return {
     editorOptions: {
       fontSize: 18,
+      automaticLayout: true,
     }
   }
 })

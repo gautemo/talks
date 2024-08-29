@@ -76,7 +76,7 @@ h1{
   <li v-click>🧝 2021 - Nyheter i JavaScript - ES2021</li>
   <li v-click>🧙‍♀️ 2022 - Nyheter i JavaScript - ES2022</li>
   <li v-click>🤹 2023 - Nyheter i JavaScript - ES2023</li>
-  <li v-click v-mark.strike-through="{ color: 'red', strokeWidth: 10}">💾 2024 - Nyheter i JavaScript - ES2024</li>
+  <li v-click v-mark.crossed="{ color: 'red', strokeWidth: 10}">💾 2024 - Nyheter i JavaScript - ES2024</li>
   <li v-click="6">💾 2024 - Signals i frontend, og kan det bli en JavaScript standard?</li>
 </ul>
 
@@ -140,6 +140,8 @@ Hva er <span v-mark.blue>signals?</span>
 </style>
 
 ---
+transition: fade
+---
 
 <p>
 Signals = en type implementasjon av reaktivitet
@@ -151,6 +153,148 @@ Signals = en type implementasjon av reaktivitet
     text-align: center;
     margin-top: 10rem !important;
     font-size: 2rem;
+  }
+</style>
+
+---
+
+<p>
+Signals = en type implementasjon av reaktivitet
+</p>
+
+<p>
+Hva er <span v-mark.blue>reaktivitet?</span>
+</p>
+
+<style>
+  p {
+    opacity: 1 !important;
+    text-align: center;
+    margin-top: 10rem !important;
+    font-size: 2rem;
+  }
+</style>
+
+---
+clicks: 3
+---
+
+<p v-motion :initial="{ x: 0, y: 0}" :click-2="{ x: -250, y: -160 }">
+Hva er <span v-mark.blue>ikke reaktivit?</span>
+</p>
+
+<div v-click="3">
+
+```js {monaco-run} {autorun:false, height: 'auto' }
+let epler = 5
+let appelsiner = 5
+let frukt = epler + appelsiner
+epler += 10
+
+console.log(frukt)
+```
+
+</div>
+
+<style>
+  p {
+    opacity: 1 !important;
+    text-align: center;
+    margin-top: 10rem !important;
+    font-size: 2rem;
+  }
+</style>
+
+---
+clicks: 3
+---
+
+<p v-motion :initial="{ x: 0, y: 0}" :click-2="{ x: -250, y: -160 }">
+Hva er <span v-mark.blue>reaktivitet?</span>
+</p>
+
+<div v-click="3">
+
+<SpreadSheet />
+
+</div>
+
+<style>
+  p {
+    opacity: 1 !important;
+    text-align: center;
+    margin-top: 10rem !important;
+    font-size: 2rem;
+  }
+</style>
+
+---
+
+# Flere måter å oppnå reaktivitet på
+
+<v-clicks>
+
+- Dirty checking (<vscode-icons-file-type-angular />)
+- Re-run everything (<logos-react />)
+- Compile based reactivity (<logos-svelte-icon />)
+- Signals
+
+</v-clicks>
+
+---
+clicks: 3
+---
+
+<p v-motion :initial="{ x: 0, y: 0}" :click-2="{ x: -250, y: -160 }">
+Hva er <span v-mark.blue>signals?</span>
+</p>
+
+<div v-click="3" class="translate-y--30">
+  <p>State sier selv ifra når den er endret</p>
+</div>
+
+<style>
+  p {
+    opacity: 1 !important;
+    text-align: center;
+    margin-top: 10rem !important;
+    font-size: 2rem;
+  }
+</style>
+
+---
+src: ./pages/signal-tree.md
+transition: fade
+---
+
+---
+
+<p v-motion :initial="{ x: -250, y: -160 }">
+Hva er <span v-mark.blue="0" class="normal">signals?</span>
+</p>
+
+```js
+function signal(value) {
+  return {
+    get value() {
+      // track
+      return value
+    },
+    set value(newValue) {
+      value = newValue
+      // notify all trackers
+    }
+  }
+}
+```
+
+<style>
+  p {
+    opacity: 1 !important;
+    text-align: center;
+    margin-top: 10rem !important;
+    font-size: 2rem;
+    margin-bottom: -80px;
   }
 </style>
 

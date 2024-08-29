@@ -232,6 +232,9 @@ importers:
         specifier: ^3.4.38
         version: 3.4.38(typescript@5.5.4)
     devDependencies:
+      '@iconify-json/vscode-icons':
+        specifier: ^1.1.37
+        version: 1.1.37
       '@slidev/types':
         specifier: 0.49.29
         version: 0.49.29(@nuxt/kit@3.13.0(rollup@4.21.1))(@vue/compiler-sfc@3.4.38)(postcss@8.4.41)(rollup@4.21.1)(typescript@5.5.4)(vite@5.4.2(@types/node@22.5.0))
@@ -1215,6 +1218,9 @@ packages:
 
   '@iconify-json/uim@1.1.10':
     resolution: {integrity: sha512-wBhnK3cmBnlKPD/2TN6UMvcwMEoem6xDe8c0+bayU96SqrPKvYmj0eHBlebEJfsQv3SH2A4f5Y1G2q9GS6u3WA==}
+
+  '@iconify-json/vscode-icons@1.1.37':
+    resolution: {integrity: sha512-02+dR2/LdIZTqGfyQerla5snhdN4edwYgpDuFZpI2lK9w8OVm26WYbg8RR8TxXQrlCRs726NQYxl5W+7V1YM/Q==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -5397,6 +5403,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/uim@1.1.10':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/vscode-icons@1.1.37':
     dependencies:
       '@iconify/types': 2.0.0
 
