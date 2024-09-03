@@ -1,6 +1,6 @@
 ---
 theme: default
-background: /Capra_Logo_Bakgrunn_01.png
+background: ./Capra_Logo_Bakgrunn_01.png
 title: Hjelp, Capra må lage det nye frontend rammeverket!
 info: |
   ## Hjelp, Capra må lage det nye frontend rammeverket!
@@ -290,7 +290,7 @@ transition: fade-out
 </style>
 
 ---
-background: /Capra_Logo_Bakgrunn_01.png
+background: ./Capra_Logo_Bakgrunn_01.png
 layout: cover
 class: text-center
 ---
@@ -299,7 +299,7 @@ class: text-center
 ## Hva nå?
 
 ---
-background: /Capra_Logo_Bakgrunn_01.png
+background: ./Capra_Logo_Bakgrunn_01.png
 layout: cover
 class: text-center
 ---
