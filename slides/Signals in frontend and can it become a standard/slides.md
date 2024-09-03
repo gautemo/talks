@@ -149,13 +149,7 @@ layout: center
 Signals = en type implementasjon av reaktivitet
 </h2>
 
-<p v-click="1">
-Hva er <span v-mark.blue="1">reaktivitet?</span>
-</p>
-
-
 <style>
-
   p {
     text-align: center;
     margin-top: 5rem !important;
