@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build --base /signals-in-frontend-and-can-it-become-a-standard",
     "dev": "slidev",
     "export": "slidev export"
   },
