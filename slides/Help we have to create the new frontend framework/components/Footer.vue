@@ -4,7 +4,7 @@ import Homepage from './Homepage.vue'
 import Twitter from './Twitter.vue'
 
 const props = defineProps<{ page: number, totalPages: number }>()
-const audio = new Audio('/music.mp3');
+const audio = new Audio('./music.mp3');
 
 watchEffect(() => {
   if(props.page === 1) {
