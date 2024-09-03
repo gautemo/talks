@@ -8,10 +8,9 @@ info: |
 class: text-center
 drawings:
   persist: false
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
 transition: slide-left
-# enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
+routerMode: hash
 ---
 
 <div class="abs-br m-6 flex flex-col gap-2">

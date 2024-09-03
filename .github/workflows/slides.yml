@@ -83,6 +83,11 @@ jobs:
           cd "slides/Help we have to create the new frontend framework"
           pnpm build
           mv dist ../web/help-we-have-to-create-the-new-frontend-framework
+      - name: Signals in frontend and can it become a standard
+        run: |
+          cd "slides/Signals in frontend and can it become a standard"
+          pnpm build
+          mv dist ../web/signals-in-frontend-and-can-it-become-a-standard
       - name: deploy
         run: |
           netlify deploy --dir slides/web --prod --auth ${{ secrets.NETLIFY_AUTH_TOKEN }}  --site ${{ secrets.NETLIFY_SITE_ID }}
