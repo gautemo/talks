@@ -1,6 +1,6 @@
 
 
-<p v-motion :initial="{ x: -250, y: -160 }">
+<p class="translate-x--62 translate-y--40">
 Hva er <span v-mark.blue="0" class="normal">signals?</span>
 </p>
 
@@ -42,7 +42,7 @@ Hva er <span v-mark.blue="0" class="normal">signals?</span>
 transition: fade
 ---
 
-<p v-motion :initial="{ x: -250, y: -160 }">
+<p class="translate-x--62 translate-y--40">
 Hva er <span v-mark.blue="0" class="normal">signals?</span>
 </p>
 
@@ -84,7 +84,7 @@ Hva er <span v-mark.blue="0" class="normal">signals?</span>
 transition: fade
 ---
 
-<p v-motion :initial="{ x: -250, y: -160 }">
+<p class="translate-x--62 translate-y--40">
 Hva er <span v-mark.blue="0" class="normal">signals?</span>
 </p>
 
@@ -139,7 +139,7 @@ Hva er <span v-mark.blue="0" class="normal">signals?</span>
 transition: fade
 ---
 
-<p v-motion :initial="{ x: -250, y: -160 }">
+<p class="translate-x--62 translate-y--40">
 Hva er <span v-mark.blue="0" class="normal">signals?</span>
 </p>
 
@@ -196,7 +196,7 @@ Hva er <span v-mark.blue="0" class="normal">signals?</span>
 transition: fade
 ---
 
-<p v-motion :initial="{ x: -250, y: -160 }">
+<p class="translate-x--62 translate-y--40">
 Hva er <span v-mark.blue="0" class="normal">signals?</span>
 </p>
 
@@ -250,7 +250,7 @@ Hva er <span v-mark.blue="0" class="normal">signals?</span>
 transition: fade
 ---
 
-<p v-motion :initial="{ x: -250, y: -160 }">
+<p class="translate-x--62 translate-y--40">
 Hva er <span v-mark.blue="0" class="normal">signals?</span>
 </p>
 
@@ -304,7 +304,7 @@ Hva er <span v-mark.blue="0" class="normal">signals?</span>
 
 ---
 
-<p v-motion :initial="{ x: -250, y: -160 }">
+<p class="translate-x--62 translate-y--40">
 Hva er <span v-mark.blue="0" class="normal">signals?</span>
 </p>
 

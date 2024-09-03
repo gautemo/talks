@@ -228,6 +228,9 @@ importers:
       '@slidev/theme-seriph':
         specifier: 0.25.0
         version: 0.25.0
+      signal-polyfill:
+        specifier: ^0.1.2
+        version: 0.1.2
       vue:
         specifier: ^3.4.38
         version: 3.4.38(typescript@5.5.4)
@@ -3831,6 +3834,9 @@ packages:
   signal-exit@4.1.0:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
+
+  signal-polyfill@0.1.2:
+    resolution: {integrity: sha512-HT9d+L9NMiTzMxb/tU2Baym6129ROyRETSjvchvSkQa7wN0+SrG/IUlsaBLqKn2c+4mlze6CgQBEvgBjxOpiaQ==}
 
   sirv@2.0.4:
     resolution: {integrity: sha512-94Bdh3cC2PKrbgSOUqTiGPWVZeSiXfKOVZNJniWoqrWrRkB1CJzBU3NEbiTsPcYy1lDsANA/THzS+9WBiy5nfQ==}
@@ -9124,6 +9130,8 @@ snapshots:
 
   signal-exit@4.1.0:
     optional: true
+
+  signal-polyfill@0.1.2: {}
 
   sirv@2.0.4:
     dependencies:
