@@ -314,7 +314,7 @@ layout: center
 ```js {1|1-3|5|7}
 const count = new Signal.State(0)
 console.log(count.get())
-console.log(count.set(1))
+count.set(1)
 
 const double = new Signal.Computed(() => count.get() * 2)
 
