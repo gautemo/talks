@@ -146,7 +146,7 @@ layout: center
 ---
 
 <h2>
-Signals = en type implementasjon av reaktivitet
+Signals = en type implementasjon som oppnår reaktivitet
 </h2>
 
 <style>
@@ -471,7 +471,7 @@ https://tc39.es/process-document/
 layout: center
 ---
 
-# Takk for meg
+<h1 v-click>Takk for meg</h1>
 
 <div class="abs-br m-6 flex flex-col gap-2">
   <Homepage gradid="grad1"/>
