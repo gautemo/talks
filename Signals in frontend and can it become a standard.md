@@ -2,6 +2,8 @@
 Format: Lightning talk ⚡
 
 ### 04 September 2024 - JavaZone
+[Recording - norwegian](https://vimeo.com/1006184282)  
+[slides](https://gaute-talks.netlify.app/signals-in-frontend-and-can-it-become-a-standard/)  
 
 ## Description (Norwegian)
 Det er blitt en hype rundt signals i det siste, flere og flere frontendrammeverk kaster seg på. Men hva er egentlig signals? Og hvordan ser TC39 sitt proposal ut for at det implementeres direkte i JavaScript?
