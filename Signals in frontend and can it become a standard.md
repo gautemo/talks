@@ -2,6 +2,7 @@
 Format: Lightning talk ⚡
 
 ### 04 September 2024 - JavaZone
+### 25 September 2024 - frontendForum, Gjensidige
 [Recording - norwegian](https://vimeo.com/1006184282)  
 [slides](https://gaute-talks.netlify.app/signals-in-frontend-and-can-it-become-a-standard/)  
 
