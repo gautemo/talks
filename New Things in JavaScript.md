@@ -3,7 +3,6 @@ Format: Presentation 👨‍🏫
 
 ### May 2019 - conference Apps Deep Dive, Sopra Steria
 [Slides](https://es-intro.netlify.app/)  
-[Repo](https://github.com/gautemo/ES-Intro)
 
 ## Description
 JavaScript is the most used programming language! It's coming with improvements and features which makes life easier each year.
