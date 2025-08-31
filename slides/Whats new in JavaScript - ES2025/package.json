@@ -1,0 +1,23 @@
+{
+  "name": "whats-new-in-javascript-es2025",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.18.0",
+    "@codemirror/commands": "^6.8.1",
+    "@codemirror/lang-javascript": "^6.2.4",
+    "@codemirror/language": "^6.11.3",
+    "@codemirror/state": "^6.5.2",
+    "@codemirror/theme-one-dark": "^6.1.3",
+    "@codemirror/view": "^6.38.1",
+    "@slidev/cli": "^52.1.0",
+    "@slidev/theme-default": "0.25.0",
+    "@slidev/theme-seriph": "0.25.0",
+    "vue": "^3.5.20"
+  }
+}
