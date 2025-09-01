@@ -12,11 +12,6 @@ fonts:
   sans: 'Baloo Chettan, Roboto'
   serif: 'Baloo Chettan, Roboto'
 css: unocss
-seoMeta:
-  # By default, Slidev will use ./og-image.png if it exists,
-  # or generate one from the first slide if not found.
-  ogImage: auto
-  # ogImage: https://cover.sli.dev
 ---
 
 <Heart/>
