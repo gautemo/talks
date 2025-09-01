@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v3
+      - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
         with:
-          version: 8
+          version: 10
 
       - name: pnpm install
         run: |
@@ -88,6 +88,12 @@ jobs:
           cd "slides/Signals in frontend and can it become a standard"
           pnpm build
           mv dist ../web/signals-in-frontend-and-can-it-become-a-standard
+      - name: build Whats new in JavaScript - ES2025
+        run: |
+          cd "slides/Whats new in JavaScript - ES2025"
+          pnpm build
+          mv dist ../web/whats-new-in-javascript-es2025          
       - name: deploy
         run: |
+          npm install -g netlify-cli
           netlify deploy --dir slides/web --prod --auth ${{ secrets.NETLIFY_AUTH_TOKEN }}  --site ${{ secrets.NETLIFY_SITE_ID }}

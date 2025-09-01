@@ -386,6 +386,9 @@ export { default } from './data.json' with { type: 'json' }
 
 # Takk for meg!
 
-- https://gaute.dev/talks
-- https://gaute.dev/dev-blog
-- [✖️](https://x.com/GauteMeekOlsen) og [🦋](https://bsky.app/profile/gaute.bsky.social)
+## Recap
+<ul>
+  <li>https://gaute.dev/talks</li>
+  <li>https://gaute.dev/dev-blog</li>
+  <li><a href="https://bsky.app/profile/gaute.bsky.social" target="_blank"><simple-icons-bluesky class="text-blue-500"/></a> og <a href="https://x.com/GauteMeekOlsen" target="_blank"><logos-twitter/></a></li>
+</ul>
