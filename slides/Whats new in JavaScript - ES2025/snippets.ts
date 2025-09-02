@@ -63,17 +63,16 @@ for(const i of iter) {
     initial:
     ``,
     complete:
-    `function* generator() {
-  let count = 0
-  while(true) {
-    const add = yield count
-    count += add
+    `function* cards() {
+  const suits = ["♣️", "♦️", "♥️", "♠️"]
+  const court = ["J", "Q", "K", "A"]
+  for(const suit of suits) {
+    for(let i = 2; i <= 10; i++) yield suit + i
+    for(const c of court) yield suit + c
   }
 }
 
-const iter = generator()
-console.log(iter.next(5))
-console.log(iter.next(5))`,
+console.log([...cards()])`,
   },
   {
     initial:
@@ -111,7 +110,7 @@ Promise.try(fun)
   },
   {
     initial:
-      `const match = 'Donals Duck'
+      `const match = 'Donald Duck'
   .match(/(?<name>\\w+)\\s(?<name>\\w+)/)
 console.log(match.groups.name)`,
     complete:
