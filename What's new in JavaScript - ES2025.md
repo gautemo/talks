@@ -1,10 +1,9 @@
-# What's new in JavaScript - ES2023
+# What's new in JavaScript - ES2025
 Format: Lightning talk ⚡
 
-### 07 September 2023 - JavaZone
-[Recording - norwegian](https://vimeo.com/861948019)  
-[slides](https://gaute-talks.netlify.app/whats-new-in-javascript-es2023/#/1)  
-
+### 04 September 2025 - JavaZone
+<!-- [Recording - norwegian]()   -->
+[slides](https://gaute-talks.netlify.app/whats-new-in-javascript-es2025/#/1)  
 
 ## Description
 Every year new features are added to the language JavaScript. Let me walk you through this year's changes.

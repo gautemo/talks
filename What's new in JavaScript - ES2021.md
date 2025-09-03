@@ -5,7 +5,6 @@ Format: Lightning talk ⚡
 ### 20 January 2022 - DevFest Norway
 [Recording](https://youtu.be/EwerUS318LQ?t=1060)  
 [Recording - norwegian](https://vimeo.com/669321152)  
-[repo](https://github.com/gautemo/ES-Intro/tree/master/es12)  
 [slides](https://gaute-talks.netlify.app/whats-new-in-javascript-es2021/index.html)
 
 
