@@ -15,4 +15,5 @@ packages:
   - 'Help we have to create the new frontend framework'
   - 'Signals in frontend and can it become a standard'
   - 'Whats new in JavaScript - ES2025'
+  - 'Visual automated and fast component testing with Vitest'
   
