@@ -7,6 +7,7 @@ info: |
 class: text-center
 drawings:
   persist: false
+routerMode: hash    
 transition: slide-left
 comark: true
 duration: 20min
