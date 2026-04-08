@@ -297,7 +297,7 @@ Renders just the component to test component behaviour.
 
 ---
 
-# Stable
+# Stable version of component testing
 
 | Testing framework | Stable                         |
 | ----------------- | ------------------------------ |
