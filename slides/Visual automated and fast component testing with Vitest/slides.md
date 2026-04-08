@@ -224,7 +224,7 @@ Renders just the component to test component behaviour.
 
 # Frontend test pyramid?
 
-<img src="./pyramids/frontend-pyramid.svg" width="500"/>
+<img src="/pyramids/frontend-pyramid.svg" width="500"/>
 <p v-click class="translate-y--50"><b>Key takeaway:</b>Test pyramids are difficult.</p>
 
 <style>
