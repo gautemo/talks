@@ -1,5 +1,5 @@
 ---
-background: ./cover.jpg # Photo by Sebastien Bonneval on Unsplash
+background: /cover.jpg # Photo by Sebastien Bonneval on Unsplash
 title: Visual, automated, and fast component testing with Vitest
 info: |
   ## Visual, automated, and fast component testing with Vitest
@@ -148,13 +148,13 @@ fonts:
 <section>
   <v-clicks>
 
-  <img src="./pyramids/1.svg" width="500"/>
-  <img src="./pyramids/2.svg" width="500" class="translate-x-5 translate-y-2"/>
-  <img src="./pyramids/3.svg" width="500" class="translate-x--20 translate-y--10 rotate-2"/>
-  <img src="./pyramids/4.svg" width="500" class="translate-x-20 translate-y-10 rotate--5"/>
-  <img src="./pyramids/5.svg" width="500" class="translate-x-50 translate-y--20 rotate--10"/>
-  <img src="./pyramids/6.svg" width="500" class="translate-x--50 translate-y--20 rotate-7"/>
-  <img src="./pyramids/7.svg" width="500" class="translate-x-50 translate-y--20 rotate-1"/>
+  <img src="/pyramids/1.svg" width="500"/>
+  <img src="/pyramids/2.svg" width="500" class="translate-x-5 translate-y-2"/>
+  <img src="/pyramids/3.svg" width="500" class="translate-x--20 translate-y--10 rotate-2"/>
+  <img src="/pyramids/4.svg" width="500" class="translate-x-20 translate-y-10 rotate--5"/>
+  <img src="/pyramids/5.svg" width="500" class="translate-x-50 translate-y--20 rotate--10"/>
+  <img src="/pyramids/6.svg" width="500" class="translate-x--50 translate-y--20 rotate-7"/>
+  <img src="/pyramids/7.svg" width="500" class="translate-x-50 translate-y--20 rotate-1"/>
   <p class="translate-y--20"><b>Key takeaway:</b>Test pyramids are difficult.</p>
 
   </v-clicks>
@@ -490,7 +490,7 @@ Renders just the component to test component behaviour.
 
 ---
 layout: cover
-background: ./end-cover.jpg # Photo by JAM on Unsplash
+background: /end-cover.jpg # Photo by JAM on Unsplash
 ---
 
 # Thank you for listening
