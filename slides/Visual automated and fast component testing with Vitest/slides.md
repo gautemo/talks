@@ -1,5 +1,5 @@
 ---
-background: /cover.jpg # Photo by Sebastien Bonneval on Unsplash
+background: cover.jpg # Photo by Sebastien Bonneval on Unsplash
 title: Visual, automated, and fast component testing with Vitest
 info: |
   ## Visual, automated, and fast component testing with Vitest
@@ -491,7 +491,7 @@ Renders just the component to test component behaviour.
 
 ---
 layout: cover
-background: /end-cover.jpg # Photo by JAM on Unsplash
+background: end-cover.jpg # Photo by JAM on Unsplash
 ---
 
 # Thank you for listening
