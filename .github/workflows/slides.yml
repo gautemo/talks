@@ -93,6 +93,11 @@ jobs:
           cd "slides/Whats new in JavaScript - ES2025"
           pnpm build
           mv dist ../web/whats-new-in-javascript-es2025          
+      - name: build Visual, automated, and fast component testing with Vitest
+        run: |
+          cd "slides/Visual automated and fast component testing with Vitest"
+          pnpm build
+          mv dist ../web/visual-automated-and-fast-component-testing-with-vitest         
       - name: deploy
         run: |
           npm install -g netlify-cli
