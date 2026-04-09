@@ -249,8 +249,8 @@ Renders just the component to test component behaviour.
 
 <v-clicks>
 
-1. If it renders the test should run in a browser
-2. If it renders the test should run in a browser
+1. If it renders you run the test in a browser
+2. If it renders you run the test in a browser
 
 </v-clicks>
 
