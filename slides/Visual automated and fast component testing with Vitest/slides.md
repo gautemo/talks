@@ -421,12 +421,12 @@ Renders just the component to test component behaviour.
     </tr>
     <tr>
       <td>Playwright</td>
-      <td>Vite</td>
+      <td>Vite*</td>
     </tr>
     <tr>
       <td>Cypress</td>
       <td>
-        Vite 5-7, Webpack
+        Vite, Webpack
       </td>
     </tr>
   </tbody>
@@ -467,21 +467,31 @@ Renders just the component to test component behaviour.
   <tbody>
     <tr>
       <td>Vitest</td>
-      <td><v-click at="1">8.6s</v-click></td>
-      <td><v-click at="4">9s</v-click></td>
+      <td><v-click at="1">6.7s</v-click></td>
+      <td><v-click at="4">8s</v-click></td>
     </tr>
     <tr>
       <td>Playwright</td>
-      <td><v-click at="2">14.7s</v-click></td>
-      <td><v-click at="5">25s</v-click></td>
+      <td><v-click at="2">10.4s</v-click></td>
+      <td><v-click at="5">22s</v-click></td>
     </tr>
     <tr>
       <td>Cypress</td>
-      <td><v-click at="3">1m 13s</v-click></td>
-      <td><v-click at="6">1m 3s</v-click></td>
+      <td><v-click at="3">44.9s</v-click></td>
+      <td><v-click at="6">1m 0s</v-click></td>
     </tr>
   </tbody>
 </table>
+
+---
+
+# Which one should you choose?
+
+- API
+- Framework and browser support
+- Features
+- Speed
+- Same as your using for E2E and/or unit tests
 
 ---
 
