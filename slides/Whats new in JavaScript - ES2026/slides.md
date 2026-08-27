@@ -67,7 +67,7 @@ img.me{
 }
 
 img.me:hover {
-  content: url("familie.jpg");
+  content: url("/familie.jpg");
 }
 
 img.capra {
