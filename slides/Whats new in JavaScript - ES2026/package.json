@@ -1,0 +1,19 @@
+{
+  "name": "whats-new-in-javascript---es2026",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build --base /whats-new-in-javascript-es2026",
+    "dev": "slidev",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.19.1",
+    "@slidev/theme-default": "0.25.0",
+    "@slidev/theme-seriph": "0.25.0",
+    "vue": "^3.5.41"
+  },
+  "devDependencies": {
+    "@slidev/types": "^52.19.1"
+  }
+}

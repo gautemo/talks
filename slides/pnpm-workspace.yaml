@@ -16,4 +16,9 @@ packages:
   - 'Signals in frontend and can it become a standard'
   - 'Whats new in JavaScript - ES2025'
   - 'Visual automated and fast component testing with Vitest'
-  
+  - 'Whats new in JavaScript - ES2026'
+allowBuilds:
+  esbuild: true
+  playwright-chromium: true
+  protobufjs: true
+  vue-demi: true

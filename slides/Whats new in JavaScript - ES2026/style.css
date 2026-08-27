@@ -1,0 +1,12 @@
+.slidev-monaco-container-inner {
+  height: 300px !important;
+}
+
+.slidev-runner-output {
+  font-size: 20px !important;
+  line-height: 20px !important;
+}
+
+button[title="Run code"] {
+  z-index: 999;
+}
