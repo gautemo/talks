@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="about-me" v-if="[1,2,20].includes($nav.currentPage)">
+    <div class="about-me" v-if="[1,2,10].includes($nav.currentPage)">
       <Homepage/>
     </div>
     <div class="progress" :style="{ width: `${$nav.currentPage * 100 / $nav.total }%` }"></div>

@@ -82,37 +82,14 @@ h1{
 
 ---
 
-# TC39 process
-
-```mermaid
-stateDiagram-v2 
-    direction LR
-    state "Stage 0" as 0
-    state "Stage 1" as 1
-    state "Stage 2" as 2
-    state "Stage 2.7" as 27
-    state "Stage 3" as 3
-    state "Stage 4" as 4
-    state "yearly standard publication" as r
-    [*] --> 0
-    0 --> 1
-    1 --> 2
-    2 --> 27
-    27 --> 3
-    3 --> 4
-    4 --> r
-```
-
----
-
 # Upsert
 
 ```js {monaco-run} {autorun:false}
 const map = new Map()
 
-if (!map.has('count')) {
-  map.set('count', 0)
-}
+// if (!map.has('count')) {
+//   map.set('count', 0)
+// }
 const count = map.get('count')
 console.log(count)
 ```
@@ -141,6 +118,24 @@ const error = new Error('💥')
 
 ---
 
+# Iterator.concat
+
+```js {monaco-run} {autorun:false}
+function* sequence1() {
+  yield 1
+  yield 2
+}
+
+function* sequence2() {
+  yield 3
+  yield 4
+}
+```
+
+<CopyCode example="concat"/>
+
+---
+
 # fromAsync
 
 ```js {monaco-run} {autorun:false}
@@ -157,24 +152,6 @@ const asyncIterable = async function* () {
 ```
 
 <CopyCode example="fromAsync"/>
-
----
-
-# Iterator.concat
-
-```js {monaco-run} {autorun:false}
-function* sequence1() {
-  yield 1
-  yield 2
-}
-
-function* sequence2() {
-  yield 3
-  yield 4
-}
-```
-
-<CopyCode example="concat"/>
 
 ---
 
