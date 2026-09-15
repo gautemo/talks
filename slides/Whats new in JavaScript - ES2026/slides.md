@@ -18,7 +18,7 @@ fonts:
 
 <Heart/>
 
-# Nyheter i JavaScript
+# What's new in JavaScript
 ## ES2026
 
 <style>

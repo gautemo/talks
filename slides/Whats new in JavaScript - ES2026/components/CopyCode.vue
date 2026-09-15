@@ -58,8 +58,8 @@ console.log(data.money)`,
 console.log(arr.toBase64())
 console.log(arr.toHex())
 
-console.log(Uint8Array.fromBase64('SGVsbG8gV29ybGQ='))
-console.log(Uint8Array.fromHex('48656c6c6f20576f726c64'))`,
+console.log(...Uint8Array.fromBase64('SGVsbG8gV29ybGQ='))
+console.log(...Uint8Array.fromHex('48656c6c6f20576f726c64'))`,
 } as const
 
 const props = defineProps<{ example: keyof typeof examples }>()
